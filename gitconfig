@@ -1,0 +1,38 @@
+[core]
+  excludesfile = /Users/akartashov/.gitignore
+
+[color]
+  diff = auto
+  branch = auto
+  status = auto
+
+[user]
+  name = Andrey Kartashov
+  email = akartashov@gilt.com
+
+[push]
+  default = tracking
+
+[alias]
+  #datetag = !git tag `date \"+%Y-%m-%d-%H%M%S\"`
+  #rctag = !git tag `date \"+%Y-%m-%d-%H%M%S\"`-rc
+  #livetag = !git tag `date \"+%Y-%m-%d-%H%M%S\"`-live
+
+  rtag = !git tag r`date \"+%Y-%m-%d-%H%M%S\"`
+  st = !git status
+  up = !git fetch --tags & git status
+  ci = !git commit
+  wdiff = !git diff --color-words
+
+[diff]
+  tool = opendiff
+
+
+[commit]
+  template = /Users/akartashov/.git_commit_template
+
+#
+#
+# git config core.ignorecase false
+#
+#
