@@ -10,3 +10,5 @@ termcapinfo xterm ti@:te@ # allows autoscrolling
 defscrollback  40960
 caption string '%H -> %c [%t]'
 defbce on
+
+hardstatus off
