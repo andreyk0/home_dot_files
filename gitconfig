@@ -1,5 +1,5 @@
 [core]
-  excludesfile = /Users/akartashov/.gitignore
+  excludesfile = ~/.gitignore
 
 [color]
   diff = auto
@@ -29,7 +29,7 @@
 
 
 [commit]
-  template = /Users/akartashov/.git_commit_template
+  template = ~/.git_commit_template
 
 #
 #
