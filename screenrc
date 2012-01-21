@@ -4,8 +4,13 @@ startup_message off
 fit
 vbell off
 escape "^  "
-term xterm
-termcapinfo xterm ti@:te@ # allows autoscrolling
+
+attrcolor b ".I"    # allow bold colors - necessary for some reason
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'   # tell screen how to set colors. AB = background, AF=foreground
+term screen-256color
+defbce on    # use current bg color for erased chars
+
+#termcapinfo xterm ti@:te@ # allows autoscrolling
 
 defscrollback  40960
 caption string '%H -> %c [%t]'
