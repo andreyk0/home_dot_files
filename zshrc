@@ -24,4 +24,4 @@ setopt extendedhistory
 PS1='%~# '
 REPORTTIME=10
 
-[[ -z $TMUX ]] && tmux
+[[ -z $TMUX ]] && tmux -2
