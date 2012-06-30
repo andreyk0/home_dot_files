@@ -1,4 +1,4 @@
 :set prompt "ghci> "
 :set +t
-:set -fglasgow-exts
+:set -XForeignFunctionInterface
 :set -Wall
