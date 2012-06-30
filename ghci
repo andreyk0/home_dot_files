@@ -1,2 +1,4 @@
+:set prompt "ghci> "
 :set +t
-:set prompt "ghci >"
+:set -fglasgow-exts
+:set -Wall
