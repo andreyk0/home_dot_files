@@ -1,4 +1,5 @@
 :set prompt "ghci> "
 :set +t
 :set -XForeignFunctionInterface
+:set -XQuasiQuotes
 :set -Wall
