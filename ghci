@@ -4,6 +4,7 @@
 :set -XOverloadedStrings
 :set -XForeignFunctionInterface
 :set -XQuasiQuotes
+:set -XOverloadedStrings
 :set -Wall
 :set -fno-print-bind-result
 
