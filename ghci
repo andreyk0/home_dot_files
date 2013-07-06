@@ -1,5 +1,7 @@
 :set prompt "ghci> "
 :set +t
+:set -XOverloadedStrings
 :set -XForeignFunctionInterface
 :set -XQuasiQuotes
 :set -Wall
+:set -fno-print-bind-result
