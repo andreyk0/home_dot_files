@@ -2,7 +2,7 @@
 
 :set +t
 :set -XForeignFunctionInterface
---:set -XOverloadedStrings
+-- :set -XOverloadedStrings
 :set -XQuasiQuotes
 :set -Wall
 :set -fno-print-bind-result
