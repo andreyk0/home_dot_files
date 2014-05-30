@@ -1,10 +1,12 @@
-:set prompt "ghci> "
+:set prompt "\ESC[34mλ \ESC[m"
 
 :set +t
 :set -XForeignFunctionInterface
--- :set -XOverloadedStrings
+:set -XNoMonomorphismRestriction
 :set -XQuasiQuotes
-:set -Wall
 :set -fno-print-bind-result
+
+-- :set -XOverloadedStrings
+-- :set -Wall
 
 :def he \str -> return $ ":! hoogle --count=20 \'" ++ (concatMap (\c -> if '\'' == c then "'\"'\"'" else [c]) str) ++ "\' | less -SX"
