@@ -25,7 +25,8 @@
   wdiff = !git diff --color-words
 
 [diff]
-  tool = opendiff
+  tool = vimdiff
+	ignoreSubmodules = dirty
 
 
 [commit]
