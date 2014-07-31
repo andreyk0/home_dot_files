@@ -14,6 +14,7 @@ setopt interactivecomments # pound sign in interactive prompt
 # superglobs
 setopt extendedglob
 unsetopt caseglob
+unsetopt nomatch
 
 HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=10000
