@@ -11,6 +11,8 @@ setopt auto_cd
 
 setopt interactivecomments # pound sign in interactive prompt
 
+setopt no_auto_remove_slash # keep slashes
+
 # superglobs
 setopt extendedglob
 unsetopt caseglob
