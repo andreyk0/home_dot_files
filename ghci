@@ -5,6 +5,7 @@
 :set -XNoMonomorphismRestriction
 :set -XQuasiQuotes
 :set -fno-print-bind-result
+:set -fno-warn-type-defaults
 
 -- :set -XOverloadedStrings
 -- :set -Wall
