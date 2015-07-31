@@ -25,9 +25,7 @@ HISTSIZE=SAVEHIST=10000
 unsetopt share_history     # Don't share history real-time between instances.
 setopt inc_append_history  # Each instance has its own history at run time, but global history file (for future invocations) is appended in real-time
 # Some history settings missing from lib/history.zsh
-setopt hist_ignore_dups    # Don't store sequential duplicate lines
 setopt hist_find_no_dups   # Don't cycle through dupes during history search
-setopt hist_reduce_blanks  # Trim before saving
 setopt hist_no_store       # Don't save invocation of history itself
 setopt hist_no_functions   # Don't save ZSH function definitions
 
