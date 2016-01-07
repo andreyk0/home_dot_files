@@ -7,7 +7,4 @@
 :set -fno-print-bind-result
 :set -fno-warn-type-defaults
 
--- :set -XOverloadedStrings
--- :set -Wall
-
 :def he \str -> return $ ":! hoogle --count=20 \'" ++ (concatMap (\c -> if '\'' == c then "'\"'\"'" else [c]) str) ++ "\' | less -SX"

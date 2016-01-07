@@ -1,5 +1,5 @@
-.cache
-cscope.files
-cscope.out
 *.swp
-tags
+.DS_Store
+.cache
+/.idea
+/tags
