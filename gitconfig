@@ -22,7 +22,7 @@
 
   rtag = !git tag r`date \"+%Y-%m-%d-%H%M%S\"`
   st = !git status
-  up = !git fetch --tags & git status
+  up = !git fetch --tags -p & git-delete-merged-branches & git status
   ci = !git commit
   wdiff = !git diff --color-words
 
