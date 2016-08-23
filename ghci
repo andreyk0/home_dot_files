@@ -3,6 +3,7 @@
 :set +t
 :set -XForeignFunctionInterface
 :set -XNoMonomorphismRestriction
+:set -XOverloadedStrings
 :set -XQuasiQuotes
 :set -fno-print-bind-result
 :set -fno-warn-type-defaults
