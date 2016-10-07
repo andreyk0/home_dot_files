@@ -38,6 +38,8 @@ Return a list of installed packages or nil for every skipped package."
   'magit
   'powerline
   'projectile
+  'rainbow-delimiters
+  'solarized-theme
   )
 
 (require 'evil)
@@ -63,22 +65,33 @@ Return a list of installed packages or nil for every skipped package."
 ; Follow symlinks
 (setq vc-follow-symlinks t)
 
-
+; Projectile
 (require 'projectile)
 (projectile-mode t)
 
+; Helm
 (require 'helm)
 (helm-mode t)
 
+; Haskell
+(require 'haskell-mode)
+(require 'hindent)
+(add-hook 'haskell-mode-hook #'hindent-mode)
+(require 'rainbow-delimiters)
+(add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
+(add-to-list 'interpreter-mode-alist '("stack" . haskell-mode))
+
+; Solarized
+(load-theme 'solarized-light t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
+ '(custom-safe-themes
    (quote
-    (hindent haskell-mode powerline magit iedit helm-projectile evil-visual-mark-mode ensime))))
+    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
