@@ -30,6 +30,7 @@ Return a list of installed packages or nil for every skipped package."
 (ensure-package-installed
   'ensime
   'evil
+  'evil-magit
   'haskell-mode
   'helm
   'helm-projectile
@@ -42,9 +43,15 @@ Return a list of installed packages or nil for every skipped package."
   'solarized-theme
   )
 
+; EVIL
+(setq evil-want-C-u-scroll t)
 (require 'evil)
 (evil-mode t)
 
+; Magit
+(require 'evil-magit)
+
+; Powerline
 (require 'powerline)
 (powerline-center-evil-theme)
 
@@ -91,7 +98,10 @@ Return a list of installed packages or nil for every skipped package."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default))))
+    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+ '(package-selected-packages
+   (quote
+    (evil-magit solarized-theme rainbow-delimiters powerline magit iedit hindent helm-projectile haskell-mode evil-visual-mark-mode ensime))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
