@@ -28,11 +28,14 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Extra packages
 (ensure-package-installed
+  'ensime
   'evil
   'helm
+  'helm-projectile
   'iedit
   'magit
   'powerline
+  'projectile
   )
 
 (require 'evil)
