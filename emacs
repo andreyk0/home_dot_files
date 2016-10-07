@@ -30,8 +30,10 @@ Return a list of installed packages or nil for every skipped package."
 (ensure-package-installed
   'ensime
   'evil
+  'haskell-mode
   'helm
   'helm-projectile
+  'hindent
   'iedit
   'magit
   'powerline
@@ -40,19 +42,6 @@ Return a list of installed packages or nil for every skipped package."
 
 (require 'evil)
 (evil-mode t)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (helm magit iedit evil-visual-mark-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 (require 'powerline)
 (powerline-center-evil-theme)
@@ -70,3 +59,29 @@ Return a list of installed packages or nil for every skipped package."
 
 ; Window settings
 (setq window-min-width 64)
+
+; Follow symlinks
+(setq vc-follow-symlinks t)
+
+
+(require 'projectile)
+(projectile-mode t)
+
+(require 'helm)
+(helm-mode t)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (hindent haskell-mode powerline magit iedit helm-projectile evil-visual-mark-mode ensime))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
