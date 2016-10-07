@@ -42,6 +42,7 @@ Return a list of installed packages or nil for every skipped package."
   'projectile
   'rainbow-delimiters
   'solarized-theme
+  'yaml-mode
   )
 
 ; EVIL
@@ -82,15 +83,24 @@ Return a list of installed packages or nil for every skipped package."
 (helm-mode t)
 
 ; Haskell
+(setq haskell-process-type 'stack-ghci)
+(setq haskell-compile-cabal-build-command "stack build")
 (require 'haskell-mode)
 (require 'hindent)
 (add-hook 'haskell-mode-hook #'hindent-mode)
 (require 'rainbow-delimiters)
 (add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
 (add-to-list 'interpreter-mode-alist '("stack" . haskell-mode))
+(eval-after-load "haskell-mode"
+    '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
+(eval-after-load "haskell-cabal"
+    '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
 
 ; Markdown
 (require 'markdown-mode)
+
+; YAML
+(require 'yaml-mode)
 
 ; Solarized
 (load-theme 'solarized-light t)
