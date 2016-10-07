@@ -37,6 +37,7 @@ Return a list of installed packages or nil for every skipped package."
   'hindent
   'iedit
   'magit
+  'markdown-mode
   'powerline
   'projectile
   'rainbow-delimiters
@@ -87,6 +88,9 @@ Return a list of installed packages or nil for every skipped package."
 (require 'rainbow-delimiters)
 (add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
 (add-to-list 'interpreter-mode-alist '("stack" . haskell-mode))
+
+; Markdown
+(require 'markdown-mode)
 
 ; Solarized
 (load-theme 'solarized-light t)
