@@ -32,5 +32,3 @@ setopt hist_no_functions   # Don't save ZSH function definitions
 
 PS1='%~# '
 REPORTTIME=10
-
-[[ -z $TMUX ]] && tmux -2 -u

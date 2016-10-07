@@ -9,8 +9,8 @@
 
 [user]
   name = Andrey Kartashov
-  email = andrey.kartashov@gmail.com
-  #email = akartashov@gilt.com
+  #email = andrey.kartashov@gmail.com
+  email = akartashov@gilt.com
 
 [push]
   default = tracking
