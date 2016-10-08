@@ -92,8 +92,8 @@ Return a list of installed packages or nil for every skipped package."
 (add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
 (add-to-list 'interpreter-mode-alist '("stack" . haskell-mode))
 (eval-after-load "haskell-mode" '(progn
-  '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile)
-  '(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-mode-format-imports)
+  (define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile)
+  (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-mode-format-imports)
   ))
 (eval-after-load "haskell-cabal"
     '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
