@@ -42,26 +42,31 @@ Return a list of installed packages or nil for every skipped package."
   'projectile
   'rainbow-delimiters
   'solarized-theme
+  'xterm-color
   'yaml-mode
   )
 
-; EVIL
-(setq evil-want-C-u-scroll t)
-(require 'evil)
-(evil-mode t)
+; ENV
+(setenv "PAGER" "less -X")
+;(setenv "TERM" "xterm-256color")
 
-; Magit
-(require 'evil-magit)
+; Disable TABS
+(setq-default indent-tabs-mode nil)
 
-; Powerline
-(require 'powerline)
-(powerline-center-evil-theme)
+; Changes all yes/no questions to y/n type
+(fset 'yes-or-no-p 'y-or-n-p)
+
+; Delete trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ; Disable auto-save and auto-backup
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
 ; Disable menus
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
@@ -74,6 +79,20 @@ Return a list of installed packages or nil for every skipped package."
 ; Follow symlinks
 (setq vc-follow-symlinks t)
 
+
+; EVIL
+(setq evil-want-C-u-scroll t)
+(require 'evil)
+(evil-mode t)
+
+; Magit
+(require 'evil-magit)
+(global-set-key (kbd "C-c g") 'magit-status)
+
+; Powerline
+(require 'powerline)
+(powerline-center-evil-theme)
+
 ; Projectile
 (require 'projectile)
 (projectile-mode t)
@@ -81,6 +100,7 @@ Return a list of installed packages or nil for every skipped package."
 ; Helm
 (require 'helm)
 (helm-mode t)
+(global-set-key [f2] 'helm-projectile)
 
 ; Haskell
 (setq haskell-process-type 'stack-ghci)
@@ -106,6 +126,14 @@ Return a list of installed packages or nil for every skipped package."
 
 ; Solarized
 (load-theme 'solarized-light t)
+
+; Shell
+(global-set-key [f1] 'shell)
+(require 'xterm-color)
+(progn (add-hook 'comint-preoutput-filter-functions 'xterm-color-filter)
+       (setq comint-output-filter-functions (remove 'ansi-color-process-output comint-output-filter-functions))
+       (setq font-lock-unfontify-region-function 'xterm-color-unfontify-region))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
