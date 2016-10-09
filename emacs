@@ -96,11 +96,13 @@ Return a list of installed packages or nil for every skipped package."
 ; Projectile
 (require 'projectile)
 (projectile-mode t)
+(global-set-key [f1] 'projectile-run-eshell)
 
 ; Helm
 (require 'helm)
 (helm-mode t)
 (global-set-key [f2] 'helm-projectile)
+(global-set-key [f3] 'helm-grep-do-git-grep)
 
 ; Haskell
 (setq haskell-process-type 'stack-ghci)
@@ -128,7 +130,6 @@ Return a list of installed packages or nil for every skipped package."
 (load-theme 'solarized-light t)
 
 ; Shell
-(global-set-key [f1] 'eshell)
 (require 'xterm-color)
 (progn (add-hook 'comint-preoutput-filter-functions 'xterm-color-filter)
        (setq comint-output-filter-functions (remove 'ansi-color-process-output comint-output-filter-functions))
