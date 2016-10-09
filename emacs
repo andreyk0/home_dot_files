@@ -128,7 +128,7 @@ Return a list of installed packages or nil for every skipped package."
 (load-theme 'solarized-light t)
 
 ; Shell
-(global-set-key [f1] 'shell)
+(global-set-key [f1] 'eshell)
 (require 'xterm-color)
 (progn (add-hook 'comint-preoutput-filter-functions 'xterm-color-filter)
        (setq comint-output-filter-functions (remove 'ansi-color-process-output comint-output-filter-functions))
