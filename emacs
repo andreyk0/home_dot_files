@@ -103,7 +103,12 @@ Return a list of installed packages or nil for every skipped package."
 (require 'helm)
 (helm-mode t)
 (global-set-key [f2] 'helm-projectile)
-(global-set-key [f3] 'helm-grep-do-git-grep)
+
+(global-set-key [f3] (lambda (&rest args)
+    (interactive)
+    (cd (projectile-project-root))
+    (helm-grep-do-git-grep args)
+  ))
 
 ; Haskell
 (setq haskell-process-type 'stack-ghci)
