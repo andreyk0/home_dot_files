@@ -80,6 +80,8 @@ Return a list of installed packages or nil for every skipped package."
 ; Follow symlinks
 (setq vc-follow-symlinks t)
 
+; Case sensitive tags search
+(setq tags-case-fold-search nil)
 
 ; EVIL
 (setq evil-want-C-u-scroll t)
