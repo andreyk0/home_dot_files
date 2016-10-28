@@ -39,6 +39,7 @@ Return a list of installed packages or nil for every skipped package."
   'iedit
   'magit
   'markdown-mode
+  'org-plus-contrib
   'powerline
   'projectile
   'rainbow-delimiters
