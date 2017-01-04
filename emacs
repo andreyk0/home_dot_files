@@ -160,6 +160,7 @@ Return a list of installed packages or nil for every skipped package."
  '(custom-safe-themes
    (quote
     ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+ '(org-agenda-files (quote ("~/notes/todo.org")))
  '(package-selected-packages
    (quote
     (dockerfile-mode evil-magit solarized-theme rainbow-delimiters powerline magit iedit hindent helm-projectile haskell-mode evil-visual-mark-mode ensime))))
