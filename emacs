@@ -113,6 +113,9 @@ Return a list of installed packages or nil for every skipped package."
     (helm-grep-do-git-grep args)
   ))
 
+(global-set-key [f4] 'helm-etags-select)
+
+
 ; Haskell
 (setq haskell-process-type 'stack-ghci)
 (setq haskell-compile-cabal-build-command "stack build")
