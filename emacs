@@ -139,6 +139,9 @@ Return a list of installed packages or nil for every skipped package."
   (function (lambda () (setq evil-shift-width c-basic-offset)
                        (modify-syntax-entry ?_ "w") )))
 
+; Arduino
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
+
 ; Markdown
 (require 'markdown-mode)
 
