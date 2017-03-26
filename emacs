@@ -84,6 +84,7 @@ Return a list of installed packages or nil for every skipped package."
 ; Case sensitive tags search
 (setq tags-case-fold-search nil)
 
+
 ; EVIL
 (setq evil-want-C-u-scroll t)
 (require 'evil)
@@ -131,6 +132,12 @@ Return a list of installed packages or nil for every skipped package."
   ))
 (eval-after-load "haskell-cabal"
     '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
+
+; C++
+(setq-default c-basic-offset 4)
+(add-hook 'c++-mode-hook
+  (function (lambda () (setq evil-shift-width c-basic-offset)
+                       (modify-syntax-entry ?_ "w") )))
 
 ; Markdown
 (require 'markdown-mode)
