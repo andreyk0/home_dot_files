@@ -1,6 +1,5 @@
 (require 'package)
 
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
@@ -39,7 +38,6 @@ Return a list of installed packages or nil for every skipped package."
   'iedit
   'magit
   'markdown-mode
-  'org-plus-contrib
   'powerline
   'projectile
   'rainbow-delimiters
@@ -120,18 +118,23 @@ Return a list of installed packages or nil for every skipped package."
 ; Haskell
 (setq haskell-process-type 'stack-ghci)
 (setq haskell-compile-cabal-build-command "stack build")
+
 (require 'haskell-mode)
-(require 'hindent)
-(add-hook 'haskell-mode-hook #'hindent-mode)
 (require 'rainbow-delimiters)
+(require 'hindent)
+
+(add-hook 'haskell-mode-hook #'hindent-mode)
 (add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
+
 (add-to-list 'interpreter-mode-alist '("stack" . haskell-mode))
+
 (eval-after-load "haskell-mode" '(progn
   (define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile)
   (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-mode-format-imports)
   ))
 (eval-after-load "haskell-cabal"
     '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
+
 
 ; C++
 (setq-default c-basic-offset 2)
@@ -173,10 +176,9 @@ Return a list of installed packages or nil for every skipped package."
  '(custom-safe-themes
    (quote
     ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
- '(org-agenda-files (quote ("~/notes/todo.org")))
  '(package-selected-packages
    (quote
-    (dockerfile-mode evil-magit solarized-theme rainbow-delimiters powerline magit iedit hindent helm-projectile haskell-mode evil-visual-mark-mode ensime))))
+    (dockerfile-mode evil-magit solarized-theme rainbow-delimiters powerline magit iedit helm-projectile haskell-mode evil-visual-mark-mode ensime))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -1,7 +1,11 @@
 . ~/.shenv
 
-autoload -U compinit
-compinit
+fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completion $fpath)
+
+autoload -Uz compinit && compinit -i
+
+
 setopt completeinword
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
