@@ -121,8 +121,12 @@ Return a list of installed packages or nil for every skipped package."
 (require 'intero)
 (require 'flycheck)
 
+(define-key intero-mode-map (kbd "C-c C-o") 'haskell-mode-format-imports)
+
 (add-hook 'haskell-mode-hook 'intero-mode)
+(add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
 (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
+
 
 ;;; (setq haskell-process-type 'stack-ghci)
 ;;; (setq haskell-compile-cabal-build-command "stack build")
