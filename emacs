@@ -44,6 +44,7 @@ Return a list of installed packages or nil for every skipped package."
   'solarized-theme
   'xterm-color
   'yaml-mode
+  'intero
   )
 
 ; ENV
@@ -116,25 +117,32 @@ Return a list of installed packages or nil for every skipped package."
 
 
 ; Haskell
-(setq haskell-process-type 'stack-ghci)
-(setq haskell-compile-cabal-build-command "stack build")
 
-(require 'haskell-mode)
-(require 'rainbow-delimiters)
-(require 'hindent)
+(require 'intero)
+(require 'flycheck)
 
-(add-hook 'haskell-mode-hook #'hindent-mode)
-(add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'haskell-mode-hook 'intero-mode)
+(flycheck-add-next-checker 'intero '(warning . haskell-hlint))
 
-(add-to-list 'interpreter-mode-alist '("stack" . haskell-mode))
-
-(eval-after-load "haskell-mode" '(progn
-  (define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile)
-  (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-mode-format-imports)
-  ))
-(eval-after-load "haskell-cabal"
-    '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
-
+;;; (setq haskell-process-type 'stack-ghci)
+;;; (setq haskell-compile-cabal-build-command "stack build")
+;;;
+;;; (require 'haskell-mode)
+;;; (require 'rainbow-delimiters)
+;;; (require 'hindent)
+;;;
+;;; (add-hook 'haskell-mode-hook #'hindent-mode)
+;;; (add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
+;;;
+;;; (add-to-list 'interpreter-mode-alist '("stack" . haskell-mode))
+;;;
+;;; (eval-after-load "haskell-mode" '(progn
+;;;   (define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile)
+;;;   (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-mode-format-imports)
+;;;   ))
+;;; (eval-after-load "haskell-cabal"
+;;;     '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
+;;;
 
 ; C++
 (setq-default c-basic-offset 2)
