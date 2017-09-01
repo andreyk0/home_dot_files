@@ -1,6 +1,8 @@
 *.swp
 .DS_Store
 .cache
+.dir-locals.el
 /.idea
+/.sources
 /tags
 TAGS
