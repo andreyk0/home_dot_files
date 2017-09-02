@@ -190,7 +190,10 @@ Return a list of installed packages or nil for every skipped package."
     ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(package-selected-packages
    (quote
-    (dockerfile-mode evil-magit solarized-theme rainbow-delimiters powerline magit iedit helm-projectile haskell-mode evil-visual-mark-mode ensime))))
+    (dockerfile-mode evil-magit solarized-theme rainbow-delimiters powerline magit iedit helm-projectile haskell-mode evil-visual-mark-mode ensime)))
+ '(safe-local-variable-values
+   (quote
+    ((intero-targets "amazonka-core:lib" "amazonka-core:test:tests")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
