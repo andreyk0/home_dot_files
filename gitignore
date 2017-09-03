@@ -1,3 +1,4 @@
+*.prof
 *.swp
 .DS_Store
 .cache
