@@ -129,32 +129,13 @@ Return a list of installed packages or nil for every skipped package."
 (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
 
 
-;;; (setq haskell-process-type 'stack-ghci)
-;;; (setq haskell-compile-cabal-build-command "stack build")
-;;;
-;;; (require 'haskell-mode)
-;;; (require 'rainbow-delimiters)
-;;; (require 'hindent)
-;;;
-;;; (add-hook 'haskell-mode-hook #'hindent-mode)
-;;; (add-hook 'haskell-mode-hook #'rainbow-delimiters-mode)
-;;;
-;;; (add-to-list 'interpreter-mode-alist '("stack" . haskell-mode))
-;;;
-;;; (eval-after-load "haskell-mode" '(progn
-;;;   (define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile)
-;;;   (define-key haskell-mode-map (kbd "C-c C-i") 'haskell-mode-format-imports)
-;;;   ))
-;;; (eval-after-load "haskell-cabal"
-;;;     '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
-;;;
-
 
 ; JSON
 (add-hook 'json-mode-hook
           (lambda ()
             (make-local-variable 'js-indent-level)
-            (setq js-indent-level 2)))
+            (setq js-indent-level 2)) )
+(add-hook 'json-mode-hook #'flycheck-mode )
 
 ; C++
 (setq-default c-basic-offset 2)
