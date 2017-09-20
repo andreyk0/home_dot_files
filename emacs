@@ -36,6 +36,8 @@ Return a list of installed packages or nil for every skipped package."
   'helm-projectile
   'hindent
   'iedit
+  'intero
+  'json-mode
   'magit
   'markdown-mode
   'powerline
@@ -44,7 +46,6 @@ Return a list of installed packages or nil for every skipped package."
   'solarized-theme
   'xterm-color
   'yaml-mode
-  'intero
   )
 
 ; ENV
@@ -148,6 +149,13 @@ Return a list of installed packages or nil for every skipped package."
 ;;;     '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
 ;;;
 
+
+; JSON
+(add-hook 'json-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq js-indent-level 2)))
+
 ; C++
 (setq-default c-basic-offset 2)
 (add-hook 'c++-mode-hook
@@ -193,7 +201,8 @@ Return a list of installed packages or nil for every skipped package."
     (dockerfile-mode evil-magit solarized-theme rainbow-delimiters powerline magit iedit helm-projectile haskell-mode evil-visual-mark-mode ensime)))
  '(safe-local-variable-values
    (quote
-    ((intero-targets "amazonka-core:lib" "amazonka-core:test:tests")))))
+    ((intero-targets "amazonka-s3-encryption:lib" "amazonka-s3-encryption:test:amazonka-s3-encryption-test")
+     (intero-targets "amazonka-core:lib" "amazonka-core:test:tests")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
