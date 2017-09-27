@@ -31,6 +31,7 @@ Return a list of installed packages or nil for every skipped package."
   'ensime
   'evil
   'evil-magit
+  'go-mode
   'haskell-mode
   'helm
   'helm-projectile
@@ -179,7 +180,7 @@ Return a list of installed packages or nil for every skipped package."
     ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(package-selected-packages
    (quote
-    (dockerfile-mode evil-magit solarized-theme rainbow-delimiters powerline magit iedit helm-projectile haskell-mode evil-visual-mark-mode ensime)))
+    (go-mode dockerfile-mode evil-magit solarized-theme rainbow-delimiters powerline magit iedit helm-projectile haskell-mode evil-visual-mark-mode ensime)))
  '(safe-local-variable-values
    (quote
     ((intero-targets "amazonka-s3-encryption:lib" "amazonka-s3-encryption:test:amazonka-s3-encryption-test")
