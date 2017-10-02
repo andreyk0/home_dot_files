@@ -176,7 +176,15 @@ Return a list of installed packages or nil for every skipped package."
 
 
 ; Frame title format
-(setq frame-title-format '("%b"))
+(setq frame-title-format
+  '(:eval
+    (if buffer-file-name
+        (replace-regexp-in-string
+         "\\\\" "/"
+         (replace-regexp-in-string
+          (regexp-quote (getenv "HOME")) "~"
+          (convert-standard-filename buffer-file-name)))
+      (buffer-name))))
 
 
 (custom-set-variables
