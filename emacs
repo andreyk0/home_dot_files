@@ -166,6 +166,15 @@ Return a list of installed packages or nil for every skipped package."
        (setq font-lock-unfontify-region-function 'xterm-color-unfontify-region))
 
 
+; Go
+(defun my-go-mode-hook ()
+      (setq tab-width 2 indent-tabs-mode 1)
+      (define-key evil-normal-state-map (kbd "C-]") 'godef-jump)
+      (local-set-key (kbd "C-]") 'godef-jump))
+(add-hook 'go-mode-hook 'my-go-mode-hook)
+
+
+
 ; Frame title format
 (setq frame-title-format '("%b"))
 
