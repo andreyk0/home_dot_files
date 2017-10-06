@@ -174,6 +174,12 @@ Return a list of installed packages or nil for every skipped package."
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 
+; Shell
+(add-hook 'sh-mode-hook
+          (lambda ()
+            (setq sh-basic-offset 2)
+            (setq evil-shift-width sh-basic-offset)
+            ) )
 
 ; Frame title format
 (setq frame-title-format
