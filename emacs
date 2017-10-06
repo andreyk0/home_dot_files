@@ -90,6 +90,8 @@ Return a list of installed packages or nil for every skipped package."
 (setq evil-want-C-u-scroll t)
 (require 'evil)
 (evil-mode t)
+(require 'comint)
+(define-key evil-insert-state-map (kbd "C-x C-f") 'comint-dynamic-complete-filename)
 
 ; Magit
 (require 'evil-magit)
