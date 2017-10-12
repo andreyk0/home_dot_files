@@ -45,6 +45,7 @@ Return a list of installed packages or nil for every skipped package."
   'projectile
   'rainbow-delimiters
   'solarized-theme
+  'terraform-mode
   'xterm-color
   'yaml-mode
   )
