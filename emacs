@@ -184,6 +184,7 @@ Return a list of installed packages or nil for every skipped package."
 (add-hook 'sh-mode-hook
           (lambda ()
             (setq sh-basic-offset 2)
+            (setq sh-indentation 2)
             (setq evil-shift-width sh-basic-offset)
             ) )
 
