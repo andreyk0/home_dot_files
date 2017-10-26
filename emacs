@@ -108,6 +108,10 @@ Return a list of installed packages or nil for every skipped package."
 ; Projectile
 (require 'projectile)
 (projectile-mode t)
+(setq projectile-mode-line
+         '(:eval (format " Projectile[%s]"
+                        (projectile-project-name))))
+
 (global-set-key [f1] 'projectile-run-eshell)
 
 ; Helm
