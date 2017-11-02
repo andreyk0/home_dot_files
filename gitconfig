@@ -27,6 +27,7 @@
   ci = !git commit
   wdiff = !git diff --color-words
   lg = !git log --graph
+  lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
 
 [diff]
   tool = vimdiff
