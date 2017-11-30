@@ -96,6 +96,7 @@ Return a list of installed packages or nil for every skipped package."
 (evil-mode t)
 (require 'comint)
 (define-key evil-insert-state-map (kbd "C-x C-f") 'comint-dynamic-complete-filename)
+(evil-ex-define-cmd "ls" 'helm-mini)
 
 ; Magit
 (require 'evil-magit)
