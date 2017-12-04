@@ -98,9 +98,13 @@ Return a list of installed packages or nil for every skipped package."
 (define-key evil-insert-state-map (kbd "C-x C-f") 'comint-dynamic-complete-filename)
 (evil-ex-define-cmd "ls" 'helm-mini)
 
+(with-eval-after-load 'evil
+    (defalias #'forward-evil-word #'forward-evil-symbol))
+
 ; Magit
 (require 'evil-magit)
 (global-set-key (kbd "C-c g") 'magit-status)
+
 
 ; Powerline
 (require 'powerline)
@@ -153,7 +157,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq-default c-basic-offset 2)
 (add-hook 'c++-mode-hook
   (function (lambda () (setq evil-shift-width c-basic-offset)
-                       (modify-syntax-entry ?_ "w") )))
+                       )))
 
 ; Arduino
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
