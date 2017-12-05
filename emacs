@@ -133,6 +133,19 @@ Return a list of installed packages or nil for every skipped package."
 (global-set-key [f4] 'helm-etags-select)
 
 
+; Make
+; GNU make by default
+(setq auto-mode-alist
+        (cons '("\\Makefile\\'" . makefile-gmake-mode) auto-mode-alist))
+
+; Highlight leading spaces
+ (add-hook 'makefile-mode-hook
+      (lambda ()
+       (font-lock-add-keywords nil
+        '(("^[ ]+" .  makefile-space)
+         ))))
+
+
 ; Haskell
 
 (require 'intero)
