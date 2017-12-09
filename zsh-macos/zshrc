@@ -1,0 +1,17 @@
+. $(dirname $(readlink ${(%):-%x}))/../zsh-common/zshrc
+
+alias ls='gls --color'
+alias ll='gls --color -lF'
+alias st='git status'
+
+alias env-mobile='export AWS_PROFILE=aws-mobile'
+alias env-pii='export AWS_PROFILE=hbc-pii'
+
+e () {
+  emacsclient -cnq "$@"
+}
+
+export CLICOLOR=1
+export LSCOLORS=dxfxcxdxbxegedabagacad
+eval $(gdircolors ~/.dircolors)
+

@@ -1,0 +1,17 @@
+typeset -U path
+path=(
+  ~/sbin
+  ~/bin
+  ~/.local/bin
+  ~/go/bin
+  /usr/local/opt/gpg-agent/bin
+  /usr/local/sbin
+  /usr/local/bin
+  /web/mobile-service-tools/bin
+  /usr/sbin
+  /sbin
+  /usr/bin
+  /bin
+
+ $path[@]
+)
