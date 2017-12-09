@@ -36,4 +36,5 @@ REPORTTIME=10
 autoload -Uz promptinit
 promptinit
 
-PROMPT='%# '
+PROMPT='%F{yellow}%#%f '
+RPROMPT='%F{yellow}%1~%f'
