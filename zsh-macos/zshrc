@@ -1,4 +1,4 @@
-. $(dirname $(readlink ${(%):-%x}))/../zsh-common/zshrc
+. $HOME/.dotfiles/zsh-common/zshrc
 
 alias ls='gls --color'
 alias ll='gls --color -lF'
