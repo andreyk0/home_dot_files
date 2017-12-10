@@ -45,7 +45,7 @@ values."
      (haskell :variables
               haskell-completion-backend 'intero
               haskell-process-type 'stack-ghci
-              haskell-compile-cabal-build-command "stack build --ghc-options=-ferror-spans"
+              haskell-compile-cabal-build-command "stack build --fast --test --bench --no-run-tests --no-run-benchmarks --ghc-options=-ferror-spans"
               haskell-compile-command "stack exec ghc -- -Wall -ferror-spans -fforce-recomp -c %sbuild" )
      markdown
      scala
