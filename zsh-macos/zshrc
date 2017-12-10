@@ -7,7 +7,7 @@ alias st='git status'
 alias env-mobile='export AWS_PROFILE=aws-mobile'
 alias env-pii='export AWS_PROFILE=hbc-pii'
 
-E() { open -a /Applications/Emacs.app --args "$@" }
+E() { open -a /Applications/Emacs.app --args "$@" & disown }
 e() { command emacsclient -nq "$@" }
 
 export CLICOLOR=1
