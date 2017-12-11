@@ -4,6 +4,8 @@
 .DS_Store
 .cache
 .dir-locals.el
+.ensime
+.ensime_cache
 /*.aux
 /*.hp
 /*.ps
