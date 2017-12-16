@@ -7,32 +7,21 @@
   branch = auto
   status = auto
 
-[user]
-  # export GIT_AUTHOR_NAME="Andrey Kartashov"
-  # export GIT_AUTHOR_EMAIL="andrey.kartashov@gmail.com"
-  # export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-  # export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
-
 [push]
   default = tracking
 
 [alias]
-  #datetag = !git tag `date \"+%Y-%m-%d-%H%M%S\"`
-  #rctag = !git tag `date \"+%Y-%m-%d-%H%M%S\"`-rc
-  #livetag = !git tag `date \"+%Y-%m-%d-%H%M%S\"`-live
-
+  ci = !git commit
+  lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
+  lg = !git log --graph
   rtag = !git tag r`date \"+%Y-%m-%d-%H%M%S\"`
   st = !git status
   up = ! git checkout master && git pull && git fetch --tags -p && git-delete-merged-branches && git status
-  ci = !git commit
   wdiff = !git diff --color-words
-  lg = !git log --graph
-  lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
 
 [diff]
   tool = vimdiff
 	ignoreSubmodules = dirty
-
 
 [commit]
 	gpgsign = true
@@ -43,3 +32,5 @@
 # git config core.ignorecase false
 #
 #
+[user]
+	signingkey = A50B5999

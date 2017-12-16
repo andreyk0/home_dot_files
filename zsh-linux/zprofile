@@ -1,0 +1,15 @@
+typeset -U path
+path=(
+  ~/bin
+  /bin
+  ~/go/bin
+  ~/.local/bin
+  ~/sbin
+  /sbin
+  /usr/bin
+  /usr/local/bin
+  /usr/local/sbin
+  /usr/sbin
+
+ $path[@]
+)

@@ -1,0 +1,29 @@
+. $HOME/.dotfiles/zsh-common/zshrc
+
+
+E() { emacs -mm "$@" & disown }
+e() { emacsclient -nq "$@" }
+
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+
+  export CLICOLOR=1
+  export LSCOLORS=dxfxcxdxbxegedabagacad
+
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ls='ls --color=auto'
+alias ll='ls -lF'
+alias la='ls -A'
+
+alias st='git status'
+
+alias trm='trash-put'
+alias open='xdg-open'
