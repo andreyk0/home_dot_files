@@ -328,6 +328,7 @@ you should place your code here."
   (setq powerline-default-separator 'curve)
   (setq ns-use-srgb-colorspace nil)
   (setq find-file-visit-truename 't)
+  (setq-default evil-escape-key-sequence "HG")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
