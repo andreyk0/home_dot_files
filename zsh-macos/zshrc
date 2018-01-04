@@ -12,5 +12,5 @@ e() { command emacsclient -nq "$@" }
 
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
-eval $(gdircolors ~/.dircolors)
+eval $(/usr/local/bin/gdircolors ~/.dircolors)
 
