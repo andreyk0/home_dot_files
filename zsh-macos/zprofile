@@ -4,6 +4,7 @@ path=(
   ~/bin
   ~/.local/bin
   ~/go/bin
+  ~/.npm/node_modules/bin
   /usr/local/opt/gpg-agent/bin
   /usr/local/sbin
   /usr/local/bin

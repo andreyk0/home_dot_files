@@ -8,5 +8,7 @@ export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 export GIT=/usr/local/bin/git
 
+export GOPATH=~/.go
+
 #export _JAVA_OPTIONS=-Djava.awt.headless=true
 export TMUX_DEFAULT_COMMAND="reattach-to-user-namespace -l zsh"
