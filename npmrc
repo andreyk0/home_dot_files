@@ -1,0 +1,2 @@
+prefix = "~/.npm/node_modules"
+cache = "~/.npm/cache"
