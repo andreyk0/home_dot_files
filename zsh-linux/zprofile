@@ -4,7 +4,7 @@ path=(
   ~/bin
   ~/go/bin
   ~/.local/bin
-  ~/.npm-global/bin
+  ~/.npm/node_modules/bin
   /sbin
   /bin
   /usr/sbin
