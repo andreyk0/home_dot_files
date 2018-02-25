@@ -40,6 +40,7 @@ values."
      better-defaults
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode)
+     company-math
      docker
      emacs-lisp
      git
