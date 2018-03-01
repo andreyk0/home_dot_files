@@ -342,6 +342,11 @@ you should place your code here."
   (setq tab-always-indent t)
   (setq c-basic-offset 2
         sh-basic-offset 2)
+
+  (setq history-length 100)
+  (put 'minibuffer-history 'history-length 50)
+  (put 'evil-ex-history 'history-length 50)
+  (put 'kill-ring 'history-length 25)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
