@@ -318,7 +318,14 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  )
+
+  (setq-default
+    evil-escape-key-sequence "HG"
+
+    ;; Default indents
+    js2-basic-offset 2
+    js-indent-level 2
+  ))
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -330,13 +337,11 @@ you should place your code here."
   (setq powerline-default-separator 'curve)
   (setq ns-use-srgb-colorspace nil)
   (setq find-file-visit-truename 't)
-  (setq-default evil-escape-key-sequence "HG")
 
   ;; Favorite indents for various modes.
   (setq tab-always-indent t)
   (setq c-basic-offset 2
-        sh-basic-offset 2
-        js-indent-level 2)
+        sh-basic-offset 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
