@@ -40,7 +40,6 @@ values."
      better-defaults
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode)
-     company-math
      docker
      emacs-lisp
      git
@@ -334,6 +333,10 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  (set-language-environment "UTF-8")
+  (set-default-coding-systems 'utf-8)
+
   (setq powerline-default-separator 'curve)
   (setq ns-use-srgb-colorspace nil)
   (setq find-file-visit-truename 't)
