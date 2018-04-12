@@ -354,6 +354,8 @@ you should place your code here."
   (put 'minibuffer-history 'history-length 50)
   (put 'evil-ex-history 'history-length 50)
   (put 'kill-ring 'history-length 25)
+
+  (setq-default mode-line-format nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
