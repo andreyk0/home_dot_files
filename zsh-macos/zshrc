@@ -10,4 +10,4 @@ e() { command emacsclient -nq "$@" }
 export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 eval $(/usr/local/bin/gdircolors ~/.dircolors)
-
+eval "$(jenv init -)"
