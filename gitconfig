@@ -16,7 +16,7 @@
 	lg = !git log --graph
 	rtag = !git tag r`date \"+%Y-%m-%d-%H%M%S\"`
 	st = !git status
-	up = ! git checkout master && git pull && git fetch --tags -p && git-delete-merged-branches && git status
+	up = ! git fetch --tags -p &&  git-delete-merged-branches && git status
 	wdiff = !git diff --color-words
 
 [diff]
