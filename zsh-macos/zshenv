@@ -1,11 +1,6 @@
 export SHELL=/usr/local/bin/zsh
 
 export TRASHDIR=$HOME/Trash
-
-export GIT_AUTHOR_NAME="Andrey Kartashov"
-export GIT_AUTHOR_EMAIL="akartashov@gilt.com"
-export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 export GIT=/usr/local/bin/git
 
 export GOPATH=~/.go

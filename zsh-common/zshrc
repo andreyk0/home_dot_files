@@ -41,3 +41,11 @@ RPROMPT='%F{yellow}%1~%f'
 
 
 alias ag="ag --color-path '1;35' --color-line-number '1;34' --color-match '30;47' --color --break --group --heading"
+
+# Launch GPG agent
+gpgconf --launch gpg-agent
+
+# GPG/SSH env
+GPG_TTY=$(/usr/bin/tty)
+SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
+export GPG_TTY SSH_AUTH_SOCK

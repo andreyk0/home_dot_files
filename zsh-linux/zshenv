@@ -1,12 +1,6 @@
 . $HOME/.dotfiles/zsh-linux/zprofile
 
 export SHELL=/usr/bin/zsh
-
-export GIT_AUTHOR_NAME="Andrey Kartashov"
-export GIT_AUTHOR_EMAIL="andrey.kartashov@gmail.com"
-export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
-export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 export GIT=/usr/bin/git
 
 export MEDIA_ROOT=/media/andrey/T2
-

@@ -1,31 +1,31 @@
 [core]
-  excludesfile = ~/.gitignore
-  editor = vim
+	excludesfile = ~/.gitignore
+	editor = vim
 
 [color]
-  diff = auto
-  branch = auto
-  status = auto
+	diff = auto
+	branch = auto
+	status = auto
 
 [push]
-  default = tracking
+	default = tracking
 
 [alias]
-  ci = !git commit
-  lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
-  lg = !git log --graph
-  rtag = !git tag r`date \"+%Y-%m-%d-%H%M%S\"`
-  st = !git status
-  up = ! git checkout master && git pull && git fetch --tags -p && git-delete-merged-branches && git status
-  wdiff = !git diff --color-words
+	ci = !git commit
+	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
+	lg = !git log --graph
+	rtag = !git tag r`date \"+%Y-%m-%d-%H%M%S\"`
+	st = !git status
+	up = ! git checkout master && git pull && git fetch --tags -p && git-delete-merged-branches && git status
+	wdiff = !git diff --color-words
 
 [diff]
-  tool = vimdiff
-  ignoreSubmodules = dirty
+	tool = vimdiff
+	ignoreSubmodules = dirty
 
 [commit]
-  gpgsign = true
-  template = ~/.git_commit_template
+	gpgsign = true
+	template = ~/.git_commit_template
 
 #
 #
@@ -33,4 +33,6 @@
 #
 #
 [user]
-  signingkey = 202DA9BAE8F0FE08
+	signingkey = 202DA9BAE8F0FE08
+	name = Andrey Kartashov
+	email = andrey.kartashov@gmail.com
