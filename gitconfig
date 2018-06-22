@@ -1,6 +1,6 @@
 [core]
   excludesfile = ~/.gitignore
-	editor = vim
+  editor = vim
 
 [color]
   diff = auto
@@ -21,10 +21,10 @@
 
 [diff]
   tool = vimdiff
-	ignoreSubmodules = dirty
+  ignoreSubmodules = dirty
 
 [commit]
-	gpgsign = true
+  gpgsign = true
   template = ~/.git_commit_template
 
 #
@@ -33,4 +33,4 @@
 #
 #
 [user]
-	signingkey = A50B5999
+  signingkey = 202DA9BAE8F0FE08
