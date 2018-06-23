@@ -11,3 +11,11 @@ export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad
 eval $(/usr/local/bin/gdircolors ~/.dircolors)
 eval "$(jenv init -)"
+
+# Launch GPG agent
+gpgconf --launch gpg-agent
+
+# GPG/SSH env
+GPG_TTY=$(/usr/bin/tty)
+SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
+export GPG_TTY SSH_AUTH_SOCK

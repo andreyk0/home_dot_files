@@ -27,3 +27,11 @@ alias st='git status'
 
 alias trm='trash-put'
 alias open='xdg-open'
+
+# Launch GPG agent
+gpgconf --launch gpg-agent
+-
+# GPG/SSH env
+GPG_TTY=$(/usr/bin/tty)
+SSH_AUTH_SOCK="/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"
+export GPG_TTY SSH_AUTH_SOCK
