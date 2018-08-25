@@ -28,6 +28,8 @@ alias st='git status'
 alias trm='trash-put'
 alias open='xdg-open'
 
+alias Nixed='. .nix-profile/etc/profile.d/nix.sh'
+
 # Launch GPG agent
 gpgconf --launch gpg-agent
 -
