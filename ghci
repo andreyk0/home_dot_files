@@ -1,11 +1,12 @@
 :set prompt "\ESC[34mλ \ESC[m"
+:set prompt-cont "\ESC[34m| \ESC[m"
 
 :set +t
+:set +m
+
 :set -XForeignFunctionInterface
 :set -XNoMonomorphismRestriction
 :set -XOverloadedStrings
 :set -XQuasiQuotes
 :set -fno-print-bind-result
 :set -fno-warn-type-defaults
-
-:def he \str -> return $ ":! hoogle --count=20 \'" ++ (concatMap (\c -> if '\'' == c then "'\"'\"'" else [c]) str) ++ "\' | less -SX"
