@@ -30,6 +30,8 @@ alias open='xdg-open'
 
 alias Nixed='. .nix-profile/etc/profile.d/nix.sh'
 
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
+
 # Launch GPG agent
 gpgconf --launch gpg-agent
 -
