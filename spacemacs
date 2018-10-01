@@ -448,7 +448,13 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
     ;; Default indents
     js2-basic-offset 2
     js-indent-level 2
-  ))
+    )
+
+    ;; do linting on-the-fly
+    (with-eval-after-load 'intero
+      (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
+      )
+  )
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.
