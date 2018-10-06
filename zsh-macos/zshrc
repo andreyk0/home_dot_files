@@ -1,4 +1,5 @@
-. $HOME/.dotfiles/zsh-common/zshrc
+source $HOME/.dotfiles/zsh-common/zshrc
+source /usr/local/share/zsh/site-functions/aws_zsh_completer.sh
 
 alias ls='gls --color'
 alias ll='gls --color -lF'
