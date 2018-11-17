@@ -1,7 +1,7 @@
 . $HOME/.dotfiles/zsh-common/zshrc
 
 
-E() { emacs -mm "$@" & disown }
+E() { emacs "$@" & disown }
 e() { emacsclient -nq "$@" }
 
 
