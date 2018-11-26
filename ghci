@@ -2,7 +2,6 @@
 :set prompt-cont "\ESC[34m| \ESC[m"
 
 :set +t
-:set +m
 
 :set -XForeignFunctionInterface
 :set -XNoMonomorphismRestriction
