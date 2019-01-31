@@ -33,20 +33,15 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(systemd
+   '(better-defaults
+
+     systemd
      csv
      graphviz
      typescript
      sql
      rust
      python
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     auto-completion
-     better-defaults
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode)
      docker
@@ -60,9 +55,7 @@ This function should only modify configuration layer settings."
               haskell-enable-hindent-style "johan-tibell"
               haskell-process-type 'stack-ghci
               )
-     helm
      emacs-lisp
-     neotree
      html
      javascript
      markdown
@@ -73,10 +66,14 @@ This function should only modify configuration layer settings."
              shell-default-term-shell "zsh"
              shell-default-height 30
              shell-default-position 'bottom)
-     spell-checking
-     syntax-checking
      terraform
      yaml
+
+     helm
+     neotree
+     spell-checking
+     syntax-checking
+     auto-completion
      )
 
    ;; List of additional packages that will be installed without being
@@ -534,7 +531,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yapfify yaml-mode xterm-color web-mode web-beautify unfill toml-mode tide typescript-mode tagedit systemd sql-indent smeargle slim-mode shell-pop seeing-is-believing scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocop rspec-mode robe rbenv rake racer pyvenv pytest pyenv-mode py-isort pug-mode psci purescript-mode psc-ide prettier-js pippel pipenv pip-requirements noflet neotree mwim mvn multi-term mmm-mode minitest meghanada maven-test-mode markdown-toc magit-svn magit-gitflow livid-mode skewer-mode live-py-mode json-navigator hierarchy js2-refactor multiple-cursors js2-mode js-doc intero importmagic epc ctable concurrent deferred impatient-mode htmlize simple-httpd hlint-refactor hindent helm-rtags helm-pydoc helm-hoogle helm-gitignore helm-git-grep helm-css-scss helm-company helm-c-yasnippet haskell-snippets haml-mode groovy-mode groovy-imports pcache graphviz-dot-mode gradle-mode google-c-style godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-rust flycheck-rtags flycheck-pos-tip pos-tip flycheck-haskell haskell-mode flycheck evil-magit magit git-commit with-editor eshell-z eshell-prompt-extras esh-help ensime sbt-mode scala-mode emmet-mode dockerfile-mode docker json-mode tablist magit-popup docker-tramp json-snatcher json-reformat disaster cython-mode csv-mode company-web web-completion-data company-terraform terraform-mode hcl-mode company-tern dash-functional tern company-statistics company-rtags rtags company-go go-mode company-emacs-eclim eclim company-cabal company-c-headers company-anaconda company cmm-mode clang-format chruby cargo markdown-mode rust-mode bundler inf-ruby auto-yasnippet yasnippet auto-dictionary anaconda-mode pythonic ac-ispell auto-complete ws-butler writeroom-mode winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package treemacs-projectile treemacs-evil toc-org symon string-inflection spaceline-all-the-icons restart-emacs request rainbow-delimiters popwin persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file nameless move-text macrostep lorem-ipsum link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio font-lock+ flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish define-word counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line))))
+    (yasnippet-snippets intero helm-company helm-c-yasnippet fuzzy company-web web-completion-data company-terraform company-tern company-statistics company-rtags company-go company-emacs-eclim company-cabal company-c-headers company-anaconda auto-yasnippet ac-ispell auto-complete yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill toml-mode toc-org tide terraform-mode tern tagedit systemd symon string-inflection sql-indent spaceline-all-the-icons smeargle slim-mode shell-pop seeing-is-believing scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocop rspec-mode robe restart-emacs rbenv rake rainbow-delimiters racer pyvenv pytest pyenv-mode py-isort pug-mode psci psc-ide prettier-js popwin pippel pipenv pip-requirements persp-mode password-generator paradox overseer org-plus-contrib org-bullets open-junk-file noflet neotree nameless mwim mvn multi-term move-text mmm-mode minitest meghanada maven-test-mode markdown-toc magit-svn magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode link-hint json-navigator js2-refactor js-doc indent-guide importmagic impatient-mode hungry-delete hlint-refactor hindent highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-rtags helm-pydoc helm-purpose helm-projectile helm-mode-manager helm-make helm-hoogle helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-ag haskell-snippets groovy-mode groovy-imports graphviz-dot-mode gradle-mode google-translate google-c-style golden-ratio godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md font-lock+ flyspell-correct-helm flycheck-rust flycheck-rtags flycheck-pos-tip flycheck-haskell flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-nerd-commenter evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help ensime emmet-mode elisp-slime-nav editorconfig eclim dumb-jump dotenv-mode doom-modeline dockerfile-mode docker disaster diminish define-word cython-mode csv-mode counsel-projectile column-enforce-mode cmm-mode clean-aindent-mode clang-format chruby centered-cursor-mode cargo bundler auto-highlight-symbol auto-dictionary auto-compile anaconda-mode aggressive-indent ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
