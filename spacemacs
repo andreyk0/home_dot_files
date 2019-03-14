@@ -92,6 +92,8 @@ This function should only modify configuration layer settings."
    ;; hl-todo results in long fontification times
    dotspacemacs-excluded-packages '( hl-todo
                                      smartparens
+                                     yasnippet
+                                     auto-yasnippet
                                    )
 
    ;; Defines the behaviour of Spacemacs when installing packages.
