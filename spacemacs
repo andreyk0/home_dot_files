@@ -59,6 +59,7 @@ This function should only modify configuration layer settings."
      html
      javascript
      markdown
+     nixos
      purescript
      ruby
      scala
