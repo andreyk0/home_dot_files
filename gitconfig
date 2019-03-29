@@ -12,6 +12,9 @@
 
 [alias]
 	ci = !git commit
+	dm = !git diff origin/master
+	dh = !git diff HEAD
+	rhm = !git reset --hard origin/master
 	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
 	lg = !git log --graph
 	rtag = !git tag r`date \"+%Y-%m-%d-%H%M%S\"`
