@@ -62,6 +62,7 @@ This function should only modify configuration layer settings."
      nixos
      purescript
      ruby
+     rust
      scala
      (shell :variables
              shell-default-term-shell "zsh"

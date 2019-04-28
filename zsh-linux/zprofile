@@ -4,6 +4,7 @@ path=(
   ~/bin
   ~/go/bin
   ~/.local/bin
+  ~/.cargo/bin
   ~/.npm/node_modules/bin
   /sbin
   /bin
