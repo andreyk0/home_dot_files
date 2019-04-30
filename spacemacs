@@ -51,7 +51,7 @@ This function should only modify configuration layer settings."
      (haskell :variables
               haskell-compile-cabal-build-command "stack build --fast --test --bench --no-run-tests --no-run-benchmarks --ghc-options=-ferror-spans"
               haskell-compile-command "stack exec ghc -- -Wall -ferror-spans -fforce-recomp -c %sbuild"
-              haskell-completion-backend 'intero
+              ;;haskell-completion-backend 'intero
               haskell-enable-hindent-style "johan-tibell"
               haskell-process-type 'stack-ghci
               )
@@ -469,9 +469,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
     )
 
     ;; do linting on-the-fly
-    (with-eval-after-load 'intero
-      (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
-      )
+    ;;(with-eval-after-load 'intero
+    ;;  (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
+    ;;  )
   )
 
 (defun dotspacemacs/user-load ()
