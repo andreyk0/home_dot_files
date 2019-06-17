@@ -2,10 +2,46 @@
 :set prompt-cont "\ESC[34m| \ESC[m"
 
 :set +t
-
-:set -XForeignFunctionInterface
-:set -XNoMonomorphismRestriction
-:set -XOverloadedStrings
-:set -XQuasiQuotes
 :set -fno-print-bind-result
 :set -fno-warn-type-defaults
+
+-- https://github.com/commercialhaskell/rio#language-extensions
+:set -XAutoDeriveTypeable
+:set -XBangPatterns
+:set -XBinaryLiterals
+:set -XConstraintKinds
+:set -XDataKinds
+:set -XDefaultSignatures
+:set -XDeriveDataTypeable
+:set -XDeriveFoldable
+:set -XDeriveFunctor
+:set -XDeriveGeneric
+:set -XDeriveTraversable
+:set -XDoAndIfThenElse
+:set -XEmptyDataDecls
+:set -XExistentialQuantification
+:set -XFlexibleContexts
+:set -XFlexibleInstances
+:set -XFunctionalDependencies
+:set -XGADTs
+:set -XGeneralizedNewtypeDeriving
+:set -XInstanceSigs
+:set -XKindSignatures
+:set -XLambdaCase
+:set -XMonadFailDesugaring
+:set -XMultiParamTypeClasses
+:set -XMultiWayIf
+:set -XNamedFieldPuns
+:set -XNoImplicitPrelude
+:set -XOverloadedStrings
+:set -XPartialTypeSignatures
+:set -XPatternGuards
+:set -XPolyKinds
+:set -XRankNTypes
+:set -XRecordWildCards
+:set -XScopedTypeVariables
+:set -XStandaloneDeriving
+:set -XTupleSections
+:set -XTypeFamilies
+:set -XTypeSynonymInstances
+:set -XViewPatterns
