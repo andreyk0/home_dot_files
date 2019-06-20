@@ -32,7 +32,7 @@
 :set -XMultiParamTypeClasses
 :set -XMultiWayIf
 :set -XNamedFieldPuns
-:set -XNoImplicitPrelude
+-- :set -XNoImplicitPrelude
 :set -XOverloadedStrings
 :set -XPartialTypeSignatures
 :set -XPatternGuards
