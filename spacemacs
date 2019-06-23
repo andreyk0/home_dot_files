@@ -517,6 +517,8 @@ you should place your code here."
 
   ;; less resource intensive on larger projects
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+
+  (server-start)
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
