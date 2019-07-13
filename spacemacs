@@ -49,7 +49,7 @@ This function should only modify configuration layer settings."
      git
      go
      (haskell :variables
-              haskell-compile-cabal-build-command "stack build --fast --test --bench --no-run-tests --no-run-benchmarks --ghc-options=-ferror-spans"
+              haskell-compile-cabal-build-command "stack build --fast --test --bench --no-run-tests --no-run-benchmarks --ghc-options=-ferror-spans ."
               haskell-compile-command "stack exec ghc -- -Wall -ferror-spans -fforce-recomp -c %sbuild"
               ;;haskell-completion-backend 'intero
               haskell-enable-hindent-style "johan-tibell"
