@@ -466,6 +466,13 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
     ;; Default indents
     js2-basic-offset 2
     js-indent-level 2
+
+    dotspacemacs-default-font '("Source Code Pro"
+                                :size 14
+                                :weight normal
+                                :width normal
+                                :powerline-scale 1.1)
+
     )
 
     ;; do linting on-the-fly
