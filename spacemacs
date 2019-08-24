@@ -62,7 +62,6 @@ This function should only modify configuration layer settings."
      html
      javascript
      lsp
-     lsp-haskell
      markdown
      neotree
      nixos
@@ -521,13 +520,14 @@ you should place your code here."
   (setq jit-lock-stealth-time 0.5)
   (setq jit-lock-stealth-load nil)
 
-  ;; (setq haskell-stylish-on-save t)
+  (setq haskell-stylish-on-save t)
 
   ;; less resource intensive on larger projects
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
 
+  (setq-default yas-prompt-functions '(yas-ido-prompt yas-dropdown-prompt))
+
   (setq lsp-haskell-process-path-hie "hie-wrapper")
-  (require 'lsp-haskell)
   (add-hook 'haskell-mode-hook #'lsp)
 
   (server-start)
