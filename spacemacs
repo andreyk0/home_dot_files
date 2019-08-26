@@ -527,7 +527,10 @@ you should place your code here."
   (setq-default yas-prompt-functions '(yas-ido-prompt yas-dropdown-prompt))
 
   ;(setq haskell-stylish-on-save t)
+  (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "= =" 'haskell-mode-stylish-buffer)
+
   (setq lsp-haskell-process-path-hie "hie-wrapper")
+  (setq lsp-document-sync-method 'full)
   (require 'lsp-haskell)
   (add-hook 'haskell-mode-hook #'lsp)
 
