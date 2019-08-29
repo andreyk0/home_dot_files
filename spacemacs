@@ -1,6 +1,8 @@
 ;; -*- mode: emacs-lisp; lexical-binding: t -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 
 (defun dotspacemacs/layers ()
   "Layer configuration:
