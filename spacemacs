@@ -536,6 +536,10 @@ you should place your code here."
   (require 'lsp-haskell)
   (add-hook 'haskell-mode-hook #'lsp)
 
+  (spacemacs/toggle-centered-point-globally-on)
+  (spacemacs/toggle-indent-guide-globally-on)
+  (spacemacs/toggle-maximize-frame-on)
+
   (server-start)
   )
 (defun dotspacemacs/emacs-custom-settings ()
