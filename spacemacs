@@ -65,6 +65,7 @@ This function should only modify configuration layer settings."
      javascript
      lsp
      lsp-haskell
+     lsp-ui
      markdown
      neotree
      nixos
@@ -528,15 +529,18 @@ you should place your code here."
 
   (setq-default yas-prompt-functions '(yas-ido-prompt yas-dropdown-prompt))
 
-  ;(setq haskell-stylish-on-save t)
+  (setq haskell-stylish-on-save t)
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "= =" 'haskell-mode-stylish-buffer)
 
-  (setq lsp-haskell-process-path-hie "stack exec ghcide --")
-  (setq lsp-haskell-process-args-hie '())
+  (setq lsp-haskell-process-path-hie "hie-wrapper")
+  ;(setq lsp-haskell-process-args-hie '())
 
   (setq lsp-document-sync-method 'full)
   (require 'lsp-haskell)
   (add-hook 'haskell-mode-hook #'lsp)
+
+  (require 'lsp-ui)
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
   (spacemacs/toggle-centered-point-globally-on)
   (spacemacs/toggle-indent-guide-globally-on)
