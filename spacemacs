@@ -533,13 +533,14 @@ you should place your code here."
 
   (setq haskell-stylish-on-save t)
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "= =" 'haskell-mode-stylish-buffer)
+  (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "g T" 'helm-etags-select)
 
   (setq lsp-haskell-process-path-hie "hie-wrapper")
   ;(setq lsp-haskell-process-args-hie '())
 
   (setq lsp-document-sync-method 'full)
   (require 'lsp-haskell)
-  (add-hook 'haskell-mode-hook #'lsp)
+  ;;(add-hook 'haskell-mode-hook #'lsp)
 
   (require 'lsp-ui)
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
