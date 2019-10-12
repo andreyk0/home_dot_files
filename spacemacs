@@ -56,7 +56,6 @@ This function should only modify configuration layer settings."
      csv
      docker
      emacs-lisp
-     emacs-lisp
      git
      go
      graphviz
@@ -64,15 +63,12 @@ This function should only modify configuration layer settings."
      html
      javascript
      lsp
-     lsp-haskell
-     lsp-ui
      markdown
      neotree
      nixos
      purescript
      python
      ruby
-     rust
      rust
      scala
      spell-checking
@@ -229,7 +225,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
+   dotspacemacs-mode-line-theme '(vanilla)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -319,15 +315,15 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-loading-progress-bar nil
 
    ;; If non-nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
 
    ;; If non-nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
-   dotspacemacs-fullscreen-use-non-native nil
+   dotspacemacs-fullscreen-use-non-native t
 
    ;; If non-nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
@@ -377,7 +373,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
-   dotspacemacs-folding-method 'evil
+   dotspacemacs-folding-method 'origami
 
    ;; If non-nil `smartparens-strict-mode' will be enabled in programming modes.
    ;; (default nil)
@@ -395,7 +391,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server nil
+   dotspacemacs-enable-server t
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
@@ -441,7 +437,7 @@ It should only modify the values of Spacemacs settings."
    ;; `trailing' to delete only the whitespace at end of lines, `changed' to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup 'changed
 
    ;; Either nil or a number of seconds. If non-nil zone out after the specified
    ;; number of seconds. (default nil)
@@ -473,18 +469,28 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
     js2-basic-offset 2
     js-indent-level 2
 
-    dotspacemacs-default-font '("Source Code Pro"
-                                :size 14
-                                :weight normal
-                                :width normal
-                                :powerline-scale 1.1)
-
-    )
 
     ;; do linting on-the-fly
     ;;(with-eval-after-load 'intero
     ;;  (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
     ;;  )
+    )
+
+  ;; Platform-specific settings
+  (cond
+    ((eql window-system 'x) (setq-default
+      dotspacemacs-default-font '("Source Code Pro"
+                                 :size 16
+                                 :weight normal
+                                 :width normal)
+      ))
+
+    ((eql window-system 'mac) (setq-default
+      dotspacemacs-default-font '("Source Code Pro"
+                                 :size 14
+                                 :weight normal
+                                 :width normal))
+      ))
   )
 
 (defun dotspacemacs/user-load ()
@@ -547,9 +553,6 @@ you should place your code here."
 
   (spacemacs/toggle-centered-point-globally-on)
   (spacemacs/toggle-indent-guide-globally-on)
-  (spacemacs/toggle-maximize-frame-on)
-
-  (server-start)
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
