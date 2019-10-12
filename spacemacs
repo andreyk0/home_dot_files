@@ -485,7 +485,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
                                  :width normal)
       ))
 
-    ((eql window-system 'mac) (setq-default
+    ((eql window-system 'ns) (setq-default  ; mac
       dotspacemacs-default-font '("Source Code Pro"
                                  :size 14
                                  :weight normal
