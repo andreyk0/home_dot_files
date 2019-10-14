@@ -540,6 +540,7 @@ you should place your code here."
   (setq haskell-stylish-on-save t)
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "= =" 'haskell-mode-stylish-buffer)
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "g T" 'helm-etags-select)
+  (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "T" 'haskell-session-change-target)
 
   (setq lsp-haskell-process-path-hie "hie-wrapper")
   ;(setq lsp-haskell-process-args-hie '())
