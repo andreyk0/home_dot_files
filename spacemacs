@@ -54,6 +54,7 @@ This function should only modify configuration layer settings."
      auto-completion
      better-defaults
      csv
+     dhall
      docker
      emacs-lisp
      git
