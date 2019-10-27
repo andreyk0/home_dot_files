@@ -1,5 +1,6 @@
 . $HOME/.dotfiles/zsh-linux/zprofile
 
+export EDITOR=vim
 export SHELL=/usr/bin/zsh
 export GIT=/usr/bin/git
 
