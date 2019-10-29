@@ -40,3 +40,7 @@ PROMPT='%F{yellow}%#%f '
 
 
 alias ag="ag --color-path '1;35' --color-line-number '1;34' --color-match '30;47' --color --break --group --heading"
+
+
+# shell mode
+setopt emacs
