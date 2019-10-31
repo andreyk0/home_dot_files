@@ -20,5 +20,3 @@ gpgconf --launch gpg-agent
 GPG_TTY=$(/usr/bin/tty)
 SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
 export GPG_TTY SSH_AUTH_SOCK
-
-. $HOME/.nix-profile/etc/profile.d/nix.sh
