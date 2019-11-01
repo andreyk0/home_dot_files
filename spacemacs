@@ -558,8 +558,6 @@ you should place your code here."
 
   (spacemacs/toggle-centered-point-globally-on)
   (spacemacs/toggle-indent-guide-globally-on)
-
-  (setq helm-ag-base-command "rg -S --no-heading")
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
