@@ -218,8 +218,15 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light)
+   ;; e.g :: deeper-blue dichromacy spacemacs-dark spacemacs-light
+   ;;     :: tango-dark wheatgrass whiteboard wombat
+   dotspacemacs-themes '(deeper-blue
+                         tango-dark
+                         wheatgrass
+                         whiteboard
+                         spacemacs-dark
+                         spacemacs-light
+                         wombat)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -558,6 +565,7 @@ you should place your code here."
 
   (spacemacs/toggle-centered-point-globally-on)
   (spacemacs/toggle-indent-guide-globally-on)
+  (spacemacs/toggle-highlight-current-line-globally-off)
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
