@@ -1,6 +1,9 @@
 . $HOME/.dotfiles/zsh-common/zshrc
 . $HOME/.nix-profile/etc/profile.d/nix.sh
 
+if type kubectl > /dev/null ; then
+  source <(kubectl completion zsh)
+fi
 
 E() { emacs "$@" & disown }
 e() { emacsclient -nq "$@" }
