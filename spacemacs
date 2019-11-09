@@ -55,7 +55,7 @@ This function should only modify configuration layer settings."
      better-defaults
      csv
      (dhall :variables
-            dhall-format-arguments "--ascii"
+            dhall-type-check-inactivity-timeout 5
             )
      docker
      emacs-lisp
@@ -557,6 +557,8 @@ you should place your code here."
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "S t" 'haskell-session-change-target)
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "S r" 'haskell-process-reload)
 
+  (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "= =" 'dhall-format-buffer)
+
   (setq lsp-haskell-process-path-hie "hie-wrapper")
   ;(setq lsp-haskell-process-args-hie '())
 
@@ -565,6 +567,7 @@ you should place your code here."
   (require 'lsp-mode)
   (require 'lsp-ui)
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+
 
   ;;(require 'lsp-haskell)
   ;;(add-hook 'haskell-mode-hook #'lsp)
