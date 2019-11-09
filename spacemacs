@@ -547,6 +547,10 @@ you should place your code here."
 
   (setq-default yas-prompt-functions '(yas-ido-prompt yas-dropdown-prompt))
 
+  (spacemacs/toggle-centered-point-globally-on)
+  (spacemacs/toggle-indent-guide-globally-on)
+  (spacemacs/toggle-highlight-current-line-globally-off)
+
   (setq haskell-stylish-on-save t)
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "= =" 'haskell-mode-stylish-buffer)
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "g T" 'helm-etags-select)
@@ -557,15 +561,15 @@ you should place your code here."
   ;(setq lsp-haskell-process-args-hie '())
 
   (setq lsp-document-sync-method 'full)
-  (require 'lsp-haskell)
-  ;;(add-hook 'haskell-mode-hook #'lsp)
 
+  (require 'lsp-mode)
   (require 'lsp-ui)
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
-  (spacemacs/toggle-centered-point-globally-on)
-  (spacemacs/toggle-indent-guide-globally-on)
-  (spacemacs/toggle-highlight-current-line-globally-off)
+  ;;(require 'lsp-haskell)
+  ;;(add-hook 'haskell-mode-hook #'lsp)
+  ;;(add-hook 'dhall-mode-hook #'lsp)
+
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
