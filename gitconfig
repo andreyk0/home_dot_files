@@ -22,7 +22,7 @@
 	rid = !git rebase -i origin/development
 	rim = !git rebase -i origin/master
 	st = !git status
-	tagts = !git tag r`date \"+%Y-%m-%d-%H%M%S\"`
+	tagts = !git tag -m release `date \"+%Y-%m-%d-%H%M%S\"`
 	up = ! git fetch --tags -p &&  git-delete-merged-branches && git status
 	wdiff = !git diff --color-words
 
