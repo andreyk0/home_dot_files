@@ -56,6 +56,7 @@ This function should only modify configuration layer settings."
      csv
      (dhall :variables
             dhall-type-check-inactivity-timeout 5
+            dhall-use-header-line nil
             )
      docker
      emacs-lisp
@@ -558,6 +559,9 @@ you should place your code here."
   (spacemacs/set-leader-keys-for-major-mode 'haskell-mode "S r" 'haskell-process-reload)
 
   (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "= =" 'dhall-format-buffer)
+  (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "c c" 'dhall-buffer-type)
+  (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "c f" 'dhall-freeze-buffer)
+  (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "s s" 'dhall-repl-show)
 
   (setq lsp-haskell-process-path-hie "hie-wrapper")
   ;(setq lsp-haskell-process-args-hie '())
