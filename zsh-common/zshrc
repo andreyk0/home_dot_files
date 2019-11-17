@@ -39,4 +39,7 @@ promptinit
 PROMPT='%F{yellow}%#%f '
 
 # shell mode
-setopt emacs
+setopt vi
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^r' history-incremental-search-backward
