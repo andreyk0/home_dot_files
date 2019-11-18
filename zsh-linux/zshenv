@@ -4,6 +4,6 @@ export EDITOR=vim
 export SHELL=/usr/bin/zsh
 export GIT=/usr/bin/git
 
-export MEDIA_ROOT=/media/andrey/T2
+export MEDIA_ROOT=/run/media/andrey/media
 
 export GOPATH=~/.go
