@@ -498,10 +498,10 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
     ((eql window-system 'ns) (setq-default  ; mac
       dotspacemacs-default-font '("Source Code Pro"
-                                 :size 14
+                                 :size 16
                                  :weight normal
                                  :width normal))
-      ))
+     ))
   )
 
 (defun dotspacemacs/user-load ()
@@ -576,6 +576,12 @@ you should place your code here."
   ;;(require 'lsp-haskell)
   ;;(add-hook 'haskell-mode-hook #'lsp)
   ;;(add-hook 'dhall-mode-hook #'lsp)
+
+
+  (defun set-default-font-size (size)
+    "Set default font size."
+    (interactive "sPlease enter font size, e.g. 16: ")
+    (set-face-attribute 'default nil :height (* 10 (string-to-number size))))
 
   )
 (defun dotspacemacs/emacs-custom-settings ()
