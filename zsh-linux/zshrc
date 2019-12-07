@@ -1,3 +1,4 @@
+. /etc/environment
 . $HOME/.dotfiles/zsh-common/zshrc
 #. $HOME/.nix-profile/etc/profile.d/nix.sh
 
