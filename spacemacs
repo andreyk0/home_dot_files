@@ -57,6 +57,7 @@ This function should only modify configuration layer settings."
      (dhall :variables
             dhall-type-check-inactivity-timeout 5
             dhall-use-header-line nil
+            dhall-format-arguments '("--ascii")
             )
      docker
      emacs-lisp
