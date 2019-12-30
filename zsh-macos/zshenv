@@ -7,3 +7,5 @@ export GOPATH=~/.go
 
 #export _JAVA_OPTIONS=-Djava.awt.headless=true
 export TMUX_DEFAULT_COMMAND="reattach-to-user-namespace -l zsh"
+
+. $HOME/.nix-profile/etc/profile.d/nix.sh
