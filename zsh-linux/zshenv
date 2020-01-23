@@ -6,4 +6,4 @@ export GIT=/usr/bin/git
 
 export MEDIA_ROOT=/run/media/andrey/media
 
-export GOPATH=~/.go
+export QT_QPA_PLATFORM=wayland
