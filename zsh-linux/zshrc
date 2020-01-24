@@ -5,6 +5,10 @@ if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] ; then
 . $HOME/.nix-profile/etc/profile.d/nix.sh
 fi
 
+if [ -x /sbin/direnv ] ; then
+  eval "$(direnv hook zsh)"
+fi
+
 if type kubectl > /dev/null ; then
   source <(kubectl completion zsh)
 fi
