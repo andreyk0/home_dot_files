@@ -9,6 +9,11 @@ if type kubectl > /dev/null ; then
   source <(kubectl completion zsh)
 fi
 
+if [ -e $HOME/.zshenvlocal ] ; then
+. $HOME/.zshenvlocal
+fi
+
+
 E() { emacs "$@" & disown }
 e() { emacsclient -nq "$@" }
 
