@@ -1,6 +1,7 @@
 .#*
 /*.aux
 .cache
+.direnv.d
 .dir-locals.el
 .DS_Store
 .ensime
@@ -14,5 +15,5 @@ ensime.sbt
 /.stack-work
 *.swp
 /tags
-/.vscode
 TAGS
+/.vscode
