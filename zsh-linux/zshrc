@@ -1,6 +1,9 @@
 . /etc/environment
 . $HOME/.dotfiles/zsh-common/zshrc
-#. $HOME/.nix-profile/etc/profile.d/nix.sh
+
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] ; then
+. $HOME/.nix-profile/etc/profile.d/nix.sh
+fi
 
 if type kubectl > /dev/null ; then
   source <(kubectl completion zsh)
