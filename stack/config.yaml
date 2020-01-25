@@ -12,3 +12,6 @@ templates:
     author-email: andrey.kartashov@gmail.com
     github-username: andreyk0
     copyright: 2018 Andrey Kartashov
+
+ghc-options:
+  "$everything": -j6
