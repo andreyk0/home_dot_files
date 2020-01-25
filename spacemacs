@@ -570,11 +570,11 @@ you should place your code here."
   (setq lsp-haskell-process-path-hie "hie-wrapper")
   ;(setq lsp-haskell-process-args-hie '())
 
-  (setq lsp-document-sync-method 'full)
+  ;(setq lsp-document-sync-method 'full)
 
   (require 'lsp-mode)
-  (require 'lsp-ui)
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  ;(require 'lsp-ui)
+  ;(add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 
   ;;(require 'lsp-haskell)
