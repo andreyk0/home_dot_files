@@ -1,13 +1,17 @@
-. /etc/environment
+# Skip these inside of nix shell
+if [ -z "$IN_NIX_SHELL" ] ; then
+  . /etc/environment
+
+  if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] ; then
+  . $HOME/.nix-profile/etc/profile.d/nix.sh
+  fi
+
+  if [ -x /sbin/direnv ] ; then
+    eval "$(direnv hook zsh)"
+  fi
+fi
+
 . $HOME/.dotfiles/zsh-common/zshrc
-
-if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] ; then
-. $HOME/.nix-profile/etc/profile.d/nix.sh
-fi
-
-if [ -x /sbin/direnv ] ; then
-  eval "$(direnv hook zsh)"
-fi
 
 if type kubectl > /dev/null ; then
   source <(kubectl completion zsh)
@@ -16,7 +20,6 @@ fi
 if [ -e $HOME/.zshenvlocal ] ; then
 . $HOME/.zshenvlocal
 fi
-
 
 E() { emacs "$@" & disown }
 e() { emacsclient -nq "$@" }
@@ -31,7 +34,7 @@ if [ -x /usr/bin/dircolors ]; then
   export CLICOLOR=1
   export LSCOLORS=dxfxcxdxbxegedabagacad
 
-  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  test -r ~/.dircolors && eval "$(/usr/bin/dircolors -b ~/.dircolors)" || eval "$(/usr/bin/dircolors -b)"
 fi
 
 alias ls='ls --color=auto'
@@ -42,10 +45,6 @@ alias st='git status'
 
 alias trm='trash-put'
 alias open='xdg-open'
-
-alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
-
-alias sx='exec startx'
 
 # Launch GPG agent
 #gpgconf --launch gpg-agent

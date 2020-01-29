@@ -1,15 +1,22 @@
 typeset -U path
-path=(
-  ~/sbin
-  /sbin
-  ~/bin
-  ~/.local/bin
-  ~/.cargo/bin
-  /bin
-  /usr/sbin
-  /usr/bin
-  /usr/local/sbin
-  /usr/local/bin
 
- $path[@]
-)
+# Inherit PATH from nix when running inside nix shell
+if [ -z "$IN_NIX_SHELL" ] ; then
+  path=(
+    ~/sbin
+    /sbin
+    ~/bin
+    ~/.local/bin
+    ~/.cargo/bin
+    /sbin
+    /bin
+    /usr/sbin
+    /usr/bin
+    /usr/local/sbin
+    /usr/local/bin
+
+  $path[@]
+  )
+else
+  path=($(echo "$PATH" | sed -e 's/:/\n/g'))
+fi
