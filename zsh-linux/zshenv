@@ -1,3 +1,7 @@
+if [ -z "$TMPDIR" -a -e "/run/user/$(id -u)" ] ; then
+  export TMPDIR="/run/user/$(id -u)"
+fi
+
 . $HOME/.dotfiles/zsh-linux/zprofile
 
 export EDITOR=vim
