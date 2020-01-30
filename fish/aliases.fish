@@ -27,3 +27,13 @@ function trm
   trash-put $argv
 end
 funcsave trm
+
+function E
+  emacs $argv & disown
+end
+funcsave E
+
+function e
+  emacsclient -nq $argv
+end
+funcsave e

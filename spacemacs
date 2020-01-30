@@ -75,6 +75,7 @@ This function should only modify configuration layer settings."
      python
      ruby
      rust
+     shell-scripts
      spell-checking
      sql
      syntax-checking
