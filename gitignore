@@ -1,6 +1,7 @@
 .#*
 /*.aux
 .cache
+.direnv
 .direnv.d
 .dir-locals.el
 .DS_Store
