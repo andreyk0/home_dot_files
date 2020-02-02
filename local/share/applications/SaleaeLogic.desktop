@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Saleae Logic
+Comment=Saleae Logic Analyzer
+TryExec=/home/andrey/opt/SaleaeLogic-1.2.18/SaleaeLogic
+Exec=/home/andrey/opt/SaleaeLogic-1.2.18/SaleaeLogic %F
+Icon=/home/andrey/opt/SaleaeLogic-1.2.18/SaleaeLogic.png

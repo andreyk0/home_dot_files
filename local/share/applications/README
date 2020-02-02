@@ -1,0 +1,2 @@
+Install into ~/.local/share/applications
+Run update-desktop-database .local/share/applications
