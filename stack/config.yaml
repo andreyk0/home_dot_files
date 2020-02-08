@@ -14,4 +14,4 @@ templates:
     copyright: 2018 Andrey Kartashov
 
 ghc-options:
-  "$everything": -j6
+  "$everything": -j
