@@ -223,13 +223,14 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    ;; e.g :: deeper-blue dichromacy spacemacs-dark spacemacs-light
    ;;     :: tango-dark wheatgrass whiteboard wombat
-   dotspacemacs-themes '(deeper-blue
+   dotspacemacs-themes '(wombat
+                         spacemacs-dark
+                         deeper-blue
                          tango-dark
+                         misterioso
                          wheatgrass
                          whiteboard
-                         spacemacs-dark
-                         spacemacs-light
-                         wombat)
+                         spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
