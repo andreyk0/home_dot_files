@@ -29,6 +29,9 @@ setopt inc_append_history  # Each instance has its own history at run time, but 
 setopt hist_find_no_dups   # Don't cycle through dupes during history search
 setopt hist_no_store       # Don't save invocation of history itself
 setopt hist_no_functions   # Don't save ZSH function definitions
+setopt histignorealldups # Substitute commands in the prompt
+setopt promptsubst # required for git plugin
+
 
 REPORTTIME=10
 
