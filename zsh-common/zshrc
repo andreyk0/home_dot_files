@@ -32,10 +32,9 @@ setopt hist_no_functions   # Don't save ZSH function definitions
 
 REPORTTIME=10
 
-
-autoload -Uz promptinit
-promptinit
-prompt adam2
+#autoload -Uz promptinit
+#promptinit
+#prompt adam2
 
 # shell mode
 setopt vi
