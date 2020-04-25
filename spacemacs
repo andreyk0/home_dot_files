@@ -223,11 +223,11 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    ;; e.g :: deeper-blue dichromacy spacemacs-dark spacemacs-light
    ;;     :: tango-dark wheatgrass whiteboard wombat
-   dotspacemacs-themes '(wombat
+   dotspacemacs-themes '(misterioso
+                         wombat
                          spacemacs-dark
                          deeper-blue
                          tango-dark
-                         misterioso
                          wheatgrass
                          whiteboard
                          spacemacs-light)
@@ -239,7 +239,8 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(vanilla)
+   ;; dotspacemacs-mode-line-theme '(vim-powerline)
+   dotspacemacs-mode-line-theme '(vim-powerline)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
