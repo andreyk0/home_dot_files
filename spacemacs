@@ -102,9 +102,7 @@ This function should only modify configuration layer settings."
 
    ;; A list of packages that will not be installed and loaded.
    ;; hl-todo results in long fontification times
-   dotspacemacs-excluded-packages '( hl-todo
-                                     smartparens
-                                   )
+   dotspacemacs-excluded-packages '( hl-todo )
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -584,11 +582,14 @@ you should place your code here."
   ;;(add-hook 'haskell-mode-hook #'lsp)
   ;;(add-hook 'dhall-mode-hook #'lsp)
 
-
   (defun set-default-font-size (size)
     "Set default font size."
     (interactive "sPlease enter font size, e.g. 16: ")
     (set-face-attribute 'default nil :height (* 10 (string-to-number size))))
+
+  ;; Disable smartparens
+  (remove-hook 'prog-mode-hook #'smartparens-mode)
+  (spacemacs/toggle-smartparens-globally-off)
 
   )
 (defun dotspacemacs/emacs-custom-settings ()
