@@ -51,14 +51,14 @@ This function should only modify configuration layer settings."
             shell-default-height 30
             shell-default-position 'bottom)
 
-     auto-completion
-     better-defaults
-     csv
      (dhall :variables
             dhall-type-check-inactivity-timeout 5
             dhall-use-header-line nil
-            dhall-format-arguments '("--ascii")
-            )
+            dhall-format-arguments '("--ascii"))
+
+     auto-completion
+     better-defaults
+     csv
      docker
      emacs-lisp
      git
@@ -81,6 +81,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      systemd
      terraform
+     themes-megapack
      typescript
      yaml
      )
