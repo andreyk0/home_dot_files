@@ -40,8 +40,8 @@ This function should only modify configuration layer settings."
             c-c++-default-mode-for-headers 'c++-mode)
 
      (haskell :variables
-              haskell-compile-cabal-build-command "nice -n 20 stack build --fast --test --bench --no-run-tests --no-run-benchmarks --ghc-options=-ferror-spans 2>&1 | sed -e 's/^[a-zA-Z-]* *> //'"
-              haskell-compile-command "nice -n 20 stack exec ghc -- -Wall -ferror-spans -fforce-recomp -c %sbuild"
+              haskell-compile-cabal-build-command "haskell-compile-cabal-build-command"
+              haskell-compile-command "haskell-compile-command %sbuild"
               haskell-enable-hindent-style "johan-tibell"
               haskell-completion-backend 'ghci
               haskell-process-type 'stack-ghci)
