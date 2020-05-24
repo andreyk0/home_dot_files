@@ -248,14 +248,12 @@ It should only modify the values of Spacemacs settings."
                          doom-sourcerer
                          doom-solarized-dark
                          doom-snazzy
-                         doom-rouge
                          doom-peacock
                          doom-palenight
                          doom-opera
                          doom-one
                          doom-oceanic-next
                          doom-material
-                         doom-henna
                          doom-gruvbox
                          doom-ephemeral
                          doom-dracula
