@@ -222,12 +222,62 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    ;; e.g :: deeper-blue dichromacy spacemacs-dark spacemacs-light
    ;;     :: tango-dark wheatgrass whiteboard wombat
-   dotspacemacs-themes '(misterioso
+   dotspacemacs-themes '(ample
+                         misterioso
                          wombat
                          spacemacs-dark
                          deeper-blue
                          tango-dark
-                         spacegray)
+                         spacegray
+                         tsdh-dark
+                         manoj-dark
+                         deeper-blue
+                         afternoon
+                         alect-dark
+                         alect-black
+                         apropospriate-dark
+                         birds-of-paradise-plus
+                         sanityinc-tomorrow-bright
+                         cyberpunk
+                         dakrone
+                         darkburn
+                         darkmine
+                         darktooth
+                         darkokai
+                         doom-tomorrow-night
+                         doom-sourcerer
+                         doom-solarized-dark
+                         doom-snazzy
+                         doom-rouge
+                         doom-peacock
+                         doom-palenight
+                         doom-opera
+                         doom-one
+                         doom-oceanic-next
+                         doom-material
+                         doom-henna
+                         doom-gruvbox
+                         doom-ephemeral
+                         doom-dracula
+                         doom-dark+
+                         doom-challenger-deep
+                         doom-Iosvkem
+                         dracula
+                         exotica
+                         farmhouse-dark
+                         flatland
+                         grandshell
+                         gruber-darker
+                         gruvbox
+                         gruvbox-dark-medium
+                         hc-zenburn
+                         hemisu-dark
+                         heroku
+                         inkpot
+                         ir-black
+                         jazz
+                         jbeans
+                         kaolin-valley-dark)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
