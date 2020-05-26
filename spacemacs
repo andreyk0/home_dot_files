@@ -222,44 +222,35 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    ;; e.g :: deeper-blue dichromacy spacemacs-dark spacemacs-light
    ;;     :: tango-dark wheatgrass whiteboard wombat
-   dotspacemacs-themes '(ample
-                         misterioso
-                         wombat
-                         spacemacs-dark
-                         deeper-blue
-                         tango-dark
-                         spacegray
-                         tsdh-dark
-                         manoj-dark
-                         deeper-blue
-                         afternoon
-                         alect-dark
+   dotspacemacs-themes '(afternoon
                          alect-black
+                         alect-dark
+                         ample
                          apropospriate-dark
                          birds-of-paradise-plus
-                         sanityinc-tomorrow-bright
                          cyberpunk
                          dakrone
                          darkburn
                          darkmine
-                         darktooth
                          darkokai
-                         doom-tomorrow-night
-                         doom-sourcerer
-                         doom-solarized-dark
-                         doom-snazzy
-                         doom-peacock
-                         doom-palenight
-                         doom-opera
-                         doom-one
-                         doom-oceanic-next
-                         doom-material
-                         doom-gruvbox
-                         doom-ephemeral
-                         doom-dracula
-                         doom-dark+
+                         darktooth
+                         deeper-blue
                          doom-challenger-deep
+                         doom-dark+
+                         doom-dracula
+                         doom-ephemeral
+                         doom-gruvbox
                          doom-Iosvkem
+                         doom-material
+                         doom-oceanic-next
+                         doom-one
+                         doom-opera
+                         doom-palenight
+                         doom-peacock
+                         doom-snazzy
+                         doom-solarized-dark
+                         doom-sourcerer
+                         doom-tomorrow-night
                          dracula
                          exotica
                          farmhouse-dark
@@ -275,7 +266,15 @@ It should only modify the values of Spacemacs settings."
                          ir-black
                          jazz
                          jbeans
-                         kaolin-valley-dark)
+                         kaolin-valley-dark
+                         manoj-dark
+                         misterioso
+                         sanityinc-tomorrow-bright
+                         spacegray
+                         spacemacs-dark
+                         tango-dark
+                         tsdh-dark
+                         wombat)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
