@@ -614,7 +614,7 @@ you should place your code here."
   (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "c f" 'dhall-freeze-buffer)
   (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "s s" 'dhall-repl-show)
 
-  (setq lsp-haskell-process-path-hie "hie-wrapper")
+  ;(setq lsp-haskell-process-path-hie "hie-wrapper")
   ;(setq lsp-haskell-process-args-hie '())
 
   ;(setq lsp-document-sync-method 'full)
