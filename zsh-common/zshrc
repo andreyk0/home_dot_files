@@ -40,7 +40,7 @@ REPORTTIME=10
 #prompt adam2
 
 # shell mode
-setopt vi
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^r' history-incremental-search-backward
+#setopt vi
+#bindkey '^P' up-history
+#bindkey '^N' down-history
+#bindkey '^r' history-incremental-search-backward
