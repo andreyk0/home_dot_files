@@ -223,57 +223,38 @@ It should only modify the values of Spacemacs settings."
    ;; e.g :: deeper-blue dichromacy spacemacs-dark spacemacs-light
    ;;     :: tango-dark wheatgrass whiteboard wombat
    dotspacemacs-themes '(afternoon
-                         alect-black
-                         alect-dark
                          ample
-                         apropospriate-dark
-                         birds-of-paradise-plus
-                         cyberpunk
                          dakrone
                          darkburn
                          darkmine
                          darkokai
                          darktooth
                          deeper-blue
-                         doom-challenger-deep
                          doom-dark+
-                         doom-dracula
-                         doom-ephemeral
                          doom-gruvbox
-                         doom-Iosvkem
                          doom-material
                          doom-oceanic-next
                          doom-one
                          doom-opera
-                         doom-palenight
                          doom-peacock
                          doom-snazzy
                          doom-solarized-dark
                          doom-sourcerer
                          doom-tomorrow-night
-                         dracula
                          exotica
-                         farmhouse-dark
                          flatland
-                         grandshell
-                         gruber-darker
                          gruvbox
-                         gruvbox-dark-medium
                          hc-zenburn
                          hemisu-dark
                          heroku
-                         inkpot
                          ir-black
-                         jazz
                          jbeans
                          kaolin-valley-dark
-                         manoj-dark
                          misterioso
                          sanityinc-tomorrow-bright
                          spacegray
                          spacemacs-dark
                          tango-dark
-                         tsdh-dark
                          wombat)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
