@@ -40,11 +40,13 @@ This function should only modify configuration layer settings."
             c-c++-default-mode-for-headers 'c++-mode)
 
      (haskell :variables
-              haskell-compile-cabal-build-command "haskell-compile-cabal-build-command"
-              haskell-compile-command "haskell-compile-command %sbuild"
               haskell-enable-hindent-style "johan-tibell"
-              haskell-completion-backend 'ghci
-              haskell-process-type 'stack-ghci)
+              haskell-compile-cabal-build-command "haskell-compile-cabal-build-command"
+              ; haskell-compile-command "haskell-compile-command %sbuild"
+              ; haskell-completion-backend 'ghci
+              ;haskell-process-type 'stack-ghci
+              haskell-process-type 'lsp
+              )
 
      (shell :variables
             shell-default-term-shell "zsh"
@@ -595,19 +597,16 @@ you should place your code here."
   (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "c f" 'dhall-freeze-buffer)
   (spacemacs/set-leader-keys-for-major-mode 'dhall-mode "s s" 'dhall-repl-show)
 
-  ;(setq lsp-haskell-process-path-hie "hie-wrapper")
-  ;(setq lsp-haskell-process-args-hie '())
 
   ;(setq lsp-document-sync-method 'full)
 
-  (require 'lsp-mode)
-  ;(require 'lsp-ui)
-  ;(add-hook 'lsp-mode-hook 'lsp-ui-mode)
-
-
-  ;;(require 'lsp-haskell)
-  ;;(add-hook 'haskell-mode-hook #'lsp)
+  (require 'lsp)
+  (require 'lsp-haskell)
+  (add-hook 'haskell-mode-hook #'lsp)
   ;;(add-hook 'dhall-mode-hook #'lsp)
+
+  (setq lsp-haskell-process-path-hie "ghcide")
+  (setq lsp-haskell-process-args-hie '())
 
   (defun set-default-font-size (size)
     "Set default font size."
