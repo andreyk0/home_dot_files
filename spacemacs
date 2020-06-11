@@ -41,11 +41,10 @@ This function should only modify configuration layer settings."
 
      (haskell :variables
               haskell-enable-hindent-style "johan-tibell"
+              haskell-completion-backend 'lsp
               haskell-compile-cabal-build-command "haskell-compile-cabal-build-command"
-              ; haskell-compile-command "haskell-compile-command %sbuild"
-              ; haskell-completion-backend 'ghci
+              ;haskell-compile-command "haskell-compile-command %sbuild"
               ;haskell-process-type 'stack-ghci
-              haskell-process-type 'lsp
               )
 
      (shell :variables
