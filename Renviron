@@ -1,0 +1,3 @@
+R_PROFILE_USER = ${HOME}/.dotfiles/Rprofile
+R_HISTFILE = ${HOME}/.cache/r.Rhistory
+R_LIBS_USER = ${HOME}/.local/share/r

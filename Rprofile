@@ -1,0 +1,1 @@
+options(menu.graphics=FALSE)
