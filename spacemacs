@@ -62,6 +62,7 @@ This function should only modify configuration layer settings."
      csv
      docker
      emacs-lisp
+     ess
      git
      go
      graphviz
