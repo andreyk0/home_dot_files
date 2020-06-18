@@ -35,12 +35,6 @@ setopt promptsubst # required for git plugin
 
 REPORTTIME=10
 
-#autoload -Uz promptinit
-#promptinit
-#prompt adam2
 
 # shell mode
-#setopt vi
-#bindkey '^P' up-history
-#bindkey '^N' down-history
-#bindkey '^r' history-incremental-search-backward
+bindkey -e
