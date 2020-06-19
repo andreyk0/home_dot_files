@@ -69,6 +69,7 @@ This function should only modify configuration layer settings."
      helm
      html
      javascript
+     julia
      lsp
      markdown
      neotree
