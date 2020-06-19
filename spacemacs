@@ -62,7 +62,6 @@ This function should only modify configuration layer settings."
      csv
      docker
      emacs-lisp
-     ess
      git
      go
      graphviz
@@ -229,13 +228,11 @@ It should only modify the values of Spacemacs settings."
                          ample
                          dakrone
                          darkburn
-                         darkmine
                          darkokai
                          darktooth
                          deeper-blue
                          doom-dark+
                          doom-gruvbox
-                         doom-material
                          doom-oceanic-next
                          doom-one
                          doom-opera
