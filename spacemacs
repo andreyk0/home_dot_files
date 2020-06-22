@@ -228,7 +228,6 @@ It should only modify the values of Spacemacs settings."
                          ample
                          dakrone
                          darkburn
-                         darkokai
                          darktooth
                          deeper-blue
                          doom-dark+
@@ -238,7 +237,6 @@ It should only modify the values of Spacemacs settings."
                          doom-opera
                          doom-peacock
                          doom-snazzy
-                         doom-solarized-dark
                          doom-sourcerer
                          doom-tomorrow-night
                          exotica
