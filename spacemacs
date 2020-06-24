@@ -225,15 +225,12 @@ It should only modify the values of Spacemacs settings."
    ;; e.g :: deeper-blue dichromacy spacemacs-dark spacemacs-light
    ;;     :: tango-dark wheatgrass whiteboard wombat
    dotspacemacs-themes '(afternoon
-                         ample
                          dakrone
                          darkburn
                          darktooth
                          deeper-blue
-                         doom-dark+
                          doom-gruvbox
                          doom-oceanic-next
-                         doom-one
                          doom-opera
                          doom-peacock
                          doom-snazzy
@@ -245,7 +242,6 @@ It should only modify the values of Spacemacs settings."
                          hc-zenburn
                          hemisu-dark
                          heroku
-                         ir-black
                          jbeans
                          kaolin-valley-dark
                          misterioso
