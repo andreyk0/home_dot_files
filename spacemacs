@@ -3,6 +3,13 @@
 ;; It must be stored in your home directory.
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
+;; https://stackoverflow.com/questions/49490551/how-to-shuffle-list-in-lisp
+(defun nshuffle (sequence)
+  (cl-loop for i from (length sequence) downto 2
+        do (cl-rotatef (elt sequence (random i))
+                      (elt sequence (1- i))))
+  sequence)
+
 
 (defun dotspacemacs/layers ()
   "Layer configuration:
@@ -224,7 +231,8 @@ It should only modify the values of Spacemacs settings."
    ;; with 2 themes variants, one dark and one light)
    ;; e.g :: deeper-blue dichromacy spacemacs-dark spacemacs-light
    ;;     :: tango-dark wheatgrass whiteboard wombat
-   dotspacemacs-themes '(afternoon
+   dotspacemacs-themes (nshuffle '(
+                         afternoon
                          dakrone
                          darkburn
                          darktooth
@@ -249,7 +257,7 @@ It should only modify the values of Spacemacs settings."
                          spacegray
                          spacemacs-dark
                          tango-dark
-                         wombat)
+                         wombat))
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
