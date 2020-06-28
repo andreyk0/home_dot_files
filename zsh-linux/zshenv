@@ -10,5 +10,7 @@ export GIT=/usr/bin/git
 
 export MEDIA_ROOT=/run/media/andrey/media
 
+export JULIA_NUM_THREADS=6
+
 #export QT_QPA_PLATFORM=wayland
 #export QT_AUTO_SCREEN_SCALE_FACTOR=1
