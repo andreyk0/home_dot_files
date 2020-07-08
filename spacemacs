@@ -550,6 +550,11 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
+  ;; https://github.com/justbur/emacs-which-key/issues/226
+  (setq which-key-idle-delay 30000)
+  (setq which-key-idle-secondary-delay 0.05)
+  (setq which-key-show-early-on-C-h t)
+
   (require 'direnv)
   (direnv-mode 1)
 
