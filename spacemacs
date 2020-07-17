@@ -619,9 +619,9 @@ you should place your code here."
     (set-face-attribute 'default nil :height (* 10 (string-to-number size))))
 
   ;; Disable smartparens
-  (remove-hook 'prog-mode-hook #'smartparens-mode)
   (spacemacs/toggle-smartparens-globally-off)
-
+  (remove-hook 'prog-mode-hook #'smartparens-mode)
+  (remove-hook 'markdown-mode-hook #'smartparens-mode)
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
