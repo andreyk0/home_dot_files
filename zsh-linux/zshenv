@@ -14,3 +14,5 @@ export JULIA_NUM_THREADS=6
 
 #export QT_QPA_PLATFORM=wayland
 #export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+export NIX_BUILD_CORES=6
