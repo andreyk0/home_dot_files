@@ -4,7 +4,6 @@ typeset -U path
 if [ -z "$IN_NIX_SHELL" ] ; then
   path=(
     ~/sbin
-    /sbin
     ~/bin
     ~/.local/bin
     ~/.cargo/bin
