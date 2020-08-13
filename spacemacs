@@ -267,7 +267,7 @@ It should only modify the values of Spacemacs settings."
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
    ;; dotspacemacs-mode-line-theme '(vim-powerline)
-   dotspacemacs-mode-line-theme '(vim-powerline)
+   dotspacemacs-mode-line-theme '(doom)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -533,6 +533,17 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
                                  :weight normal
                                  :width normal))
      ))
+
+
+  (advice-add 'enable-theme :after #'hack/tweak-modeline)
+
+  (defun hack/tweak-modeline (&optional theme)
+    "Tweak modeline after theme switch"
+    (setq doom-modeline-height 1)
+    (set-face-attribute 'mode-line nil :family "Source Code Pro" :height 110)
+    (set-face-attribute 'mode-line-inactive nil :family "Source Code Pro" :height 110)
+  )
+
   )
 
 (defun dotspacemacs/user-load ()
@@ -550,6 +561,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
+
+  (set-language-environment "UTF-8")
+  (set-default-coding-systems 'utf-8)
+
   ;; https://github.com/justbur/emacs-which-key/issues/226
   (setq which-key-idle-delay 30000)
   (setq which-key-idle-secondary-delay 0.05)
@@ -558,10 +573,6 @@ you should place your code here."
   (require 'direnv)
   (direnv-mode 1)
 
-  (set-language-environment "UTF-8")
-  (set-default-coding-systems 'utf-8)
-
-  (setq powerline-default-separator 'curve)
   (setq ns-use-srgb-colorspace nil)
   (setq find-file-visit-truename 't)
 
