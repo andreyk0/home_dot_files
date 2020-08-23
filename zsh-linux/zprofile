@@ -7,6 +7,7 @@ if [ -z "$IN_NIX_SHELL" ] ; then
     ~/bin
     ~/.local/bin
     ~/.cargo/bin
+    ~/.emacs.d/bin
     /sbin
     /bin
     /usr/sbin
