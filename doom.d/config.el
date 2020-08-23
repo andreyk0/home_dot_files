@@ -52,3 +52,15 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(setq rustic-lsp-server 'rust-analyzer)
+
+(setq lsp-haskell-process-path-hie "haskell-language-server-wrapper")
+
+(map! :leader
+      (:prefix-map ("c" . "code")
+       (:when (featurep! :tools lsp)
+          :desc "LSP describe thing" "h" #'lsp-describe-thing-at-point
+          )
+       )
+)
