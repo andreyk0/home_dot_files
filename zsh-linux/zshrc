@@ -51,6 +51,8 @@ alias st='git status'
 alias trm='trash-put'
 alias open='xdg-open'
 
+alias julia='julia -p auto'
+
 # Launch GPG agent
 #gpgconf --launch gpg-agent
 
