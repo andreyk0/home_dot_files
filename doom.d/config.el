@@ -66,3 +66,5 @@
           )
        )
 )
+
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
