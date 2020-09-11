@@ -1,3 +1,9 @@
+# .zshenv is sourced on all invocations of the shell, unless the -f option is
+# set. It should contain commands to set the command search path, plus other
+# important environment variables. `.zshenv' should not contain commands that
+# produce output or assume the shell is attached to a tty.
+
+
 if [ -z "$TMPDIR" -a -e "/run/user/$(id -u)" ] ; then
   export TMPDIR="/run/user/$(id -u)"
 fi
@@ -16,3 +22,12 @@ export JULIA_NUM_THREADS=6
 #export QT_AUTO_SCREEN_SCALE_FACTOR=1
 
 export NIX_BUILD_CORES=6
+
+
+if [ -e $HOME/.zshenvlocal ] ; then
+. $HOME/.zshenvlocal
+fi
+
+# apps linked against nix' glibc don't find locale definitions
+# https://github.com/NixOS/nixpkgs/issues/38991
+export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive

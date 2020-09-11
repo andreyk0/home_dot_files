@@ -1,3 +1,6 @@
+# .zshrc is sourced in interactive shells. It should contain commands to set
+# up aliases, functions, options, key bindings, etc.
+
 # Skip these inside of nix shell
 if [ -z "$IN_NIX_SHELL" ] ; then
   . /etc/environment
@@ -13,18 +16,11 @@ fi
 
 . $HOME/.dotfiles/zsh-common/zshrc
 
-# apps linked against nix' glibc don't find locale definitions
-# https://github.com/NixOS/nixpkgs/issues/38991
-export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
-
 
 if type kubectl > /dev/null ; then
   source <(kubectl completion zsh)
 fi
 
-if [ -e $HOME/.zshenvlocal ] ; then
-. $HOME/.zshenvlocal
-fi
 
 E() { emacs "$@" & disown }
 e() { emacsclient -nq "$@" }
