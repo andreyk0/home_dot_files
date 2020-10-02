@@ -55,8 +55,8 @@
 
 (setq rustic-lsp-server 'rust-analyzer)
 
-;;(setq lsp-haskell-process-path-hie "haskell-language-server-wrapper")
-(setq lsp-haskell-process-path-hie "ghcide")
+(setq lsp-haskell-process-path-hie "haskell-language-server-wrapper")
+;;(setq lsp-haskell-process-path-hie "ghcide")
 (setq lsp-haskell-process-args-hie ())
 
 (map! :leader
