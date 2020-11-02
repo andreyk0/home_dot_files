@@ -45,3 +45,5 @@
 	email = andrey.kartashov@gmail.com
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
