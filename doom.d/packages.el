@@ -50,3 +50,5 @@
 ;(unpin! t)
 
 ;; (package! ormolu)
+
+(package! graphviz-dot-mode)
