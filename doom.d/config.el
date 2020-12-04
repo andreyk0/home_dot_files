@@ -77,3 +77,10 @@
 )
 
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
+(use-package! ansi-color
+  :config
+  (defun display-ansi-colors ()
+        (interactive)
+        (ansi-color-apply-on-region (point-min) (point-max)))
+)
