@@ -12,17 +12,12 @@
 
 [alias]
 	ci = !git commit
-	dd = !git diff origin/development
 	dh = !git diff HEAD
-	dm = !git diff origin/master
 	lg = !git log --graph
 	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
-	rhd = !git reset --hard origin/development
-	rhm = !git reset --hard origin/master
-	rid = !git rebase -i origin/development
-	rim = !git rebase -i origin/master
+	rh = !git reset --hard
+	ri = !git rebase --no-gpg-sign -i
 	st = !git status
-	tagts = !git tag -m release `date \"+%Y-%m-%d-%H%M%S\"`
 	up = ! git fetch --tags -p &&  git-delete-merged-branches && git status
 	wdiff = !git diff --color-words
 
