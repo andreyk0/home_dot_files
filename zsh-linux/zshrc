@@ -25,6 +25,11 @@ fi
 E() { emacs "$@" & disown }
 e() { emacsclient -nq "$@" }
 
+o() {
+    "$@" 2>&1 | tee /tmp/out.$$
+    echo "bat /tmp/out.$$"
+}
+
 # 1Pass
 op-signin() { eval $(op signin $1) }
 
