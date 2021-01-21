@@ -12,6 +12,7 @@
 
 [alias]
 	ci = !git commit
+	ca = !git commit --amend
 	dh = !git diff HEAD
 	lg = !git log --graph
 	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
