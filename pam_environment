@@ -1,0 +1,2 @@
+_JAVA_OPTIONS DEFAULT="-Dsun.java2d.ddscale=true -Dsun.java2d.uiScale=2"
+
