@@ -3,6 +3,10 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
+;; Generate with
+;;   doom env -o ~/.doom.d/myenv
+;; and edit
+(doom-load-envvars-file "~/.doom.d/myenv")
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
