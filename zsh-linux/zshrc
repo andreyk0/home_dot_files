@@ -43,9 +43,9 @@ if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(/usr/bin/dircolors -b ~/.dircolors)" || eval "$(/usr/bin/dircolors -b)"
 fi
 
-alias ls='ls --color=auto'
-alias ll='ls -lF'
-alias la='ls -A'
+alias ls='exa'
+alias ll='exa -l@'
+alias la='exa -a'
 
 alias st='git status'
 
