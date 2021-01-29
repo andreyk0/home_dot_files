@@ -11,16 +11,21 @@
 	default = tracking
 
 [alias]
-	ci = !git commit
+	a = !git add
 	ca = !git commit --amend
+	ci = !git commit
+	co = !git checkout
+	d = !git diff
 	dh = !git diff HEAD
-	lg = !git log --graph
+	ds = !git diff --ignore-all-space
 	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
+	lg = !git log --graph
+	p = !git push
 	rh = !git reset --hard
 	ri = !git rebase --no-gpg-sign -i
-	st = !git status
+	s = !git status
 	up = ! git fetch --tags -p &&  git-delete-merged-branches && git status
-	wdiff = !git diff --color-words
+	wd = !git diff --color-words
 
 [diff]
 	tool = meld
