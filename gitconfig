@@ -11,7 +11,7 @@
 	default = tracking
 
 [alias]
-	a   = !git add
+	a   = !git add .
 	ca  = !git commit --amend
 	ci  = !git commit
 	co  = !git checkout
