@@ -15,6 +15,7 @@
 	ca  = !git commit --amend
 	ci  = !git commit
 	co  = !git checkout
+	C   = !git clean -fdx .
 	d   = !git diff
 	dh  = !git diff HEAD
 	ds  = !git diff --ignore-all-space
