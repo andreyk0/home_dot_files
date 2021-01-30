@@ -47,7 +47,7 @@ alias ls='exa'
 alias ll='exa -l@ --git'
 alias la='exa -a'
 
-alias cat='bat'
+alias cat='bat -p'
 #alias top='btm'
 #alias du='dust'
 #alias ps='procs'
