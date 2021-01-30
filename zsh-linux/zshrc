@@ -47,6 +47,11 @@ alias ls='exa'
 alias ll='exa -l@ --git'
 alias la='exa -a'
 
+alias cat='bat'
+#alias top='btm'
+#alias du='dust'
+#alias ps='procs'
+
 alias g=git
 
 alias trm='trash-put'
