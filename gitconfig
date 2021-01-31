@@ -11,7 +11,7 @@
 	default = tracking
 
 [alias]
-	a   = !git add --verbose .
+	a   = !git-add-default
 	ca  = !git commit --amend
 	ci  = !git commit
 	co  = !git checkout
@@ -29,6 +29,7 @@
 	u   = !git pull
 	up  = !git fetch --tags -p &&  git-delete-merged-branches && git status
 	wd  = !git diff --color-words
+
 
 [diff]
 	tool = meld
