@@ -13,9 +13,9 @@
 [alias]
 	a   = !git-add-default
 	ca  = !git commit --amend
+	C   = !git clean -fdx .
 	ci  = !git commit
 	co  = !git checkout
-	C   = !git clean -fdx .
 	d   = !git diff
 	dh  = !git diff HEAD
 	ds  = !git diff --ignore-all-space
@@ -29,6 +29,7 @@
 	u   = !git pull
 	up  = !git fetch --tags -p &&  git-delete-merged-branches && git status
 	wd  = !git diff --color-words
+	wip = !git commit -amwip
 
 
 [diff]
