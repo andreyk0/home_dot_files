@@ -21,6 +21,7 @@
 	ds  = !git diff --ignore-all-space
 	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
 	lg  = !git log --graph
+	pF  = !git push --force-with-lease
 	p   = !git push
 	rhd = !git reset --hard origin/$(git-default-branch)
 	rh  = !git reset --hard
@@ -30,7 +31,6 @@
 	up  = !git fetch --tags -p &&  git-delete-merged-branches && git status
 	wd  = !git diff --color-words
 	wip = !git commit -amwip
-
 
 [diff]
 	tool = meld
