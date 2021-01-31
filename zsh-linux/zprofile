@@ -33,7 +33,9 @@ else
   path=($(echo "$PATH" | sed -e 's/:/\n/g'))
 fi
 
-POWERLINE_ZSH=/usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
-if [ -e "$POWERLINE_ZSH" ] ; then
-  source "$POWERLINE_ZSH"
-fi
+#POWERLINE_ZSH=/usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+#if [ -e "$POWERLINE_ZSH" ] ; then
+#  source "$POWERLINE_ZSH"
+#fi
+
+eval "$(starship init zsh)"
