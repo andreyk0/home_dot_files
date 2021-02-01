@@ -18,8 +18,10 @@
 	C   = !git clean -fdx .
 	ci  = !git commit
 	co  = !git checkout
-	dd  = !git diff origin/$(git-default-branch)
-	dds = !git diff --ignore-all-space origin/$(git-default-branch)
+	dd  = !git diff $(git-default-branch)
+	dds = !git diff --ignore-all-space $(git-default-branch)
+	dod = !git diff origin/$(git-default-branch)
+	dods= !git diff --ignore-all-space origin/$(git-default-branch)
 	d   = !git diff
 	dh  = !git diff HEAD
 	dhs = !git diff --ignore-all-space HEAD
