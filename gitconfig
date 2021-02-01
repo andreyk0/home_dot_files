@@ -12,13 +12,19 @@
 
 [alias]
 	a   = !git-add-default
+	ba  = !git branch -a
+	b   = !git branch
 	ca  = !git commit --amend
 	C   = !git clean -fdx .
 	ci  = !git commit
 	co  = !git checkout
 	dd  = !git diff origin/$(git-default-branch)
+	dds = !git diff --ignore-all-space origin/$(git-default-branch)
 	d   = !git diff
 	dh  = !git diff HEAD
+	dhs = !git diff --ignore-all-space HEAD
+	do  = !git diff origin/$(git branch --show-current)
+	dos = !git diff --ignore-all-space origin/$(git branch --show-current)
 	ds  = !git diff --ignore-all-space
 	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
 	lg  = !git log --graph
