@@ -16,6 +16,7 @@
 	C   = !git clean -fdx .
 	ci  = !git commit
 	co  = !git checkout
+	dd  = !git diff origin/$(git-default-branch)
 	d   = !git diff
 	dh  = !git diff HEAD
 	ds  = !git diff --ignore-all-space
@@ -25,7 +26,8 @@
 	p   = !git push
 	rhd = !git reset --hard origin/$(git-default-branch)
 	rh  = !git reset --hard
-	ri  = !git rebase --no-gpg-sign -i
+	rid = !git rebase -i origin/$(git-default-branch)
+	ri  = !git rebase -i
 	s   = !git status
 	u   = !git pull
 	up  = !git fetch --tags -p &&  git-delete-merged-branches && git status
