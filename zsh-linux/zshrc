@@ -53,6 +53,7 @@ alias cat='bat -p'
 #alias ps='procs'
 
 alias g=git
+alias gs='git status'
 
 alias trm='trash-put'
 alias open='xdg-open'
