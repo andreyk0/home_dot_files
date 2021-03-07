@@ -24,6 +24,7 @@ fi
 
 E() { emacs "$@" & disown }
 e() { emacsclient -nq "$@" }
+ew() { emacs -nw "$@" }
 
 o() {
     "$@" 2>&1 | tee /tmp/out.$$
