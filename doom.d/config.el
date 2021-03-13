@@ -88,3 +88,5 @@
         (interactive)
         (ansi-color-apply-on-region (point-min) (point-max)))
 )
+
+(setq evil-snipe-spillover-scope 'whole-visible)
