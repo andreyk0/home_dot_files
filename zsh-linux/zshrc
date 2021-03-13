@@ -34,6 +34,10 @@ o() {
 # 1Pass
 op-signin() { eval $(op signin $1) }
 
+# Java UI scaling
+JavaUIScale() {
+  export _JAVA_OPTIONS="${_JAVA_OPTIONS} -Dsun.java2d.ddscale=true -Dsun.java2d.uiScale=2"
+}
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
