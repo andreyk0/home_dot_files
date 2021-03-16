@@ -30,7 +30,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; (setq doom-theme 'doom-one)
-(setq doom-theme 'doom-vibrant)
+(setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-zenburn)
 ;; (setq doom-theme 'doom-material)
 ;; (setq doom-theme 'doom-gruvbox)
