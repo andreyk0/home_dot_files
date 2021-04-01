@@ -20,6 +20,7 @@
 	co  = !git checkout
 	dd  = !git diff $(git-default-branch)
 	dds = !git diff --ignore-all-space $(git-default-branch)
+	cod = !git co $(git-default-branch) && git pull
 	dod = !git diff $(git remote)/$(git-default-branch)
 	dods= !git diff --ignore-all-space $(git remote)/$(git-default-branch)
 	d   = !git diff
