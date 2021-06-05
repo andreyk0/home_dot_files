@@ -49,7 +49,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 alias ls='exa'
-alias ll='exa -l@ --git'
+alias ll='exa -l --git'
 alias la='exa -a'
 
 alias cat='bat -p'
