@@ -90,3 +90,6 @@
 )
 
 (setq evil-snipe-spillover-scope 'whole-visible)
+
+
+(setq lsp-terraform-server '("terraform-ls" "serve"))
