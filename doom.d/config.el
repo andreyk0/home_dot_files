@@ -93,3 +93,5 @@
 
 
 (setq lsp-terraform-server '("terraform-ls" "serve"))
+
+(use-package! lsp-metals)

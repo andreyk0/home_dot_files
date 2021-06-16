@@ -52,3 +52,4 @@
 ;; (package! ormolu)
 
 (package! graphviz-dot-mode)
+(package! lsp-metals)
