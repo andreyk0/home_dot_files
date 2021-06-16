@@ -18,3 +18,7 @@ ensime.sbt
 /tags
 TAGS
 /.vscode
+.bloop
+.metals
+metals.sbt
+/project/project
