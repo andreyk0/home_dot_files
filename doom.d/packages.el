@@ -52,4 +52,6 @@
 ;; (package! ormolu)
 
 (package! graphviz-dot-mode)
+
+;; https://emacs-lsp.github.io/lsp-metals/#quickstart
 (package! lsp-metals)
