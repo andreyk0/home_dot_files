@@ -54,4 +54,5 @@
 (package! graphviz-dot-mode)
 
 ;; https://emacs-lsp.github.io/lsp-metals/#quickstart
+;; https://scalameta.org/metals/docs/editors/emacs.html
 (package! lsp-metals)
