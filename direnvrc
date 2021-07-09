@@ -9,4 +9,5 @@
 #set -x
 
 # https://github.com/nix-community/nix-direnv#with-nix-env
+export NIX_PATH=$HOME/.nix-defexpr/channels
 source $HOME/.nix-profile/share/nix-direnv/direnvrc
