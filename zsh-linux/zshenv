@@ -23,6 +23,7 @@ export JULIA_NUM_THREADS=6
 
 export NIX_BUILD_CORES=6
 
+export DOCKER_BUILDKIT=1
 
 if [ -e $HOME/.zshenvlocal ] ; then
 . $HOME/.zshenvlocal
