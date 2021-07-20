@@ -39,8 +39,7 @@
 	rid = !git rebase -i $(git remote)/$(git-default-branch)
 	ri  = !git rebase -i
 	s   = !git status
-	u   = !git pull
-	up  = !git fetch --tags -p &&  git-delete-merged-branches && git status
+	u   = !git fetch --tags -p &&  git-delete-merged-branches && git status
 	wd  = !git diff --color-words
 	wip = !git commit -amwip
 
