@@ -92,8 +92,8 @@
         (ansi-color-apply-on-region (point-min) (point-max)))
 )
 
-(setq evil-snipe-spillover-scope 'whole-visible)
-
+(after! evil-snipe
+  (evil-snipe-mode -1))
 
 (setq lsp-terraform-server '("terraform-ls" "serve"))
 
