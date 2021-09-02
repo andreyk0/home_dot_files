@@ -32,8 +32,8 @@
 ;; (setq doom-theme 'doom-one)
 ;;
 ;; https://github.com/hlissner/emacs-doom-themes/tree/screenshots
-(setq doom-theme 'doom-one)
-;; (setq doom-theme 'doom-snazzy)
+;; (setq doom-theme 'doom-one)
+(setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-zenburn)
 ;; (setq doom-theme 'doom-material)
 ;; (setq doom-theme 'doom-gruvbox)
