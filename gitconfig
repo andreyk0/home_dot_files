@@ -41,7 +41,7 @@
 	s   = !git status
 	u   = !git fetch --tags -p &&  git-delete-merged-branches && git status
 	wd  = !git diff --color-words
-	wip = !git commit -amwip
+	wip = !git commit -amwip --no-gpg-sign
 
 [diff]
 	tool = meld
