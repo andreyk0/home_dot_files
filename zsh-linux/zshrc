@@ -53,6 +53,7 @@ alias ll='exa -l --git'
 alias la='exa -a'
 
 alias cat='bat -p'
+alias wbat='bat --wrap=never'
 #alias top='btm'
 #alias du='dust'
 #alias ps='procs'
