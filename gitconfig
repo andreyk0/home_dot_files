@@ -64,3 +64,6 @@
 	ff = only
 [init]
 	defaultBranch = main
+
+[includeIf "gitdir:~akartashov/"]
+	path = ~/.gitconfig.d/work
