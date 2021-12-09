@@ -55,4 +55,5 @@
 
 ;; https://emacs-lsp.github.io/lsp-metals/#quickstart
 ;; https://scalameta.org/metals/docs/editors/emacs.html
-(package! lsp-metals)
+;; https://siawyoung.com/blog/code/2020-02-06-installing-metals-emacs-doom
+;;(package! lsp-metals)
