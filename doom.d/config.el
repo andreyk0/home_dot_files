@@ -29,7 +29,7 @@
 ;;(setq doom-font (font-spec :family "Fira Code" :size 14 :weight 'medium))
 (setq doom-font (font-spec :family "Fira Code" :size 13 :weight 'semi-light)
       doom-variable-pitch-font (font-spec :family "Fira Code") ; inherits `doom-font''s :size
-      doom-unicode-font (font-spec :family "Iosevka" :size 13)
+      doom-unicode-font (font-spec :family "Symbola" :size 13)
       doom-big-font (font-spec :family "Fira Code" :size 19))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
