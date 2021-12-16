@@ -69,6 +69,7 @@ alias cdp='cd $(project-root)'
 alias julia='julia -p auto'
 
 alias rga='rg --no-ignore -.'
+alias fda='fd -H'
 
 # Launch GPG agent
 #gpgconf --launch gpg-agent
