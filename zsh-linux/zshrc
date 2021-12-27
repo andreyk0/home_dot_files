@@ -22,6 +22,11 @@ if type kubectl > /dev/null ; then
 fi
 
 
+if type zoxide > /dev/null ; then
+  source <(zoxide init zsh)
+fi
+
+
 E() { emacs "$@" & disown }
 e() { emacsclient -nq "$@" }
 ew() { emacs -nw "$@" }
