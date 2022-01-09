@@ -104,3 +104,5 @@
 (setq lsp-terraform-server '("terraform-ls" "serve"))
 
 (use-package! lsp-metals)
+
+(setq dhall-use-header-line nil)
