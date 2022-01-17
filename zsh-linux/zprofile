@@ -39,4 +39,6 @@ fi
 #  source "$POWERLINE_ZSH"
 #fi
 
-eval "$(starship init zsh)"
+if [ "$TERM" != "dumb" ] ; then
+	eval "$(starship init zsh)"
+fi
