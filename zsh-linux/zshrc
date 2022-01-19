@@ -61,6 +61,7 @@ fi
 alias ls='exa'
 alias ll='exa -l --git'
 alias la='exa -a'
+alias tree='exa --git-ignore -T'
 
 alias cat='bat -p'
 alias wbat='bat --wrap=never'
