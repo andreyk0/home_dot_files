@@ -75,7 +75,7 @@ alias gs='git status'
 alias trm='trash-put'
 alias open='xdg-open'
 
-alias cdp='cd $(project-root)'
+alias zp='z $(project-root)'
 
 alias julia='julia -p auto'
 
