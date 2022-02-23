@@ -4,6 +4,3 @@
 	signingkey = 202DA9BAE8F0FE08
 	name = Andrey Kartashov
 	email = akartashov@earnestresearch.com
-
-[log]
-	showSignature = true
