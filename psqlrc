@@ -1,1 +1,6 @@
-\x auto
+-- \x off
+-- \pset format wrapped
+-- \pset pager off
+-- \x auto
+
+\setenv PAGER 'bat --wrap=never'
