@@ -3,4 +3,4 @@
 -- \pset pager off
 -- \x auto
 
-\setenv PAGER 'bat --wrap=never'
+\setenv PAGER 'less -SX'
