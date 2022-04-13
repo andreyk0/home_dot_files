@@ -82,6 +82,8 @@ alias julia='julia -p auto'
 alias rga='rg --no-ignore -.'
 alias fda='fd -H'
 
+alias j=just
+
 # Launch GPG agent
 #gpgconf --launch gpg-agent
 
