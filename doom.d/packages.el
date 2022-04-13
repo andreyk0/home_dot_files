@@ -57,3 +57,6 @@
 ;; https://scalameta.org/metals/docs/editors/emacs.html
 ;; https://siawyoung.com/blog/code/2020-02-06-installing-metals-emacs-doom
 ;;(package! lsp-metals)
+
+;; https://github.com/leon-barrett/just-mode.el
+(package! just-mode)
