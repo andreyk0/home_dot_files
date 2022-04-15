@@ -80,7 +80,7 @@ alias zp='z $(project-root)'
 alias julia='julia -p auto'
 
 alias rga='rg --no-ignore -.'
-alias fda='fd -H'
+alias fda='fd -uH'
 
 alias j=just
 
