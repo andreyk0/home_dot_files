@@ -32,3 +32,6 @@ fi
 # apps linked against nix' glibc don't find locale definitions
 # https://github.com/NixOS/nixpkgs/issues/38991
 export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+
+# https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
