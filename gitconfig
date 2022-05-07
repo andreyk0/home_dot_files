@@ -29,6 +29,7 @@
 	do  = !git diff $(git remote)/$(git branch --show-current)
 	dos = !git diff --ignore-all-space $(git remote)/$(git branch --show-current)
 	ds  = !git diff --ignore-all-space
+        FIX = !git remote set-head origin --auto
 	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
 	lg  = !git log --graph
 	pF  = !git push --force-with-lease
