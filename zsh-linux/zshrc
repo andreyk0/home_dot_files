@@ -83,6 +83,7 @@ alias rga='rg --no-ignore -.'
 alias fda='fd -uH'
 
 alias j=just
+alias jc='just --choose'
 
 # Launch GPG agent
 #gpgconf --launch gpg-agent
