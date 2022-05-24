@@ -39,10 +39,12 @@
 ;;
 ;; https://github.com/hlissner/emacs-doom-themes/tree/screenshots
 ;; (setq doom-theme 'doom-one)
-(setq doom-theme 'doom-snazzy)
+;; (setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-zenburn)
 ;; (setq doom-theme 'doom-material)
 ;; (setq doom-theme 'doom-gruvbox)
+;; (setq doom-theme 'doom-Iosvkem)
+(setq doom-theme 'doom-monokai-pro)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
