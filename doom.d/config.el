@@ -108,3 +108,7 @@
 (use-package! lsp-metals)
 
 (setq dhall-use-header-line nil)
+
+;; https://github.com/joaotavora/yasnippet#use-yas-minor-mode-on-a-per-buffer-basis
+(yas-reload-all)
+(add-hook 'terraform-mode-hook #'yas-minor-mode)
