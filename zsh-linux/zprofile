@@ -19,6 +19,7 @@ if [ -z "$IN_NIX_SHELL" ] ; then
     ~/bin
     ~/.local/bin
     ~/.cargo/bin
+    ~/.ghcup/bin
     ~/.emacs.d/bin
     ~/.local/share/coursier/bin
     /sbin
