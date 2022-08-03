@@ -115,9 +115,25 @@
 
 
 (add-hook 'scala-mode-hook
-          (lambda () (map!
-           :leader
-           :prefix "c"
-           :desc "SBT compile" "c" #'sbt-do-compile
-           ))
+          (lambda ()
+
+            (map!
+             :leader
+             :prefix "c"
+             :desc "SBT rerun last command" "c" #'sbt-run-previous-command
+             )
+
+            (map!
+             :leader
+             :prefix "c"
+             :desc "SBT recompile" "C" #'sbt-do-compile
+             )
+
+            (map!
+             :leader
+             :prefix "c"
+             :desc "SBT test" "t" #'sbt-do-test
+             )
+
+            )
           )
