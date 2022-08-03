@@ -112,3 +112,12 @@
 ;; https://github.com/joaotavora/yasnippet#use-yas-minor-mode-on-a-per-buffer-basis
 (yas-reload-all)
 (add-hook 'terraform-mode-hook #'yas-minor-mode)
+
+
+(add-hook 'scala-mode-hook
+          (lambda () (map!
+           :leader
+           :prefix "c"
+           :desc "SBT compile" "c" #'sbt-do-compile
+           ))
+          )
