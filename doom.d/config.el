@@ -86,10 +86,12 @@
 (map! :leader
       (:prefix-map ("c" . "code")
        (:when (featurep! :tools lsp)
-          :desc "LSP describe thing" "h" #'lsp-describe-thing-at-point
-          )
+        :desc "LSP describe thing" "h" #'lsp-describe-thing-at-point
+        )
+
+       :desc "Run build tool" "b" #'compile
        )
-)
+      )
 
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
 
