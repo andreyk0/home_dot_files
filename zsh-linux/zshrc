@@ -85,6 +85,8 @@ alias fda='fd -uH'
 alias j=just
 alias jc='just --choose'
 
+alias hx=helix
+
 # Launch GPG agent
 #gpgconf --launch gpg-agent
 
