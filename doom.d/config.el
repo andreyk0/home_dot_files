@@ -85,7 +85,7 @@
 
 (map! :leader
       (:prefix-map ("c" . "code")
-       (:when (featurep! :tools lsp)
+       (:when (modulep! :tools lsp)
         :desc "LSP describe thing" "h" #'lsp-describe-thing-at-point
         )
 
