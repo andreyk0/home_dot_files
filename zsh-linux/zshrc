@@ -87,6 +87,8 @@ alias jc='just --choose'
 
 alias hx=helix
 
+alias top='procs --watch --sortd cpu'
+
 # Launch GPG agent
 #gpgconf --launch gpg-agent
 
