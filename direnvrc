@@ -11,11 +11,3 @@
 # https://github.com/nix-community/nix-direnv#with-nix-env
 export NIX_PATH=$HOME/.nix-defexpr/channels
 source $HOME/.nix-profile/share/nix-direnv/direnvrc
-
-# https://nixos.wiki/wiki/Flakes#Direnv_integration
-use_flake() {
-  watch_file flake.nix
-  watch_file flake.lock
-  mkdir -pv "$(direnv_layout_dir)"
-  eval "$(nix print-dev-env --profile "$(direnv_layout_dir)/flake-profile")"
-}
