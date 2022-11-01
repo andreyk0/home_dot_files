@@ -33,7 +33,7 @@ precmd_functions+=(set_win_title)
 
 
 E() { emacs "$@" & disown }
-e() { emacsclient -nq "$@" }
+e() { emacsclient -nw "$@" }
 ew() { emacs -nw "$@" }
 
 o() {
