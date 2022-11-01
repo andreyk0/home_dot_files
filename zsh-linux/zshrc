@@ -32,9 +32,7 @@ function set_win_title(){
 precmd_functions+=(set_win_title)
 
 
-E() { emacs "$@" & disown }
-e() { emacsclient -nw "$@" }
-ew() { emacs -nw "$@" }
+e() { emacsclient --alternate-editor= -nw "$@" }
 
 o() {
     "$@" 2>&1 | tee /tmp/out.$$
