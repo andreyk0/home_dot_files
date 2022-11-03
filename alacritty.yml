@@ -1,13 +1,23 @@
+# https://wiki.archlinux.org/title/Alacritty
+
 key_bindings:
   - { key: F11, action: ToggleFullscreen }
 
 font:
   normal:
-    family: "Fira Code"
+    family: "Cascadia Code"
     style:  "Medium"
 
   bold:
-    family: "Fira Code"
+    family: "Cascadia Code"
     style:  "SemiBold"
+
+  italic:
+    family: "Cascadia Code"
+    style:  "Italic"
+
+  bold_italic:
+    family: "Cascadia Code"
+    style:  "SemiBold Italic"
 
   size: 10
