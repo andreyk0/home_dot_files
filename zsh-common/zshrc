@@ -36,5 +36,14 @@ setopt promptsubst # required for git plugin
 REPORTTIME=10
 
 
-# shell mode
-bindkey -e
+#
+# Shell mode
+#
+
+# Use vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# https://blog.xargs.io/2012/05/21/using-zshs-history-incremental-search-with-vi-mode/
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
