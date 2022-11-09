@@ -25,8 +25,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Cascadia Code" :size 12 :weight 'semi-bold)
-      doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 12 :weight 'semi-bold)
+(setq doom-font (font-spec :family "Cascadia Code" :size 12 :weight 'normal)
+      doom-variable-pitch-font (font-spec :family "Cascadia Code" :size 12 :weight 'normal)
       )
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
