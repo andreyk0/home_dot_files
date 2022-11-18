@@ -60,3 +60,7 @@
 
 ;; https://github.com/leon-barrett/just-mode.el
 (package! just-mode)
+
+;; String conversions
+;; https://stackoverflow.com/questions/9288181/converting-from-camelcase-to-in-emacs
+(package! string-inflection)
