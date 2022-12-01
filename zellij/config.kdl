@@ -1,2 +1,8 @@
 copy_command "pbcopy"
 scrollback_editor "e"
+
+keybinds {
+    shared_except "locked" {
+        unbind "Ctrl q"
+    }
+}
