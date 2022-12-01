@@ -2,7 +2,12 @@ copy_command "pbcopy"
 scrollback_editor "e"
 
 keybinds {
+    unbind "Ctrl g"
     shared_except "locked" {
         unbind "Ctrl q"
+        bind "F1" { SwitchToMode "Locked"; }
+    }
+    locked {
+        bind "F1" { SwitchToMode "Normal"; }
     }
 }
