@@ -82,7 +82,7 @@ alias jc='just --choose'
 
 alias hx=helix
 
-alias top='procs --watch --sortd cpu'
+alias top='procs --watch --sortd cpu --watch-interval 2'
 
 alias Z='zellij -s $(basename $(pwd))'
 
