@@ -91,7 +91,7 @@
 ;; they are implemented.
 
 ;; https://github.com/emacs-lsp/lsp-metals/issues/84
-(require 'treemacs-extensions)
+(require 'treemacs-treelib)
 (setq rustic-lsp-server 'rust-analyzer)
 
 ;;(setq lsp-haskell-process-path-hie "haskell-language-server-wrapper")
