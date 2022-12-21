@@ -90,6 +90,8 @@ alias Z='zellij action rename-tab $(basename $(pwd))'
 #gpgconf --launch gpg-agent
 
 # GPG/SSH env
-GPG_TTY=$(/usr/bin/tty)
-SSH_AUTH_SOCK="/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"
-export GPG_TTY SSH_AUTH_SOCK
+if [ -z "$SSH_CLIENT" ]; then
+  GPG_TTY=$(/usr/bin/tty)
+  SSH_AUTH_SOCK="/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"
+  export GPG_TTY SSH_AUTH_SOCK
+fi
