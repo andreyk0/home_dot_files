@@ -45,8 +45,8 @@
 ;; (setq doom-theme 'doom-material)
 ;; (setq doom-theme 'doom-monokai-classic)
 ;; (setq doom-theme 'doom-one)
-;; (setq doom-theme 'doom-peacock)
-(setq doom-theme 'doom-snazzy)
+(setq doom-theme 'doom-peacock)
+;; (setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-zenburn)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
