@@ -44,8 +44,9 @@
 ;; (setq doom-theme 'doom-Iosvkem)
 ;; (setq doom-theme 'doom-material)
 ;; (setq doom-theme 'doom-monokai-classic)
+(setq doom-theme 'doom-monokai-pro)
 ;; (setq doom-theme 'doom-one)
-(setq doom-theme 'doom-peacock)
+;; (setq doom-theme 'doom-peacock)
 ;; (setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-zenburn)
 
