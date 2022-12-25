@@ -93,6 +93,7 @@
 
 ;; https://github.com/emacs-lsp/lsp-metals/issues/84
 (require 'treemacs-treelib)
+(require 'treemacs-extensions)
 (setq rustic-lsp-server 'rust-analyzer)
 
 ;;(setq lsp-haskell-process-path-hie "haskell-language-server-wrapper")
