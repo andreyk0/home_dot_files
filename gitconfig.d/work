@@ -1,6 +1,6 @@
 # mac: git config core.ignorecase false
 
 [user]
-	signingkey = 202DA9BAE8F0FE08
+	signingkey = 5CC858C93DB02839
 	name = Andrey Kartashov
-	email = akartashov@earnestresearch.com
+	email = akartashov@earnestanalytics.com
