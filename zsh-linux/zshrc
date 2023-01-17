@@ -82,8 +82,6 @@ alias jc='just --choose'
 
 alias hx=helix
 
-alias top='procs --watch --sortd cpu --watch-interval 2'
-
 alias Z='zellij action rename-tab $(basename $(pwd))'
 
 # Launch GPG agent
