@@ -106,7 +106,6 @@
 ;;  :localleader
 ;;  "f" #'ormolu-format-buffer)
 
-
 (map! :leader
       (:prefix-map ("c" . "code")
        (:when (modulep! :tools lsp)
@@ -114,6 +113,8 @@
         )
 
        :desc "Run build tool" "b" #'compile
+
+       :desc "Toggle region comment" "#" #'comment-region
        )
       )
 
