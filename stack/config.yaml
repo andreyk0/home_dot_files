@@ -6,6 +6,7 @@
 # in the cabal config. We recommend uncommenting them and filling them out if
 # you intend to use 'stack new'.
 # See https://docs.haskellstack.org/en/stable/yaml_configuration/#templates
+
 templates:
   params:
     author-name: Andrey Kartashov
@@ -13,5 +14,6 @@ templates:
     github-username: andreyk0
     copyright: 2018 Andrey Kartashov
 
-ghc-options:
-  "$everything": -j
+# Use ghcup
+system-ghc: true
+install-ghc: false
