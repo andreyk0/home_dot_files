@@ -163,3 +163,9 @@
 
             )
           )
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (setq-default tab-width 2)
+            )
+          )
