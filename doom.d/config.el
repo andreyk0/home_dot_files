@@ -169,3 +169,5 @@
             (setq-default tab-width 2)
             )
           )
+
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
