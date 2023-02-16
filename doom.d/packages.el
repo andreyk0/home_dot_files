@@ -64,3 +64,6 @@
 ;; String conversions
 ;; https://stackoverflow.com/questions/9288181/converting-from-camelcase-to-in-emacs
 (package! string-inflection)
+
+;; Jsonnet
+(package! jsonnet-mode) 
