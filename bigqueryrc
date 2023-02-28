@@ -1,4 +1,4 @@
---apilog=stdout
+#--apilog=stdout
 --format=prettyjson
 --location=US
 
