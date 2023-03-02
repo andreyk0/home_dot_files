@@ -12,36 +12,36 @@
 
 [alias]
 	a   = !git-add-default
-	ba  = !git branch -a
-	b   = !git branch
-	ca  = !git commit --amend
-	C   = !git clean -fdx .
-	ci  = !git commit
-	co  = !git checkout
-	dd  = !git diff $(git-default-branch)
-	dds = !git diff --ignore-all-space $(git-default-branch)
+	ba  = branch -a
+	b   = branch
+	ca  = commit --amend
+	C   = clean -fdx .
+	ci  = commit
+	co  = checkout
+	dd  = !git-aliased diff $(git-default-branch)
+	dds = !git-aliased diff --ignore-all-space $(git-default-branch)
 	cod = !git co $(git-default-branch) && git pull
-	dod = !git diff $(git remote)/$(git-default-branch)
-	dods= !git diff --ignore-all-space $(git remote)/$(git-default-branch)
-	d   = !git diff
-	dh  = !git diff HEAD
-	dhs = !git diff --ignore-all-space HEAD
-	do  = !git diff $(git remote)/$(git branch --show-current)
-	dos = !git diff --ignore-all-space $(git remote)/$(git branch --show-current)
-	ds  = !git diff --ignore-all-space
+	dod = !git-aliased diff $(git remote)/$(git-default-branch)
+	dods= !git-aliased diff --ignore-all-space $(git remote)/$(git-default-branch)
+	d   = diff
+	dh  = diff HEAD
+	dhs = diff --ignore-all-space HEAD
+	do  = !git-aliased diff $(git remote)/$(git branch --show-current)
+	dos = !git-aliased diff --ignore-all-space $(git remote)/$(git branch --show-current)
+	ds  = diff --ignore-all-space
         FIX = !git remote set-head origin --auto
-	lgg = !git log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
-	lg  = !git log --graph
-	pF  = !git push --force-with-lease
-	p   = !git push
+	lgg = log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
+	lg  = log --graph
+	pF  = push --force-with-lease
+	p   = push
 	pu  = !git push --set-upstream $(git remote) $(git branch --show-current)
-	rhd = !git reset --hard $(git remote)/$(git-default-branch)
-	rh  = !git reset --hard
+	rhd = !git-aliased reset --hard $(git remote)/$(git-default-branch)
+	rh  = reset --hard
 	rid = !git rebase -i $(git remote)/$(git-default-branch)
 	ri  = !git rebase -i
-	s   = !git status
+	s   = status
 	u   = !git fetch --tags -p &&  git-delete-merged-branches && git status
-	wd  = !git diff --color-words
+	wd  = !git-aliased diff --color-words
 	wip = !git commit -amwip --no-gpg-sign
 
 [diff]
