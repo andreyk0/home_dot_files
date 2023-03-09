@@ -47,8 +47,9 @@
 ;; (setq doom-theme 'doom-monokai-pro)
 ;; (setq doom-theme 'doom-old-hope)
 ;; (setq doom-theme 'doom-one)
-;; (setq doom-theme 'doom-peacock)
-(setq doom-theme 'doom-snazzy)
+;; (setq doom-theme 'doom-opera)
+(setq doom-theme 'doom-peacock)
+;; (setq doom-theme 'doom-snazzy)
 ;; (setq doom-theme 'doom-zenburn)
 ;; (setq doom-theme 'wombat)
 
