@@ -33,3 +33,5 @@ export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
 
 # https://cloud.google.com/iap/docs/using-tcp-forwarding#increasing_the_tcp_upload_bandwidth
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
+export IDF_PATH=$HOME/opt/esp-idf
