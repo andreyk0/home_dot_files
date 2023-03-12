@@ -6,6 +6,10 @@ autoload -Uz compinit && compinit -i
 setopt completeinword
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
+zle -C complete-file complete-word _generic
+zstyle ':completion:complete-file::::' completer _files
+bindkey '^x^I' complete-file
+
 autoload select-word-style
 select-word-style shell
 setopt auto_cd
