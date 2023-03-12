@@ -21,6 +21,8 @@ if type kubectl > /dev/null ; then
   source <(kubectl completion zsh)
 fi
 
+# trm complete files
+compdef _files trash-put
 
 if type zoxide > /dev/null ; then
   source <(zoxide init zsh)
