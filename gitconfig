@@ -48,6 +48,7 @@
 [diff]
 	tool = meld
 	ignoreSubmodules = dirty
+	external = difft
 
 [commit]
 	gpgsign = true
