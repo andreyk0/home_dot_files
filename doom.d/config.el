@@ -8,6 +8,8 @@
 ;; and edit
 (doom-load-envvars-file "~/.doom.d/myenv")
 
+(add-to-list 'default-frame-alist '(undecorated . t))
+
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Andrey Kartashov"
