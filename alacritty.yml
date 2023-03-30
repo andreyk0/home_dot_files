@@ -21,3 +21,6 @@ font:
     style:  "SemiBold Italic"
 
   size: 10
+
+window:
+  decorations: none
