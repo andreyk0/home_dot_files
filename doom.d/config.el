@@ -8,7 +8,10 @@
 ;; and edit
 (doom-load-envvars-file "~/.doom.d/myenv")
 
+;; Remove top frame
 (add-to-list 'default-frame-alist '(undecorated . t))
+;; Modeline height
+(setq doom-modeline-height 1)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
