@@ -4,10 +4,11 @@ fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 setopt completeinword
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
+zstyle ':completion:complete-file::::' completer _files matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 zle -C complete-file complete-word _generic
-zstyle ':completion:complete-file::::' completer _files
 bindkey '^x^I' complete-file
 
 autoload select-word-style
