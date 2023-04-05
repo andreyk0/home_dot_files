@@ -10,3 +10,8 @@ Terminal=false
 Categories=Development;TextEditor;
 StartupNotify=true
 StartupWMClass=Emacs
+
+# https://wiki.archlinux.org/title/Desktop_entries#Hide_desktop_entries
+NoDisplay=true
+Hidden=true
+

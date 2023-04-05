@@ -13,14 +13,10 @@ StartupWMClass=Emacs
 Keywords=emacsclient;
 Actions=new-window;new-instance;
 
-# https://wiki.archlinux.org/title/Desktop_entries#Hide_desktop_entries
-NoDisplay=true
-Hidden=true
-
 [Desktop Action new-window]
 Name=New Window
 Exec=/usr/bin/emacsclient --alternate-editor= --create-frame %F
 
 [Desktop Action new-instance]
 Name=New Instance
-Exec=emacs %F
+Exec=emacs --fg-daemon %F
