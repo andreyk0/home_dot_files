@@ -1,4 +1,11 @@
+# Desktop DB
+
 Install into ~/.local/share/applications
-Run update-desktop-database .local/share/applications
+
+Run 
+
+```bash
+update-desktop-database $HOME/.local/share/applications
+```
 
 Example entries / icons can be found in the Appimage-mounted user dir.
