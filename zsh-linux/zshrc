@@ -55,9 +55,9 @@ if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(/usr/bin/dircolors -b ~/.dircolors)" || eval "$(/usr/bin/dircolors -b)"
 fi
 
-alias ls='exa'
-alias ll='exa -l --git'
-alias la='exa -a'
+alias ls='exa -g'
+alias ll='exa -g -l --git'
+alias la='exa -g -a'
 alias tree='exa --git-ignore -T'
 
 alias cat='bat -p'
