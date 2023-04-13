@@ -177,3 +177,10 @@
           )
 
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
+
+(dir-locals-set-class-variables
+ 'readonly-source
+ '((nil . ((buffer-read-only . t)))))
+
+(dir-locals-set-directory-class
+ (concat (getenv "HOME") "/.cargo") 'readonly-source)
