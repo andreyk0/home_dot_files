@@ -62,6 +62,9 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+;; default tab width
+(setq-default tab-width 4)
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/notes/")
@@ -173,6 +176,12 @@
 (add-hook 'c-mode-common-hook
           (lambda ()
             (setq-default tab-width 2)
+            )
+          )
+
+(add-hook 'python-mode-common-hook
+          (lambda ()
+            (setq-default tab-width 4)
             )
           )
 
