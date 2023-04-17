@@ -28,6 +28,10 @@ if type zoxide > /dev/null ; then
   source <(zoxide init zsh)
 fi
 
+if type zellij > /dev/null ; then
+  source <(zellij setup --generate-completion=zsh) 2>/dev/null
+fi
+
 function set_win_title(){
     echo -ne "\033]0; $(basename "$PWD") \007"
 }
