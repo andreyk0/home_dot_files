@@ -110,6 +110,15 @@
 (after! lsp-haskell
   (setq lsp-haskell-formatting-provider "ormolu"))
 
+(add-hook 'haskell-mode-hook
+          (lambda ()
+            (map! :leader
+                  (:prefix-map ("c" . "code")
+                               (:when (modulep! :tools lsp) :desc "LSP format buffer" "f" #'lsp-format-buffer)
+                               )
+                  )))
+
+
 (map! :leader
       (:prefix-map ("c" . "code")
        (:when (modulep! :tools lsp)
