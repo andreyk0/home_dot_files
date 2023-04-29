@@ -14,7 +14,61 @@ if [ -z "$IN_NIX_SHELL" ] ; then
   fi
 fi
 
-. $HOME/.dotfiles/zsh-common/zshrc
+fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(~/.zsh/completion $fpath)
+
+autoload -Uz compinit && compinit -i
+
+setopt completeinword
+
+zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
+zstyle ':completion:complete-file::::' completer _files matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+zle -C complete-file complete-word _generic
+bindkey '^x^I' complete-file
+
+autoload select-word-style
+select-word-style shell
+setopt auto_cd
+
+setopt interactivecomments # pound sign in interactive prompt
+
+setopt no_auto_remove_slash # keep slashes
+
+# superglobs
+setopt extendedglob
+unsetopt caseglob
+unsetopt nomatch
+
+HISTFILE=~/.zhistory
+HISTSIZE=SAVEHIST=10000
+
+# Prefer inc_append_history of share_history for consistent per-window behavior
+unsetopt share_history     # Don't share history real-time between instances.
+setopt inc_append_history  # Each instance has its own history at run time, but global history file (for future invocations) is appended in real-time
+# Some history settings missing from lib/history.zsh
+setopt hist_ignore_space   # Ignore dups
+setopt hist_find_no_dups   # Don't cycle through dupes during history search
+setopt hist_no_store       # Don't save invocation of history itself
+setopt hist_no_functions   # Don't save ZSH function definitions
+setopt histignorealldups # Substitute commands in the prompt
+setopt promptsubst # required for git plugin
+
+
+REPORTTIME=10
+
+
+#
+# Shell mode
+#
+
+# Use vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# https://blog.xargs.io/2012/05/21/using-zshs-history-incremental-search-with-vi-mode/
+bindkey -M viins '^R' history-incremental-search-backward
+bindkey -M vicmd '^R' history-incremental-search-backward
 
 
 if type kubectl > /dev/null ; then
