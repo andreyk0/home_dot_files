@@ -1,19 +1,6 @@
 # .zshrc is sourced in interactive shells. It should contain commands to set
 # up aliases, functions, options, key bindings, etc.
 
-# Skip these inside of nix shell
-if [ -z "$IN_NIX_SHELL" ] ; then
-  . /etc/environment
-
-  if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] ; then
-  . $HOME/.nix-profile/etc/profile.d/nix.sh
-  fi
-
-  if [ -x /sbin/direnv ] ; then
-    eval "$(direnv hook zsh)"
-  fi
-fi
-
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(~/.zsh/completion $fpath)
 
@@ -113,13 +100,17 @@ if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(/usr/bin/dircolors -b ~/.dircolors)" || eval "$(/usr/bin/dircolors -b)"
 fi
 
-alias ls='exa -g'
-alias ll='exa -g -l --git'
-alias la='exa -g -a'
-alias tree='exa --git-ignore -T'
+if type exa > /dev/null ; then
+  alias ls='exa -g'
+  alias ll='exa -g -l --git'
+  alias la='exa -g -a'
+  alias tree='exa --git-ignore -T'
+fi
 
-alias cat='bat -p'
-alias wbat='bat --wrap=never'
+if type bat > /dev/null ; then
+  alias cat='bat -p'
+  alias wbat='bat --wrap=never'
+fi
 #alias top='btm'
 #alias du='dust'
 #alias ps='procs'
@@ -152,4 +143,8 @@ if [ -z "$SSH_CLIENT" ]; then
   GPG_TTY=$(/usr/bin/tty)
   SSH_AUTH_SOCK="/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"
   export GPG_TTY SSH_AUTH_SOCK
+fi
+
+if [ "$TERM" != "dumb" ] && type starship > /dev/null ; then
+	eval "$(starship init zsh)"
 fi

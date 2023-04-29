@@ -10,36 +10,3 @@
 # the shell environment at all. Rather, it should be used to set the terminal
 # type and run a series of external commands (fortune, msgs, etc).
 
-typeset -U path
-
-# Inherit PATH from nix when running inside nix shell
-if [ -z "$IN_NIX_SHELL" ] ; then
-  path=(
-    ~/sbin
-    ~/bin
-    ~/.local/bin
-    ~/.cargo/bin
-    ~/.ghcup/bin
-    ~/.emacs.d/bin
-    ~/.local/share/coursier/bin
-    /sbin
-    /bin
-    /usr/sbin
-    /usr/bin
-    /usr/local/sbin
-    /usr/local/bin
-
-  $path[@]
-  )
-else
-  path=($(echo "$PATH" | sed -e 's/:/\n/g'))
-fi
-
-#POWERLINE_ZSH=/usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
-#if [ -e "$POWERLINE_ZSH" ] ; then
-#  source "$POWERLINE_ZSH"
-#fi
-
-if [ "$TERM" != "dumb" ] ; then
-	eval "$(starship init zsh)"
-fi

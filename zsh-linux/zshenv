@@ -3,12 +3,52 @@
 # important environment variables. `.zshenv' should not contain commands that
 # produce output or assume the shell is attached to a tty.
 
+# Skip these inside of nix shell
+if [ -z "$IN_NIX_SHELL" ] ; then
+  . /etc/environment
+
+  if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ] ; then
+  . $HOME/.nix-profile/etc/profile.d/nix.sh
+  fi
+
+  if [ -x /sbin/direnv ] ; then
+    eval "$(direnv hook zsh)"
+  fi
+fi
+
+typeset -U path
+
+# Inherit PATH from nix when running inside nix shell
+if [ -z "$IN_NIX_SHELL" ] ; then
+  path=(
+    ~/sbin
+    ~/bin
+    ~/.local/bin
+    ~/.cargo/bin
+    ~/.ghcup/bin
+    ~/.emacs.d/bin
+    ~/.local/share/coursier/bin
+    /sbin
+    /bin
+    /usr/sbin
+    /usr/bin
+    /usr/local/sbin
+    /usr/local/bin
+
+  $path[@]
+  )
+else
+  path=($(echo "$PATH" | sed -e 's/:/\n/g'))
+fi
+
+#POWERLINE_ZSH=/usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+#if [ -e "$POWERLINE_ZSH" ] ; then
+#  source "$POWERLINE_ZSH"
+#fi
 
 if [ -z "$TMPDIR" -a -e "/run/user/$(id -u)" ] ; then
   export TMPDIR="/run/user/$(id -u)"
 fi
-
-. $HOME/.dotfiles/zsh-linux/zprofile
 
 export EDITOR=vim
 export SHELL=/usr/bin/zsh
