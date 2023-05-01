@@ -1,6 +1,6 @@
 #copy_command "pbcopy"
 scrollback_editor "e"
-default_layout "compact"
+#default_layout "compact"
 
 keybinds {
     unbind "Ctrl g"
