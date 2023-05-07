@@ -76,3 +76,8 @@ export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 # conflicts with espup?
 #export IDF_PATH=$HOME/opt/esp-idf
+#
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ] ; then
+  export MOZ_ENABLE_WAYLAND=1
+fi
