@@ -34,7 +34,7 @@
 	lgg = log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
 	lg  = log --graph --name-only
 	lgp = log -p
-	pF  = push --force-with-lease
+	pF  = push --force-with-lease --force-if-includes
 	p   = push
 	pu  = !git push --set-upstream $(git remote) $(git branch --show-current)
 	rhd = !git-aliased reset --hard $(git remote)/$(git-default-branch)
