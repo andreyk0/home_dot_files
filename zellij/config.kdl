@@ -1,6 +1,10 @@
 #copy_command "pbcopy"
 scrollback_editor "e"
-#default_layout "compact"
+
+scroll_buffer_size 100000
+mirror_session true
+
+pane_frames false
 
 keybinds {
     unbind "Ctrl g"
