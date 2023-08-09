@@ -192,6 +192,9 @@
             )
           )
 
+(setq +python-ipython-repl-args '("-i" "--simple-prompt" "--no-color-info"))
+(setq +python-jupyter-repl-args '("--simple-prompt"))
+
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
 
 (dir-locals-set-class-variables
