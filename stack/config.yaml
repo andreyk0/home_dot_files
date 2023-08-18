@@ -17,3 +17,5 @@ templates:
 # Use ghcup
 system-ghc: true
 install-ghc: false
+
+#allow-newer: true
