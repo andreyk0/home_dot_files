@@ -147,13 +147,22 @@
   (evil-snipe-mode -1))
 
 (setq lsp-terraform-server '("terraform-ls" "serve"))
+(add-hook 'terraform-mode-hook #'yas-minor-mode)
+(add-hook 'terraform-mode-hook
+          (lambda ()
+            (map!
+             :leader
+             :prefix "c"
+             :desc "terraform fmt" "f" #'terraform-format-buffer
+             )
+            )
+          )
 
 (if (eq (getenv "USER") "akartashov")
   (use-package! lsp-metals))
 
 (setq dhall-use-header-line nil)
 
-(add-hook 'terraform-mode-hook #'yas-minor-mode)
 (add-hook 'rust-mode-hook #'yas-minor-mode)
 
 (add-hook 'scala-mode-hook
