@@ -1,0 +1,3 @@
+gen:
+  doom sync -e
+  doom doctor

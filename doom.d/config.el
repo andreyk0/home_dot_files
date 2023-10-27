@@ -109,6 +109,15 @@
 (require 'treemacs-treelib)
 (require 'treemacs-extensions)
 (setq rustic-lsp-server 'rust-analyzer)
+(add-hook 'rust-mode-hook #'yas-minor-mode)
+
+
+(require 'lsp)
+(lsp-register-client
+    (make-lsp-client :new-connection (lsp-tramp-connection "rust-analyzer")
+                     :major-modes '(rustic-mode)
+                     :remote? t
+                     :server-id 'rust-analyzer-remote))
 
 (after! lsp-haskell
   (setq lsp-haskell-formatting-provider "ormolu"))
@@ -162,8 +171,6 @@
   (use-package! lsp-metals))
 
 (setq dhall-use-header-line nil)
-
-(add-hook 'rust-mode-hook #'yas-minor-mode)
 
 (add-hook 'scala-mode-hook
           (lambda ()
