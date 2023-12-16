@@ -211,7 +211,14 @@
 (setq +python-ipython-repl-args '("-i" "--simple-prompt" "--no-color-info"))
 (setq +python-jupyter-repl-args '("--simple-prompt"))
 
-(add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
+
+(define-derived-mode arduino-mode c++-mode "ino" "Major mode for editing Arduino code.")
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
+
+(lsp-register-client
+    (make-lsp-client :new-connection (lsp-stdio-connection '("just" "lsp"))
+                     :major-modes '(arduino-mode)
+                     :server-id 'arduino))
 
 (dir-locals-set-class-variables
  'readonly-source
