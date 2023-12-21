@@ -1,7 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
-	pager = delta
+	#pager = delta
 
 [color]
 	diff = auto
@@ -42,6 +42,7 @@
 	rid = !git rebase -i $(git remote)/$(git-default-branch)
 	ri  = !git rebase -i
 	s   = status
+	sh  = show
 	u   = !git fetch --tags -p &&  git-delete-merged-branches && git status
 	wd  = !git-aliased diff --color-words
 	wip = !git commit -amwip --no-gpg-sign
