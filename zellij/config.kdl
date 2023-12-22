@@ -1,5 +1,6 @@
 #copy_command "pbcopy"
 scrollback_editor "e"
+session_serialization false
 
 scroll_buffer_size 100000
 mirror_session true
