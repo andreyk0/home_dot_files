@@ -1,0 +1,25 @@
+[font]
+size = 10
+
+[font.bold]
+family = "Cascadia Code"
+style = "SemiBold"
+
+[font.bold_italic]
+family = "Cascadia Code"
+style = "SemiBold Italic"
+
+[font.italic]
+family = "Cascadia Code"
+style = "Italic"
+
+[font.normal]
+family = "Cascadia Code"
+style = "Medium"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[window]
+decorations = "none"
