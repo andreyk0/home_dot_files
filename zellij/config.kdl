@@ -1,4 +1,4 @@
-#copy_command "pbcopy"
+copy_command "pbcopy"
 scrollback_editor "e"
 session_serialization false
 
