@@ -174,25 +174,11 @@
 
 (add-hook 'scala-mode-hook
           (lambda ()
-
             (map!
              :leader
              :prefix "c"
-             :desc "SBT rerun last command" "c" #'sbt-run-previous-command
+             :desc "Clean compile" "c" #'lsp-metals-clean-compile
              )
-
-            (map!
-             :leader
-             :prefix "c"
-             :desc "SBT recompile" "C" #'sbt-do-compile
-             )
-
-            (map!
-             :leader
-             :prefix "c"
-             :desc "SBT test" "t" #'sbt-do-test
-             )
-
             )
           )
 
