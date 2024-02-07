@@ -4,9 +4,9 @@
 ;; sync' after modifying this file!
 
 ;; Generate with
-;;   doom env -o ~/.doom.d/myenv
+;;   doom env -o ~/.config/doom/myenv
 ;; and edit
-(doom-load-envvars-file "~/.doom.d/myenv")
+(doom-load-envvars-file "~/.config/doom/myenv")
 
 ;; Remove top frame
 (add-to-list 'default-frame-alist '(undecorated . t))
