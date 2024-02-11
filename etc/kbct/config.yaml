@@ -1,0 +1,11 @@
+---
+# fork: https://github.com/andreyk0/kbct
+# aur: https://aur.archlinux.org/packages/kbct-git
+# needs: /etc/modules-load.d/kbct.conf
+- keyboards: [ "ELECOM ELECOM TrackBall Mouse" ]
+  keymap:
+    btn_right : btn_middle
+    btn_forward : btn_right
+    btn_extra : home
+    btn_side : end
+    btn_middle : super

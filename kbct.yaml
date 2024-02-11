@@ -1,6 +1,0 @@
-- keyboards: [ "ELECOM ELECOM TrackBall Mouse" ]
-  keymap:
-    btn_right : btn_middle
-    btn_forward : btn_right
-    btn_extra : home
-    btn_side : end
