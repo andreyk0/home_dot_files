@@ -8,4 +8,4 @@
     btn_forward : btn_right
     btn_extra : home
     btn_side : end
-    btn_middle : super
+    btn_middle : leftmeta
