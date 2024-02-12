@@ -1,7 +1,7 @@
 layout {
     pane split_direction="vertical" {
         pane
-        pane size="60%"
+        pane size="60%" focus=true
     }
 }
 
