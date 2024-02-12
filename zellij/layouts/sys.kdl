@@ -1,0 +1,16 @@
+layout {
+    pane split_direction="vertical" {
+        pane name="top" {
+          command "top"
+          args "-o" "USED"
+        }
+        pane name="btm" {
+          command "btm"
+        }
+    }
+    pane size="20%" name="logs" {
+      command "journalctl"
+      args "--no-pager" "--follow"
+   }
+}
+
