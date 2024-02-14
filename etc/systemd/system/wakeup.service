@@ -1,0 +1,8 @@
+[Unit]
+# Not sure yet, doesn't seem to work reliably
+Description=Fix for the suspend issue
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo -e 'GPP5\nGPP6' > /proc/acpi/wakeup"
+[Install]
+WantedBy=multi-user.target
