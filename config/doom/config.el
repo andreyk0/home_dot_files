@@ -174,10 +174,11 @@
 
 (add-hook 'scala-mode-hook
           (lambda ()
+            (setq compile-command "just test")
             (map!
              :leader
              :prefix "c"
-             :desc "Clean compile" "c" #'lsp-metals-clean-compile
+             :desc "Clean compile" "C" #'lsp-metals-clean-compile
              )
             )
           )
