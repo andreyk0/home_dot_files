@@ -3,6 +3,6 @@
 Description=Fix for the suspend issue
 [Service]
 Type=oneshot
-ExecStart=/bin/sh -c "echo -e 'GPP5\nGPP6' > /proc/acpi/wakeup"
+ExecStart=/bin/sh -c "echo -e 'GPP5\nGPP6\nGP12\nXHC0\nXHC1\nXHC3\nNHI1\nXHC4' > /proc/acpi/wakeup"
 [Install]
 WantedBy=multi-user.target
