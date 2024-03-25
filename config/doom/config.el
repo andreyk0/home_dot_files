@@ -45,6 +45,7 @@
 ;; (setq doom-theme 'doom-one)
 ;;
 ;; https://github.com/hlissner/emacs-doom-themes/tree/screenshots
+(setq doom-theme 'doom-bluloco-dark)
 ;; (setq doom-theme 'doom-gruvbox)
 ;; (setq doom-theme 'doom-Iosvkem)
 ;; (setq doom-theme 'doom-material)
@@ -53,11 +54,13 @@
 ;; (setq doom-theme 'doom-monokai-pro)
 ;; (setq doom-theme 'doom-monokai-ristretto)
 ;; (setq doom-theme 'doom-monokai-spectrum)
-(setq doom-theme 'doom-old-hope)
+;; (setq doom-theme 'doom-oceanic-next)
+;; (setq doom-theme 'doom-old-hope)
 ;; (setq doom-theme 'doom-one)
 ;; (setq doom-theme 'doom-opera)
 ;; (setq doom-theme 'doom-peacock)
 ;; (setq doom-theme 'doom-snazzy)
+;; (setq doom-theme 'doom-tomorrow-night)
 ;; (setq doom-theme 'doom-zenburn)
 ;; (setq doom-theme 'wombat)
 
