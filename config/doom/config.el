@@ -113,7 +113,15 @@
 (require 'treemacs-extensions)
 (setq rustic-lsp-server 'rust-analyzer)
 (add-hook 'rust-mode-hook #'yas-minor-mode)
-
+(add-hook 'rust-mode-hook
+          (lambda ()
+            (map!
+             :leader
+             :prefix "c"
+             :desc "format buffer" "f" #'rustic-cargo-fmt
+             )
+            )
+          )
 
 (require 'lsp)
 (lsp-register-client
