@@ -112,9 +112,9 @@
 (require 'treemacs-treelib)
 (require 'treemacs-extensions)
 (setq rustic-lsp-server 'rust-analyzer)
+(add-hook 'rust-mode-hook #'yas-minor-mode)
 (add-hook 'rust-mode-hook
           (lambda ()
-            #'yas-minor-mode
             (setq compile-command "cargo build")
             (map!
              :leader
