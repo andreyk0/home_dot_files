@@ -131,6 +131,13 @@
                      :remote? t
                      :server-id 'rust-analyzer-remote))
 
+(dir-locals-set-class-variables
+ 'readonly-source
+ '((nil . ((buffer-read-only . t)))))
+
+(dir-locals-set-directory-class
+ (concat (getenv "HOME") "/.cargo") 'readonly-source)
+
 (after! lsp-haskell
   (setq lsp-haskell-formatting-provider "ormolu"))
 
@@ -219,9 +226,12 @@
                      :major-modes '(arduino-mode)
                      :server-id 'arduino))
 
-(dir-locals-set-class-variables
- 'readonly-source
- '((nil . ((buffer-read-only . t)))))
-
-(dir-locals-set-directory-class
- (concat (getenv "HOME") "/.cargo") 'readonly-source)
+(add-hook 'typescript-mode-hook
+          (lambda ()
+            (map!
+             :leader
+             :prefix "c"
+             :desc "terraform fmt" "f" #'lsp-format-buffer
+             )
+            )
+          )
