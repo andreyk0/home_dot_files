@@ -67,3 +67,6 @@
 
 ;; Jsonnet
 (package! jsonnet-mode) 
+
+;; Vue
+(package! vue-mode)
