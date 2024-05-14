@@ -235,3 +235,33 @@
              )
             )
           )
+
+
+(defcustom sql-formatter-dialect "postgres"
+  "SQL formatter dialect. [postgres|bigquery]"
+  :type 'string
+  :require 'sql-mode
+  :group 'sql-formatter)
+
+(defcustom sql-formatter-templater "raw"
+  "SQL formatter templater. [raw|jinja|python|placeholder]"
+  :type 'string
+  :require 'sql-mode
+  :group 'sql-formatter)
+
+(defun run-sql-formatter ()
+  "Run buffer through a SQL formatter"
+  (interactive)
+  (shell-command-on-region (point-min) (point-max) (format "sqlfluff format --dialect %s -t %s -" sql-formatter-dialect sql-formatter-templater) t t
+                           )
+  )
+
+(add-hook 'sql-mode-hook
+          (lambda ()
+            (map!
+             :leader
+             :prefix "c"
+             :desc "SQL format" "f" #'run-sql-formatter
+             )
+            )
+          )
