@@ -57,10 +57,10 @@ export KEYTIMEOUT=1
 bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M vicmd '^R' history-incremental-search-backward
 
-
-if type kubectl > /dev/null ; then
-  source <(kubectl completion zsh)
-fi
+# Slow to start
+#if type kubectl > /dev/null ; then
+#  source <(kubectl completion zsh)
+#fi
 
 # trm complete files
 compdef _files trash-put
