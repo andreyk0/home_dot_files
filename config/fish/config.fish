@@ -5,18 +5,18 @@ if status is-interactive
   zoxide init fish | source
 end
 
-alias Z 'zellij action rename-tab $(basename $(pwd))'
 alias cat 'bat -p'
 alias fda 'fd -uH'
 alias g git
 alias gs 'git status'
 alias hx helix
-alias j just
 alias jc 'just --choose'
+alias j just
 alias julia 'julia -p auto'
 alias la 'exa -g -a'
 alias ll 'exa -g -l --git'
 alias ls 'exa -g'
+alias m 'mise run'
 alias open xdg-open
 alias rga 'rg --no-ignore -.'
 alias run-help man
@@ -25,4 +25,4 @@ alias trm trash-put
 alias wbat 'bat --wrap never'
 alias which-command whence
 alias zp 'z $(project-root)'
-
+alias Z 'zellij action rename-tab $(basename $(pwd))'
