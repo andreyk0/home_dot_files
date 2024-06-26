@@ -58,6 +58,10 @@ if status is-interactive
       alias tree 'exa --git-ignore -T'
   end
 
+  if type -q fd
+      alias fda 'fd -uH'
+  end
+
   if type -q bat
       alias cat 'bat -p'
       alias wbat 'bat --wrap=never'
