@@ -34,6 +34,10 @@ end
 if status is-interactive
   fish_vi_key_bindings
 
+  if test -e $HOME/.dircolors
+     eval (dircolors -b ~/.dircolors | sed -e 's/^/set -gx /' -e 's/=/ /; s/;$//')
+  end
+
   if type -q starship
      source (starship init fish --print-full-init | psub)
   end
