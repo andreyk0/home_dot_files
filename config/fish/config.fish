@@ -63,6 +63,14 @@ if status is-interactive
       alias wbat 'bat --wrap=never'
   end
 
+  alias g=git
+  alias gs='git status'
+
+  alias trm='trash-put'
+  alias open='xdg-open'
+
+  alias zp='z $(project-root)'
+
   function o --wraps "$argv"
       eval $argv &| tee /tmp/out.$fish_pid
       echo "bat /tmp/out.$fish_pid"
@@ -70,6 +78,7 @@ if status is-interactive
 
   if type -q zellij
       source (zellij setup --generate-completion=fish) 2>/dev/null
+      alias Z='zellij action rename-tab $(basename $(pwd))'
   end
 
   if type -q zoxide
