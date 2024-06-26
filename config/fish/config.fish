@@ -48,7 +48,7 @@ if status is-interactive
 
   if test -z "$SSH_CLIENT"
       set -gx GPG_TTY (/usr/bin/tty)
-      set -gx SSH_AUTH_SOCK "/run/user/(id -u)/gnupg/S.gpg-agent.ssh"
+      set -gx SSH_AUTH_SOCK "/run/user/$(id -u)/gnupg/S.gpg-agent.ssh"
   end
 
   if type -q exa
