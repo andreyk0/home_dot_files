@@ -70,3 +70,6 @@
 
 ;; Vue
 (package! vue-mode)
+
+;; Cuelang
+(package! cue-mode)

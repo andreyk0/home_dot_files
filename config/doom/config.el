@@ -8,6 +8,10 @@
 ;; and edit
 (doom-load-envvars-file "~/.config/doom/myenv")
 
+(setq shell-file-name (executable-find "bash"))
+(setq-default vterm-shell (executable-find "fish"))
+(setq-default explicit-shell-file-name (executable-find "fish"))
+
 ;; Remove top frame
 (add-to-list 'default-frame-alist '(undecorated . t))
 ;; Modeline height
