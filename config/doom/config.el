@@ -8,6 +8,9 @@
 ;; and edit
 (doom-load-envvars-file "~/.config/doom/myenv")
 
+(setq gc-cons-threshold (* 128 1024 1024))
+
+
 (setq shell-file-name (executable-find "bash"))
 (setq-default vterm-shell (executable-find "fish"))
 (setq-default explicit-shell-file-name (executable-find "fish"))
@@ -115,6 +118,8 @@
 ;; https://github.com/emacs-lsp/lsp-metals/issues/84
 (require 'treemacs-treelib)
 (require 'treemacs-extensions)
+
+(setq lsp-rust-analyzer-server-command '("rust-analyzer" "--memory-limit" "8G"))
 (setq rustic-lsp-server 'rust-analyzer)
 (add-hook 'rust-mode-hook #'yas-minor-mode)
 (add-hook 'rust-mode-hook
