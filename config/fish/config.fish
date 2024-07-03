@@ -66,6 +66,10 @@ if status is-interactive
       alias fda 'fd -uH'
   end
 
+  if type -q rg
+      alias rga 'rg --no-ignore -.'
+  end
+
   if type -q bat
       alias cat 'bat -p'
       alias wbat 'bat --wrap=never'
