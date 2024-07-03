@@ -17,6 +17,6 @@ Actions=new-window;new-instance;
 Name=New Window
 Exec=/usr/bin/emacsclient --alternate-editor= --create-frame %F
 
-[Desktop Action new-instance]
-Name=New Instance
-Exec=emacs --fg-daemon %F
+#[Desktop Action new-instance]
+#Name=New Instance
+#Exec=emacs --fg-daemon --with-x-toolkit=lucid %F
