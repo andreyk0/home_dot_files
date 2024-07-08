@@ -119,6 +119,9 @@
 (require 'treemacs-treelib)
 (require 'treemacs-extensions)
 
+;; Crashes periodically with nativecomp
+(setq native-comp-deferred-compilation-deny-list '("lsp-mode"))
+
 (setq lsp-rust-analyzer-server-command '("rust-analyzer" "--memory-limit" "8G"))
 (setq rustic-lsp-server 'rust-analyzer)
 (add-hook 'rust-mode-hook #'yas-minor-mode)
