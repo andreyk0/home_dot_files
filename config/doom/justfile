@@ -1,3 +1,4 @@
 gen:
   doom sync -e
   doom doctor
+  systemctl --user restart emacs.service
