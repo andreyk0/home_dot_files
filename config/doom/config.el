@@ -121,6 +121,7 @@
 (require 'lsp)
 
 ;; Crashes periodically with nativecomp
+(remove-hook 'doom-first-buffer-hook #'global-company-mode)
 (setq lsp-signature-auto-activate nil)
 (setq lsp-ui-doc-enable nil)
 (setq native-comp-deferred-compilation-deny-list 
