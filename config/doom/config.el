@@ -18,7 +18,7 @@
 ;; Remove top frame
 (add-to-list 'default-frame-alist '(undecorated . t))
 ;; Modeline height
-(setq doom-modeline-height 1)
+;;(setq doom-modeline-height 1)
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
@@ -73,7 +73,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type nil)
 
 ;; default tab width
 (setq-default tab-width 4)
