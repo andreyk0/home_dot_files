@@ -120,7 +120,7 @@
 (require 'treemacs-extensions)
 
 ;; Crashes periodically with nativecomp
-(setq native-comp-deferred-compilation-deny-list '("lsp-mode" "lsp-modeline"))
+(setq native-comp-deferred-compilation-deny-list '("lsp-mode" "lsp-modeline" "company-capf"))
 
 (setq lsp-rust-analyzer-server-command '("rust-analyzer" "--memory-limit" "8G"))
 (setq rustic-lsp-server 'rust-analyzer)
