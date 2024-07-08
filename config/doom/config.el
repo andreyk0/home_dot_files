@@ -120,22 +120,6 @@
 (require 'treemacs-extensions)
 (require 'lsp)
 
-;; Crashes periodically with nativecomp
-(remove-hook 'doom-first-buffer-hook #'global-company-mode)
-(setq lsp-signature-auto-activate nil)
-(setq lsp-ui-doc-enable nil)
-(setq native-comp-deferred-compilation-deny-list 
-      '(
-        "company"
-        "company-capf"
-        "company-dabbrev"
-        "company-dabbrev-code"
-        "lsp-mode"
-        "lsp-modeline"
-        "minibuffer" ;; this one is package-installed
-        )
-      )
-
 (setq lsp-rust-analyzer-server-command '("rust-analyzer" "--memory-limit" "8G"))
 (setq rustic-lsp-server 'rust-analyzer)
 (add-hook 'rust-mode-hook #'yas-minor-mode)
