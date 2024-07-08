@@ -118,8 +118,11 @@
 ;; https://github.com/emacs-lsp/lsp-metals/issues/84
 (require 'treemacs-treelib)
 (require 'treemacs-extensions)
+(require 'lsp)
 
 ;; Crashes periodically with nativecomp
+(setq lsp-signature-auto-activate nil)
+(setq lsp-ui-doc-enable nil)
 (setq native-comp-deferred-compilation-deny-list 
       '(
         "company"
@@ -146,7 +149,6 @@
             )
           )
 
-(require 'lsp)
 (lsp-register-client
     (make-lsp-client :new-connection (lsp-tramp-connection "rust-analyzer")
                      :major-modes '(rustic-mode)
