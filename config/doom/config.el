@@ -120,7 +120,7 @@
 (require 'treemacs-extensions)
 (require 'lsp)
 
-(setq lsp-rust-analyzer-server-command '("rust-analyzer" "--memory-limit" "8G"))
+(setq lsp-rust-analyzer-server-command '("rust-analyzer"))
 (setq rustic-lsp-server 'rust-analyzer)
 (add-hook 'rust-mode-hook #'yas-minor-mode)
 (add-hook 'rust-mode-hook
