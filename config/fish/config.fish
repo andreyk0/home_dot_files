@@ -84,7 +84,7 @@ if status is-interactive
   alias zp='z $(project-root)'
 
   function o --wraps "$argv"
-      eval $argv &| tee /tmp/out.$fish_pid
+      $argv &| tee /tmp/out.$fish_pid
       echo "bat /tmp/out.$fish_pid"
   end
 
