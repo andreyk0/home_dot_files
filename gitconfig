@@ -45,7 +45,7 @@
 	s   = status
 	sh  = show
 	u   = !git fetch --tags -p &&  git-delete-merged-branches && git status
-	wd  = !git-aliased diff --color-words
+	wd  = !git-aliased diff --word-diff --minimal
 	wip = !git commit -amwip --no-gpg-sign
 
 [diff]
