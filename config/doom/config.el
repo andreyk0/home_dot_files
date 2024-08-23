@@ -120,6 +120,10 @@
 (require 'treemacs-extensions)
 (require 'lsp)
 
+;; https://mise.jdx.dev/ide-integration.html#emacs
+(require 'mise)
+(add-hook 'after-init-hook #'global-mise-mode)
+
 (setq lsp-rust-analyzer-server-command '("rust-analyzer"))
 (setq rustic-lsp-server 'rust-analyzer)
 (add-hook 'rust-mode-hook #'yas-minor-mode)

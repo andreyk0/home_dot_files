@@ -73,3 +73,6 @@
 
 ;; Cuelang
 (package! cue-mode)
+
+;; Mise
+(package! mise)
