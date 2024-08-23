@@ -22,3 +22,4 @@ TAGS
 .metals
 metals.sbt
 /project/project
+.project.el

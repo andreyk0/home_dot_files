@@ -123,6 +123,10 @@
 ;; https://mise.jdx.dev/ide-integration.html#emacs
 (require 'mise)
 (add-hook 'after-init-hook #'global-mise-mode)
+;; CLI tools installed by Mise
+;; See: https://www.emacswiki.org/emacs/ExecPath
+;;(setenv "PATH" (concat (getenv "PATH") (concat ":" (getenv "HOME") "/.local/share/mise/shims")))
+;;(setq exec-path (append exec-path '(concat (getenv "HOME") "/.local/share/mise/shims")))
 
 (setq lsp-rust-analyzer-server-command '("rust-analyzer"))
 (setq rustic-lsp-server 'rust-analyzer)
@@ -278,3 +282,25 @@
              )
             )
           )
+
+;; https://blog.jmthornton.net/p/emacs-project-override
+(defun project-root-override (dir)
+  "Find DIR's project root by searching for a '.project.el' file.
+
+If this file exists, it marks the project root. For convenient compatibility
+with Projectile, '.projectile' is also considered a project root marker.
+
+https://blog.jmthornton.net/p/emacs-project-override"
+  (let ((root (or (locate-dominating-file dir ".project.el")
+                  (locate-dominating-file dir ".projectile")))
+        (backend (ignore-errors (vc-responsible-backend dir))))
+    (when root (if (version<= emacs-version "28")
+                    (cons 'vc root)
+                  (list 'vc backend root)))))
+
+;; Note that we cannot use :hook here because `project-find-functions' doesn't
+;; end in "-hook", and we can't use this in :init because it won't be defined
+;; yet.
+(use-package project
+  :config
+  (add-hook 'project-find-functions #'project-root-override))
