@@ -133,7 +133,7 @@
 (add-hook 'rust-mode-hook #'yas-minor-mode)
 (add-hook 'rust-mode-hook
           (lambda ()
-            (setq compile-command "cargo build")
+            (setq compile-command "cargo test --color=never")
             (map!
              :leader
              :prefix "c"
