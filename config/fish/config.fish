@@ -23,6 +23,8 @@ set -gx GIT /usr/bin/git
 set -gx LOCALE_ARCHIVE /usr/lib/locale/locale-archive
 set -gx CLOUDSDK_PYTHON_SITEPACKAGES 1
 
+set -gx GOPATH "$HOME/.cache/go"
+
 if test "$XDG_SESSION_TYPE" = wayland
     set -gx MOZ_ENABLE_WAYLAND 1
 end
