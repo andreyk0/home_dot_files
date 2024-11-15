@@ -10,6 +10,12 @@ pane_frames false
 keybinds {
     unbind "Ctrl g"
     shared_except "locked" {
+        unbind "Alt Left"
+        unbind "Alt Right"
+        unbind "Alt Up"
+        unbind "Alt Down"
+        unbind "Alt ["
+        unbind "Alt ]"
         unbind "Ctrl q"
         bind "F1" { SwitchToMode "Locked"; }
     }
