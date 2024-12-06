@@ -78,7 +78,6 @@
 	helper = !/usr/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [url "ssh://git@github.com/EarnestResearch/gcp-okta-auth-proxy"]
 	insteadOf = https://github.com/EarnestResearch/gcp-okta-auth-proxy
