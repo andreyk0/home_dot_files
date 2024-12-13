@@ -77,6 +77,10 @@ if status is-interactive
       alias wbat 'bat --wrap=never'
   end
 
+  if type -q just
+      alias j 'just'
+  end
+
   alias g=git
   alias gs='git status'
 
