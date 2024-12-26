@@ -81,6 +81,10 @@ if status is-interactive
       alias j 'just'
   end
 
+  if type -q uv
+      set -gx UV_LINK_MODE copy
+  end
+
   alias g=git
   alias gs='git status'
 
