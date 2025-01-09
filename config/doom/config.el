@@ -120,6 +120,17 @@
 (require 'treemacs-extensions)
 (require 'lsp)
 
+;; Magit
+(use-package magit
+  :commands (magit-status magit-get-current-branch)
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
+;; New frame behavior
+(after! persp-mode
+  (setq persp-emacsclient-init-frame-behaviour-override "main")
+  )
+
 ;; https://mise.jdx.dev/ide-integration.html#emacs
 (require 'mise)
 (add-hook 'after-init-hook #'global-mise-mode)
