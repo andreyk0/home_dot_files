@@ -293,3 +293,6 @@
              )
             )
           )
+
+;; Disables comment indent/continuation on Enter
+(setq +default-want-RET-continue-comments nil)
