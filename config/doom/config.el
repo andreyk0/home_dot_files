@@ -295,5 +295,8 @@
             )
           )
 
+
+(setq markdown-command "pandoc -s --highlight-style=breezeDark -o -")
+
 ;; Disables comment indent/continuation on Enter
 (setq +default-want-RET-continue-comments nil)
