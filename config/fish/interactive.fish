@@ -73,4 +73,5 @@ end
 
 if test -e $HOME/work/esp/esp-idf/export.fish
     alias esp_get_idf='. $HOME/work/esp/esp-idf/export.fish'
+    alias idf=idf.py
 end
