@@ -81,7 +81,10 @@
        vterm             ; the best terminal emulation in Emacs
 
        :checkers
+
+       ;; https://github.com/doomemacs/doomemacs/issues/8285
        ;;syntax              ; tasing you for every semicolon you forget
+       
        (spell +flyspell) ; tasing you for misspelling mispelling
        ;;grammar           ; tasing grammar mistake every you make
 
