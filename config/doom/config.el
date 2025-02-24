@@ -295,6 +295,11 @@
             )
           )
 
+;; Use spaces in justfiles
+(add-hook 'just-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+          ))
 
 (setq markdown-command "pandoc -s --highlight-style=breezeDark -o -")
 
