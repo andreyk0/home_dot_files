@@ -83,6 +83,8 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/notes/")
 
+;; Disables comment indent/continuation on Enter
+(setq +default-want-RET-continue-comments nil)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -140,8 +142,11 @@
 ;;(setenv "PATH" (concat (getenv "PATH") (concat ":" (getenv "HOME") "/.local/share/mise/shims")))
 ;;(setq exec-path (append exec-path '(concat (getenv "HOME") "/.local/share/mise/shims")))
 
-(setq lsp-rust-analyzer-server-command '("rust-analyzer"))
-(setq rustic-lsp-server 'rust-analyzer)
+(after! lsp-rust
+	(setq lsp-rust-analyzer-server-command '("rust-analyzer"))
+	(setq rustic-lsp-server 'rust-analyzer)
+	)
+
 (add-hook 'rust-mode-hook #'yas-minor-mode)
 (add-hook 'rust-mode-hook
           (lambda ()
@@ -203,7 +208,9 @@
 (after! evil-snipe
   (evil-snipe-mode -1))
 
-(setq lsp-terraform-server '("terraform-ls" "serve"))
+(after! lsp-terraform
+	(setq lsp-terraform-server '("terraform-ls" "serve"))
+	)
 (add-hook 'terraform-mode-hook #'yas-minor-mode)
 (add-hook 'terraform-mode-hook
           (lambda ()
@@ -300,6 +307,3 @@
           ))
 
 (setq markdown-command "pandoc -s --highlight-style=breezeDark -o -")
-
-;; Disables comment indent/continuation on Enter
-(setq +default-want-RET-continue-comments nil)
