@@ -218,8 +218,6 @@
 (if (eq (getenv "USER") "akartashov")
   (use-package! lsp-metals))
 
-(setq dhall-use-header-line nil)
-
 (add-hook 'scala-mode-hook
           (lambda ()
             (setq compile-command "just test")
