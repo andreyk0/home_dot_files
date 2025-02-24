@@ -233,13 +233,13 @@
 
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (setq-default tab-width 2)
+            (setq tab-width 2)
             )
           )
 
 (add-hook 'python-mode-common-hook
           (lambda ()
-            (setq-default tab-width 4)
+            (setq tab-width 4)
             )
           )
 
