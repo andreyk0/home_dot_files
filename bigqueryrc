@@ -1,8 +1,9 @@
 #--apilog=stdout
 --format=prettyjson
 --location=US
+--project_id=er-akartashov-u-93cf
 
 [query]
 --use_legacy_sql=false
 --max_rows=100
---maximum_bytes_billed=10000000
+--maximum_bytes_billed=100000000
