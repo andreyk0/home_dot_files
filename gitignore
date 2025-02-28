@@ -23,3 +23,4 @@ TAGS
 metals.sbt
 /project/project
 .project.el
+__pycache__
