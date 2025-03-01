@@ -135,8 +135,10 @@
   )
 
 ;; https://mise.jdx.dev/ide-integration.html#emacs
-(require 'mise)
-(add-hook 'after-init-hook #'global-mise-mode)
+(when (locate-file "mise" exec-path)
+  (progn (require 'mise)
+         (add-hook 'after-init-hook #'global-mise-mode))
+  )
 ;; CLI tools installed by Mise
 ;; See: https://www.emacswiki.org/emacs/ExecPath
 ;;(setenv "PATH" (concat (getenv "PATH") (concat ":" (getenv "HOME") "/.local/share/mise/shims")))
