@@ -1,3 +1,4 @@
+support_kitty_keyboard_protocol true
 copy_command "pbcopy"
 scrollback_editor "e"
 session_serialization false
