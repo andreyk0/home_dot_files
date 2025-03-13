@@ -274,13 +274,7 @@
 
 
 (defcustom sql-formatter-dialect "postgres"
-  "SQL formatter dialect. [postgres|bigquery]"
-  :type 'string
-  :require 'sql-mode
-  :group 'sql-formatter)
-
-(defcustom sql-formatter-templater "raw"
-  "SQL formatter templater. [raw|jinja|python|placeholder]"
+  "SQL formatter dialect. [bigquery|hive|mariadb|plsql|postgresql|redshift|spark|sqlite|sql|snowflake]"
   :type 'string
   :require 'sql-mode
   :group 'sql-formatter)
@@ -288,7 +282,7 @@
 (defun run-sql-formatter ()
   "Run buffer through a SQL formatter"
   (interactive)
-  (shell-command-on-region (point-min) (point-max) (format "sqlfluff format --dialect %s -t %s -" sql-formatter-dialect sql-formatter-templater) t t
+  (shell-command-on-region (point-min) (point-max) (format "sql-formatter --language %s" sql-formatter-dialect) t t
                            )
   )
 
