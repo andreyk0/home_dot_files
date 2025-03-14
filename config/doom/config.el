@@ -273,7 +273,7 @@
           )
 
 
-(defcustom sql-formatter-dialect "postgres"
+(defcustom sql-formatter-dialect "postgresql"
   "SQL formatter dialect. [bigquery|hive|mariadb|plsql|postgresql|redshift|spark|sqlite|sql|snowflake]"
   :type 'string
   :require 'sql-mode
