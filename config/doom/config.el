@@ -177,14 +177,16 @@
 (after! lsp-haskell
   (setq lsp-haskell-formatting-provider "ormolu"))
 
-(add-hook 'haskell-mode-hook
-          (lambda ()
-            (map! :leader
-                  (:prefix-map ("c" . "code")
-                               (:when (modulep! :tools lsp) :desc "LSP format buffer" "f" #'lsp-format-buffer)
-                               )
-                  )))
 
+(add-hook 'lsp-mode-hook
+          (lambda ()
+            (map!
+             :leader
+             :prefix "c"
+             :desc "LSP format buffer" "f" #'lsp-format-buffer
+             )
+            )
+          )
 
 (map! :leader
       (:prefix-map ("c" . "code")
@@ -261,16 +263,6 @@
     (make-lsp-client :new-connection (lsp-stdio-connection '("just" "lsp"))
                      :major-modes '(arduino-mode)
                      :server-id 'arduino))
-
-(add-hook 'typescript-mode-hook
-          (lambda ()
-            (map!
-             :leader
-             :prefix "c"
-             :desc "terraform fmt" "f" #'lsp-format-buffer
-             )
-            )
-          )
 
 
 (defcustom sql-formatter-dialect "postgresql"
