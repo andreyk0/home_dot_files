@@ -1,5 +1,7 @@
 fish_vi_key_bindings
 
+bind -M insert right forward-word
+
 if test -e $HOME/.dircolors
     eval (dircolors -b ~/.dircolors | sed -e 's/^/set -gx /' -e 's/=/ /; s/;$//')
 end
