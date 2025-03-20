@@ -7,7 +7,7 @@
  '(projectile-project-root-files-bottom-up
    '(".ccls-root" ".project" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs"
      ".pijul" ".sl" ".jj" ".project.el" "build.sbt" "Cargo.toml"))
- '(sql-formatter-dialect "bigquery"))
+ '(sql-formatter-dialect "postgresql"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

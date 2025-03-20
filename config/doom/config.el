@@ -274,7 +274,7 @@
 (defun run-sql-formatter ()
   "Run buffer through a SQL formatter"
   (interactive)
-  (shell-command-on-region (point-min) (point-max) (format "sql-formatter --language %s" sql-formatter-dialect) t t
+  (shell-command-on-region (point-min) (point-max) (format "sql-formatter -c '{\"keywordCase\": \"upper\"}' --language %s" sql-formatter-dialect) t t
                            )
   )
 
