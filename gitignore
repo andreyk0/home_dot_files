@@ -24,3 +24,4 @@ metals.sbt
 /project/project
 .project.el
 __pycache__
+.projectile-cache.eld
