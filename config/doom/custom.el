@@ -5,8 +5,25 @@
  ;; If there is more than one, they won't work right.
  '(lsp-haskell-completion-in-comments nil)
  '(projectile-project-root-files-bottom-up
-   '(".ccls-root" ".project" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs"
-     ".pijul" ".sl" ".jj" ".project.el" "build.sbt" "Cargo.toml"))
+   '(
+	"build.sbt"
+	".bzr"
+	"Cargo.toml"
+	".ccls-root"
+	"_darcs"
+	"_FOSSIL_"
+	".fslckout"
+	".git"
+	".hg"
+	".jj"
+	"package.json"
+	".pijul"
+	".project"
+	".project.el"
+	"pyproject.toml"
+	".sl"
+	"stack.yaml"
+     ))
  '(sql-formatter-dialect "postgresql"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
