@@ -200,7 +200,6 @@
        )
       )
 
-(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
 
 (use-package! ansi-color
   :config
@@ -295,3 +294,6 @@
           ))
 
 (setq markdown-command "pandoc -s --highlight-style=breezeDark -o -")
+
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+(after! org (add-hook 'org-mode-hook #'turn-off-smartparens-mode))
