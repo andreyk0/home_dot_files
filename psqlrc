@@ -3,4 +3,7 @@
 -- \pset pager off
 -- \x auto
 
+-- emacsclient
+-- \setenv PAGER 'e'
+
 \setenv PAGER 'less -SX'
