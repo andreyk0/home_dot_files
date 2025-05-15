@@ -12,7 +12,7 @@
                     doom-challenger-deep
                     doom-city-lights
                     doom-dark+
-                    doom-feather-dark
+                    ;; doom-feather-dark
                     doom-gruvbox
                     doom-henna
                     doom-homage-black
@@ -43,7 +43,7 @@
                     doom-rouge
                     doom-snazzy
                     doom-sourcerer
-                    doom-tokyo-night
+                    ;; doom-tokyo-night
                     doom-tomorrow-night
                     doom-vibrant
                     doom-wilmersdorf
