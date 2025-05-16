@@ -10,6 +10,11 @@
 
 (setq gc-cons-threshold (* 128 1024 1024))
 
+(add-hook 'projectile-after-switch-project-hook (lambda ()
+                                                   (message "Clearing Projectile cache for %s..." (projectile-project-root))
+                                                   (projectile-invalidate-cache nil)
+                                                   (message "Projectile cache cleared.")))
+
 
 (setq shell-file-name (executable-find "bash"))
 (setq-default vterm-shell (executable-find "fish"))
