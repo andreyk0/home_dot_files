@@ -1,0 +1,11 @@
+#model = "gemini-2.5-pro-preview-06-05"
+model = "gemini-1.5-pro-latest"
+model_provider = "gemini"
+
+[model_providers.gemini]
+
+name = "gemini"
+base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
+# https://generativelanguage.googleapis.com/v1beta/models
+env_key = "GEMINI_API_KEY"
+wire_api = "chat"

@@ -76,3 +76,6 @@
 
 ;; Mise
 (package! mise)
+
+;; gptel llm hook
+(package! gptel :recipe (:nonrecursive t))

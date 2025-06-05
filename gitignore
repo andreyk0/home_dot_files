@@ -26,3 +26,5 @@ metals.sbt
 __pycache__
 .projectile-cache.eld
 *.lck
+.aider
+.aider.*

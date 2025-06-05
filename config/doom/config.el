@@ -283,3 +283,10 @@
 
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
 (after! org (add-hook 'org-mode-hook #'turn-off-smartparens-mode))
+
+(setq
+ gptel-model 'gemini-2.5-pro-preview-05-06
+ gptel-backend (gptel-make-gemini "Gemini"
+                   :key (lambda () (getenv "GEMINI_API_KEY"))
+                   :stream t)
+)
