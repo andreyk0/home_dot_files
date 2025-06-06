@@ -291,3 +291,14 @@
                    :key (lambda () (getenv "GEMINI_API_KEY"))
                    :stream t)
 )
+
+(map! :leader
+      (:prefix-map ("l" . "llm")
+		   :desc "add context" "a" #'gptel-add
+		   :desc "remove context" "r" #'gptel-context-remove
+		   :desc "remove all context" "R" #'gptel-context-remove-all
+		   :desc "send" "s" #'gptel-send
+		   :desc "quit context" "q" #'gptel-context-quit
+		   :desc "menu" "m" #'gptel-menu
+		   )
+      )
