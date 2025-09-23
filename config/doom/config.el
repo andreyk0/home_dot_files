@@ -302,3 +302,6 @@
 		   :desc "menu" "m" #'gptel-menu
 		   )
       )
+
+;; GQL schemas
+(add-to-list 'auto-mode-alist '("\\.graphqls\\'" . graphql-mode))
