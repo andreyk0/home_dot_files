@@ -78,6 +78,14 @@ if test -e $HOME/work/esp/esp-idf/export.fish
     alias idf=idf.py
 end
 
+function esp_get_rust
+    # from ~/export-esp.sh
+    # Set LIBCLANG_PATH
+    set -gx LIBCLANG_PATH "/home/andrey/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-20.1.1_20250829/esp-clang/lib"
+    # Prepend the new path to the existing PATH
+    set -gx PATH "/home/andrey/.rustup/toolchains/esp/xtensa-esp-elf/esp-15.2.0_20250920/xtensa-esp-elf/bin" $PATH
+end
+
 function reset
   clear
   tput reset
