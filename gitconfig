@@ -51,6 +51,7 @@
 [diff]
 	tool = meld
 	ignoreSubmodules = dirty
+	relative = true
 
 [commit]
 	gpgsign = true
