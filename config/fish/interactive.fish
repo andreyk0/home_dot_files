@@ -90,3 +90,48 @@ function reset
   clear
   tput reset
 end
+
+function zephyr_setup
+    # --- 1. Define Paths ---
+    # Path to the Zephyr environment script (zephyr-env.sh)
+    set -l Z_ENV_SCRIPT "$HOME/work/zephyrproject/zephyr/zephyr-env.sh"
+    # Path to the Python virtual environment's fish activation script
+    set -l VENV_ACTIVATE_SCRIPT "$HOME/work/zephyrproject/.venv/bin/activate.fish"
+
+    if not test -f "$Z_ENV_SCRIPT"
+        echo "Error: Zephyr environment script not found at $Z_ENV_SCRIPT" >&2
+        return 1
+    end
+
+    # --- 2. Set SDK Path (Globally Exported) ---
+    # Setting the SDK path directly here overrides any system defaults
+    set -gx ZEPHYR_SDK_INSTALL_DIR "$HOME/work/zephyrproject/zephyr-sdk-0.17.4"
+    echo "Set ZEPHYR_SDK_INSTALL_DIR to: $ZEPHYR_SDK_INSTALL_DIR"
+
+    # --- 3. Activate Python Venv (Fish-specific) ---
+    if test -f "$VENV_ACTIVATE_SCRIPT"
+        echo "Activating Zephyr Python virtual environment..."
+        # Source the fish activation script. This updates PATH and sets VIRTUAL_ENV.
+        source "$VENV_ACTIVATE_SCRIPT"
+    else
+        echo "Warning: Python VENV activation script not found at $VENV_ACTIVATE_SCRIPT. west and other tools may fail." >&2
+    end
+
+
+    # --- 4. Source Zephyr Build Environment (via Bash) ---
+    echo "Setting up Zephyr build environment..."
+    # Execute the Bash script and extract exported variables
+    for var in (bash -c "source $Z_ENV_SCRIPT; env -0" | string split0)
+        # Import ZEPHYR_* variables and update PATH from the Bash script
+        if string match -q 'ZEPHYR_*=*' "$var"
+            set -gx (string split '=' $var)
+        end
+        if string match -q 'PATH=*' "$var"
+            set -gx (string split '=' $var)
+        end
+    end
+
+    echo "--- Zephyr environment is ready ---"
+    echo "ZEPHYR_BASE: $ZEPHYR_BASE"
+    echo "SDK path verified."
+end
