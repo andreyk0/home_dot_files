@@ -107,7 +107,7 @@
        ;;taskrunner        ; taskrunner for all your projects
        (terraform +lsp)    ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
-       tree-sitter         ; syntax and parsing, sitting in a tree...
+       tree-sitter         ; syntax and parsing, sitting in a tree... (run treesit-install-language-grammar)
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
