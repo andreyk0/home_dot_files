@@ -309,3 +309,6 @@
 
 ;; GQL schemas
 (add-to-list 'auto-mode-alist '("\\.graphqls\\'" . graphql-mode))
+
+;; JSON with comments
+(add-to-list 'auto-mode-alist '("\\.jsonc\\'" . js-ts-mode))
