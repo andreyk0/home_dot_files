@@ -312,3 +312,8 @@
 
 ;; JSON with comments
 (add-to-list 'auto-mode-alist '("\\.jsonc\\'" . js-ts-mode))
+
+;; Linux device tree
+(add-to-list 'auto-mode-alist '("\\.overlay\\'" . dts-mode))
+(add-to-list 'auto-mode-alist '("\\.dts\\'" . dts-mode))
+(add-to-list 'auto-mode-alist '("\\.dtsi\\'" . dts-mode))
