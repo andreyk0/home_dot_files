@@ -19,9 +19,14 @@ Before performing any data manipulation or complex querying:
 2. **Inspect:** Run `\d+ table_name` to understand the columns and constraints.
 3. **Execution:** Use the `psql` command line tool.
 
+# Connection Strategy
+- **Configuration:** ALWAYS use `PAGER=cat` and the `-X` flag (to ignore `.psqlrc`) for every command to prevent pagination and formatting issues.
+- **If `database_url` is provided:** You MUST use it. Example: `PAGER=cat psql -X <database_url> -c ...`
+- **If `database_url` is NOT provided:** Do NOT search for one. Assume the environment is configured. Example: `PAGER=cat psql -X -c ...`
+
 # Bootstrap Command
-When this skill is first activated, run this to get your bearings:
-`psql {{database_url}} -c "\dt" -c "\di"`
+When first activated, apply the connection strategy above to run:
+`PAGER=cat psql -X [optional_url] -c "\dt" -c "\di"`
 
 # Formatting
 Always return query results in a Markdown table for readability.
