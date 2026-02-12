@@ -22,9 +22,15 @@ Before performing any data manipulation or complex querying:
 3. **Execution:** Use the `psql` command line tool.
 
 # Connection Strategy
-- **Configuration:** ALWAYS use `PAGER=cat` and the `-X` flag (to ignore `.psqlrc`) for every command to prevent pagination and formatting issues.
-- **If `database_url` is provided:** You MUST use it. Example: `PAGER=cat psql -X <database_url> -c ...`
-- **If `database_url` is NOT provided:** Do NOT search for one. Assume the environment is configured. Example: `PAGER=cat psql -X -c ...`
+- **Configuration:** ALWAYS use flags to ensure deterministic, agent-friendly output.
+  - `--pset=pager=off`: Explicitly disables the pager.
+  - `-X`: Ignores `.psqlrc` configuration.
+  - `-A`: Uses unaligned output mode (no ASCII tables) to save tokens and improve parsing.
+- **Command Construction:**
+  - **With mise:** `mise run db:psql:local -- --pset=pager=off -X -A -c "..."`
+  - **Direct psql:** `psql --pset=pager=off -X -A -c "..."`
+- **If `database_url` is provided:** `psql --pset=pager=off -X -A <database_url> -c ...`
+- **If `database_url` is NOT provided:** Assume environment configuration.
 
 # Bootstrap Command
 When first activated, apply the connection strategy above to run:
