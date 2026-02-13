@@ -24,3 +24,20 @@ When creating or updating PRs, issues, or comments that require a message body:
 
 # Verification
 Before running any `gh` command, check your current context with `gh auth status` if you are unsure of your permissions.
+
+### Resolving Review Threads
+To resolve specific review comments (threads) on a Pull Request, use the GraphQL API.
+
+1. **List Review Threads:**
+   Fetch the thread IDs and their status (resolved/unresolved).
+   ```bash
+   gh api graphql -f query='query { repository(owner:"OWNER", name:"REPO") { pullRequest(number:PR_NUMBER) { reviewThreads(first:20) { nodes { id isResolved comments(first:1) { nodes { body author { login } } } } } } } }'
+   ```
+
+2. **Resolve a Thread:**
+   Use the `resolveReviewThread` mutation with the `threadId` obtained from the previous step.
+   ```bash
+   gh api graphql -f query='mutation($threadId:ID!) { resolveReviewThread(input: {threadId: $threadId}) { thread { isResolved } } }' -f threadId=THREAD_ID
+   ```
+
+This is particularly useful for programmatically handling automated review feedback (like from Copilot).
