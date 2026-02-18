@@ -1,10 +1,10 @@
 ---
 name: psql-expert
-description: Specialized in PostgreSQL database interaction. Use this when the user asks to "query the DB", "check schema", "inspect tables", "how tables relate", or mentions Postgres. This is the authoritative source for schema questions over static file analysis.
+description: Specialized in PostgreSQL database interaction. Use this when the user asks to "query the DB", "check schema", "inspect tables", "how tables relate", or mentions "psql" or "postgres". This is the authoritative source for schema questions over static file analysis.
 parameters:
   database_url:
     type: string
-    description: "The connection string. Defaults to empty (uses environment/mise)."
+    description: "The connection string. Defaults to empty (uses PG* environment variables)."
     required: false
 ---
 
@@ -27,7 +27,6 @@ Before performing any data manipulation or complex querying:
   - `-X`: Ignores `.psqlrc` configuration.
   - `-A`: Uses unaligned output mode (no ASCII tables) to save tokens and improve parsing.
 - **Command Construction:**
-  - **With mise:** `mise run db:psql:local -- --pset=pager=off -X -A -c "..."`
   - **Direct psql:** `psql --pset=pager=off -X -A -c "..."`
 - **If `database_url` is provided:** `psql --pset=pager=off -X -A <database_url> -c ...`
 - **If `database_url` is NOT provided:** Assume environment configuration.
