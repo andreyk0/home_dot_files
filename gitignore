@@ -29,3 +29,4 @@ __pycache__
 .aider
 .aider.*
 .gemini/tmp
+.claude
