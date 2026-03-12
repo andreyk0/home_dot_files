@@ -37,3 +37,8 @@ When first activated, apply the connection strategy above to run:
 
 # Formatting
 Always return query results in a Markdown table for readability.
+
+
+# Connection strings
+
+**VERY IMPORTANT**: **ALWAYS** try `psql` commands exactly as written in this skill first, it's **highly** likely that default PG environment is already set up with credentials and connection info and will "just work".
