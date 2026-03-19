@@ -298,3 +298,5 @@
 (add-to-list 'auto-mode-alist '("\\.overlay\\'" . dts-mode))
 (add-to-list 'auto-mode-alist '("\\.dts\\'" . dts-mode))
 (add-to-list 'auto-mode-alist '("\\.dtsi\\'" . dts-mode))
+
+(add-to-list 'auto-mode-alist '("\\.pio\\'" . asm-mode))
