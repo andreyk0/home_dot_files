@@ -1,6 +1,6 @@
 ---
 name: psql-expert
-description: Specialized in PostgreSQL database interaction. Use this when the user asks to "query the DB", "check schema", "inspect tables", "how tables relate", or mentions "psql" or "postgres". This is the authoritative source for schema questions over static file analysis.
+description: Specialized in PostgreSQL database interaction. Use this when the user asks to "query the DB", "check schema", "inspect tables", "how tables relate", or mentions "psql" or "postgres". This is the authoritative source for schema questions over static file analysis. Also use this **INSTEAD** of trying to guess `psql` command with DB name and password!
 parameters:
   database_url:
     type: string
