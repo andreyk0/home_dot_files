@@ -31,7 +31,7 @@
 	do  = !git-aliased diff $(git remote)/$(git branch --show-current)
 	dos = !git-aliased diff --ignore-all-space $(git remote)/$(git branch --show-current)
 	ds  = diff --ignore-all-space
-        FIX = !git remote set-head origin --auto
+	FIX = !git remote set-head origin --auto
 	lgg = log --graph --pretty='format:"%C(yellow)%h %Creset%C(cyan)%G? %GK%Creset %C(green)%ae%Creset %<(80,trunc)%s"'
 	lg  = log --graph --name-only
 	lgp = log -p
@@ -44,6 +44,7 @@
 	ri  = !git rebase -i
 	s   = status
 	sh  = show
+	sw  = switch -C
 	u   = !git fetch --tags -p &&  git-delete-merged-branches && git status
 	wd  = !git-aliased diff --word-diff --minimal
 	wip = !git commit -amwip --no-gpg-sign
