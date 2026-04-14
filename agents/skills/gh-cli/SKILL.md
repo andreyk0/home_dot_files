@@ -14,13 +14,15 @@ When creating or updating PRs, issues, or comments that require a message body:
 4. **Cleanup:** After a successful command, delete the temporary file using a shell command.
 
 # Common Procedures
-- **List PRs:** `gh pr list`
-- **View PR Diff:** `gh pr diff <number>`
+- **Check Current PR Status:** `gh pr status` or `gh pr view`. **Do NOT use `gh pr list` to find your current PR**. `gh` automatically targets the PR for your current checked-out branch.
+- **Read PR Comments/Reviews:** `gh pr view --comments` (human-readable) or `gh pr view --json comments,reviews` (JSON). Note: `reviewThreads` is not a valid JSON field for `gh pr view`.
+- **View CI Checks:** `gh pr checks`
+- **View PR Diff:** `gh pr diff`
 - **Create PR:** 1. Write description to `pr_desc.md`.
   2. `gh pr create --title "..." --body-file=pr_desc.md`
-- **Comment on Issue:**
+- **Comment on Current PR:**
   1. Write comment to `comment.md`.
-  2. `gh pr comment <number> --body-file=comment.md`
+  2. `gh pr comment --body-file=comment.md` (no number needed if on branch)
 
 # Verification
 Before running any `gh` command, check your current context with `gh auth status` if you are unsure of your permissions.
