@@ -72,6 +72,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/notes/")
+(setq org-noter-notes-search-path '("~/notes/"))
 
 ;; Disables comment indent/continuation on Enter
 (setq +default-want-RET-continue-comments nil)
@@ -112,6 +113,9 @@
 (require 'treemacs-treelib)
 (require 'treemacs-extensions)
 (require 'lsp)
+
+;; csv
+(setq csv-separators (list "," "|" "\t"))
 
 ;; Magit
 (use-package magit
