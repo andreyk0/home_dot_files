@@ -91,9 +91,20 @@ function reset
   tput reset
 end
 
+
 # Zephyr
 # https://www.zephyrproject.org/
+# 4.4 release
 function zephyr_setup
+    set -l ZEPHYR_INSTALL_ROOT "$HOME/work/zephyrproject-4.x"
+    source "$ZEPHYR_INSTALL_ROOT/.venv/bin/activate.fish"
+    bass source "$ZEPHYR_INSTALL_ROOT/zephyr/zephyr-env.sh"
+end
+
+
+# Zephyr
+# https://www.zephyrproject.org/
+function zephyr_setup_old
     # --- 1. Define Paths ---
     set -l Z_ENV_SCRIPT "$HOME/work/zephyrproject/zephyr/zephyr-env.sh"
     set -l VENV_ACTIVATE_SCRIPT "$HOME/work/zephyrproject/.venv/bin/activate.fish"
