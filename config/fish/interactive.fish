@@ -91,16 +91,15 @@ function reset
   tput reset
 end
 
-
 # Zephyr
 # https://www.zephyrproject.org/
 # 4.4 release
 function zephyr_setup
     set -l ZEPHYR_INSTALL_ROOT "$HOME/work/zephyrproject-4.x"
+    set -gx ZEPHYR_SDK_INSTALL_DIR "$ZEPHYR_INSTALL_ROOT/zephyr-sdk"
     source "$ZEPHYR_INSTALL_ROOT/.venv/bin/activate.fish"
     bass source "$ZEPHYR_INSTALL_ROOT/zephyr/zephyr-env.sh"
 end
-
 
 # Zephyr
 # https://www.zephyrproject.org/
