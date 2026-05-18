@@ -21,7 +21,8 @@
    '("build.sbt" ".bzr" "Cargo.toml" ".ccls-root" "_darcs" "_FOSSIL_" ".fslckout"
      ".git" ".hg" ".jj" "package.json" ".pijul" ".project" ".project.el"
      "pyproject.toml" ".sl" "stack.yaml"))
- '(sql-formatter-dialect "postgresql"))
+ '(sql-formatter-dialect "postgresql")
+ '(warning-suppress-log-types '((lsp-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
