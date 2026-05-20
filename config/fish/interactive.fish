@@ -55,13 +55,19 @@ alias g=git
 alias gs='git status'
 
 alias trm='trash-put'
-alias open='xdg-open'
 
 alias zp='z $(project-root)'
 
 function o --wraps "$argv"
     $argv &| tee /tmp/out.$fish_pid
     echo "bat /tmp/out.$fish_pid"
+end
+
+
+function open --wraps "$argv"
+    for f in $argv
+        xdg-open "$f"
+    end
 end
 
 if type -q zellij
