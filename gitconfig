@@ -27,6 +27,7 @@
 	d   = diff
 	dt  = difftool
 	dh  = diff HEAD
+	dth  = difftool HEAD
 	dhs = diff --ignore-all-space HEAD
 	do  = !git-aliased diff $(git remote)/$(git branch --show-current)
 	dos = !git-aliased diff --ignore-all-space $(git remote)/$(git branch --show-current)
