@@ -304,3 +304,7 @@
 (add-to-list 'auto-mode-alist '("\\.dtsi\\'" . dts-mode))
 
 (add-to-list 'auto-mode-alist '("\\.pio\\'" . asm-mode))
+
+(after! lsp-mode
+  (add-to-list 'lsp-disabled-clients 'tailwindcss)
+  (add-to-list 'lsp-disabled-clients 'tailwindcss-ls))
