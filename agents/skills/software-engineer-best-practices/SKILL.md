@@ -38,3 +38,10 @@ When performing complex operations (like data imports, migrations, or multi-step
 
 - **Defensive Coding:** Validate inputs early. Fail fast with clear error messages.
 - **Error Handling:** Catch errors specifically. Avoid empty `catch` blocks. Always log the full stack trace of unexpected errors.
+
+## Documentation & Artifact Guidelines
+
+### 1. No Local Links in Shared Artifacts
+When creating markdown documents, reports, proposals, or plans intended to be shared, **NEVER** use local `file:///...` links (since they only exist on the developer's machine).
+- **Use Relative Paths:** Reference codebase files using clean paths relative to the project root, e.g., `[label](app/operations/dataproc/distcptransferoperation.go)`.
+
